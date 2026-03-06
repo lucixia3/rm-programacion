@@ -28,13 +28,16 @@ const publicEnvSchema = z.object({
     .default("http://localhost:3000"),
 });
 
-// Falla en startup si falta alguna variable requerida
-export const serverEnv = serverEnvSchema.parse({
-  ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
-  NODE_ENV: process.env.NODE_ENV,
-  UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
-  UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
-});
+// Valida bajo demanda para evitar romper el build si falta una variable
+// que solo se necesita en tiempo de ejecución de una ruta concreta.
+export function getServerEnv() {
+  return serverEnvSchema.parse({
+    ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY,
+    NODE_ENV: process.env.NODE_ENV,
+    UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
+    UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+  });
+}
 
 export const publicEnv = publicEnvSchema.parse({
   NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
