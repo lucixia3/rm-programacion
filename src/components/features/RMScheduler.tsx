@@ -184,10 +184,6 @@ export function RMScheduler() {
         </div>
 
         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "4px 14px", borderRadius: 20, background: "var(--surface2)", border: "1px solid var(--border)", fontSize: 11, color: "var(--text2)" }}>
-            <span style={{ opacity: 0.6 }}>Modelo</span>
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)", fontWeight: 600 }}>claude-haiku-4-5</span>
-          </div>
         </div>
 
         <button
@@ -220,7 +216,7 @@ export function RMScheduler() {
               value={medInput}
               onChange={(e) => setMedInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); analyze(); } }}
-              placeholder={"Pega o escribe la valoración médica...\n\nEjemplos:\n· Discopatías L5-S1, lumbalgia severa\n· Adenoma hipofisario, control evolutivo\n· Sospecha metástasis hepática, dinámico\n· Cáncer de próstata, estadificación\n· Schwannoma vestibular derecho\n· Crohn conocido, evaluación actividad\n· Dolor rodilla derecha, sospecha menisco"}
+              placeholder="Pega o escribe la valoración médica..."
               style={{ flex: 1, width: "100%", minHeight: 220, background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: "var(--radius)", color: "var(--text)", fontFamily: "'Inter', sans-serif", fontSize: 13, lineHeight: 1.7, padding: "14px 16px", resize: "none", outline: "none", transition: "border-color 0.15s" }}
               onFocus={(e) => { e.target.style.borderColor = "var(--accent)"; }}
               onBlur={(e) => { e.target.style.borderColor = "var(--border)"; }}
@@ -235,7 +231,7 @@ export function RMScheduler() {
                 type="text"
                 value={anestInput}
                 onChange={(e) => setAnestInput(e.target.value)}
-                placeholder="p.ej: anest 2, anestesia 3+, anest 5a"
+                placeholder="Edad del paciente para anestesia (opcional)"
                 title="Indica la edad del paciente si necesita anestesia"
                 style={{ width: "100%", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", color: "var(--text)", fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "9px 12px", outline: "none", transition: "border-color 0.15s" }}
                 onFocus={(e) => { e.target.style.borderColor = "var(--accent)"; }}
@@ -262,7 +258,7 @@ export function RMScheduler() {
             </button>
 
             <p style={{ fontSize: 10, color: "var(--text3)", textAlign: "center" }}>
-              Enter para analizar · Shift+Enter para nueva línea
+                            Enter para analizar
             </p>
           </div>
 
@@ -477,3 +473,4 @@ export function RMScheduler() {
     </div>
   );
 }
+

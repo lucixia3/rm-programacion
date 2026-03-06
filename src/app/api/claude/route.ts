@@ -13,6 +13,11 @@ import { EXCEL, buildPromptTable } from "@/data/excel";
 
 const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 
+function isCartCase(text: string): boolean {
+  const normalized = text.toLowerCase();
+  return /\bcar(?:[\s\-\/]*t)\b/.test(normalized) || normalized.includes("cart");
+}
+
 function buildPrompt(text: string): string {
   return `Ets un assistent de programació de RM en un hospital espanyol. Entens abreviatures mèdiques en castellà i català.
 
@@ -66,7 +71,7 @@ ${buildPromptTable()}
 PRIMER DE TOT: comprova si és un protocol especial:
 - Si conté HIFU → equip = RM3, maquina_nota = "HIFU → RM3 obligatori"
 - Si conté MENIÈRE → equip = RM3, torn = MATI, maquina_nota = "Menière → RM3, 2 huecos, MATÍ obligatori"
-- Si conté CAR-T → equip = RM3, maquina_nota = "CAR-T → RM3"
+- Si conté CAR-T / CART / CAR T → equip = RM3, maquina_nota = "CAR-T → RM3"
 
 Si NO és protocol especial:
 1. Descodifica abreviatures
@@ -92,7 +97,7 @@ function resolveEquip(text: string, nomProtocol: string, defaultEquip: string): 
 
   if (t.includes("hifu")) return { equip1: "RM3", equips: "RM3" };
   if (t.includes("meniere") || t.includes("menière")) return { equip1: "RM3", equips: "RM3" };
-  if (t.includes("car-t") || t.includes("cart")) return { equip1: "RM3", equips: "RM3" };
+  if (isCartCase(t)) return { equip1: "RM3", equips: "RM3" };
   if (t.includes("parkinson") && (t.includes("ecp") || t.includes("dbs"))) return { equip1: "RM3", equips: "RM3" };
   if (t.includes("fetal") || t.includes("fetus")) return { equip1: "RM2", equips: "RM2" };
   if (t.includes("cais") || t.includes("penyal") || t.includes("peñascos")) return { equip1: "RM2", equips: "RM2/RM1/RM4/RM3" };
@@ -220,3 +225,4 @@ export async function POST(request: NextRequest) {
     raw: claudeRaw,
   });
 }
+
