@@ -8,7 +8,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { AnalyzeRequestSchema, ClaudeResultSchema } from "@/schemas/rm.schema";
 import { validateBody } from "@/lib/validate";
 import { checkRateLimit, getIdentifier } from "@/lib/rate-limit";
-import { serverEnv } from "@/lib/env";
+import { getServerEnv } from "@/lib/env";
 import { EXCEL, buildPromptTable } from "@/data/excel";
 
 const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
@@ -139,10 +139,11 @@ export async function POST(request: NextRequest) {
 
   let claudeRaw = "";
   try {
+    const { ANTHROPIC_API_KEY } = getServerEnv();
     let resp = await fetch(ANTHROPIC_API_URL, {
       method: "POST",
       headers: {
-        "x-api-key": serverEnv.ANTHROPIC_API_KEY,
+        "x-api-key": ANTHROPIC_API_KEY,
         "anthropic-version": "2023-06-01",
         "content-type": "application/json",
       },
@@ -157,7 +158,7 @@ export async function POST(request: NextRequest) {
       resp = await fetch(ANTHROPIC_API_URL, {
         method: "POST",
         headers: {
-          "x-api-key": serverEnv.ANTHROPIC_API_KEY,
+          "x-api-key": ANTHROPIC_API_KEY,
           "anthropic-version": "2023-06-01",
           "content-type": "application/json",
         },
