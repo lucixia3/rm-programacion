@@ -5,7 +5,6 @@ export const AnalyzeRequestSchema = z.object({
     .string()
     .trim()
     .min(2, "La valoracion debe tener al menos 2 caracteres")
-    .regex(/^\S+$/, "La valoracion debe ser una sola palabra sin espacios")
     .max(2000, "Maximo 2000 caracteres")
     .transform((val) => val.replace(/[<>"'`]/g, "")),
   anestesia: z
