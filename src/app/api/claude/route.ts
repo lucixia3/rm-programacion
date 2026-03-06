@@ -98,52 +98,12 @@ function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean 
   return msg;
 }
 
-// ── Resolució de equip (corregeix/confirma la màquina del protocol) ───────
+// ── Extreu equip1 i equips directament del protocol del Excel ────────────
+// L'ordre de prioritat ja és correcte al excel.ts — no cal sobreescriure'l.
 
-function resolveEquip(text: string, nomProtocol: string, defaultEquip: string): { equip1: string; equips: string } {
-  const t = text.toLowerCase();
-  const n = nomProtocol.toLowerCase();
-
-  if (t.includes("hifu"))                                                    return { equip1: "RM3", equips: "RM3" };
-  if (t.includes("meniere") || t.includes("menière"))                        return { equip1: "RM3", equips: "RM3" };
-  if (/\bcar[\s\-\/]*t\b/.test(t) || t.includes("cart"))                    return { equip1: "RM3", equips: "RM3" };
-  if (t.includes("spectro") || t.includes("espectro"))                       return { equip1: "RM3", equips: "RM3" };
-  if ((t.includes("perfu") || t.includes("difu")) && !t.includes("lumbar")) return { equip1: "RM3", equips: "RM3/RM2/RM1" };
-  if (t.includes("parkinson") && (t.includes("ecp") || t.includes("dbs")))  return { equip1: "RM3", equips: "RM3" };
-  if (t.includes("dbs 3t") || t.includes("dbs3t"))                          return { equip1: "RM3", equips: "RM3" };
-  if (t.includes("dbs 1.5") || t.includes("dbs1.5"))                        return { equip1: "RM5", equips: "RM5" };
-  if (t.includes("fetal") || t.includes("fetus"))                           return { equip1: "RM2", equips: "RM2" };
-  if (t.includes("cais") || t.includes("penyal") || t.includes("peñascos")) return { equip1: "RM2", equips: "RM2/RM1/RM4/RM3" };
-  if (t.includes("hipofis") || t.includes("hipòfis") || t.includes("adenoma hipofis") || t.includes("macroadenoma")) return { equip1: "RM3", equips: "RM3/RM2" };
-  if (n.includes("medul") || n.includes("columna completa"))                 return { equip1: "RM3", equips: "RM3/RM2/RM5/RM4/RM1" };
-  if (t.includes("epilepsi") || t.includes("esclerosi mult") || t.includes("esclerosis mult")) return { equip1: "RM3", equips: "RM3/RM2/RM1" };
-  if (n.includes("canell") || n.includes("mà") || t.includes("muñeca") || t.includes("canell")) return { equip1: "RM3", equips: "RM3/RM2" };
-  if (n.includes("cardio") || t.includes("cardiopatia"))                     return { equip1: "RM2", equips: "RM2/RM5" };
-  if (n.includes("entero") || t.includes("entero") || t.includes("crohn"))  return { equip1: "RM2", equips: "RM2/RM1/RM3" };
-  if (n.includes("renal") || t.includes("renal"))                           return { equip1: "RM2", equips: "RM2/RM3" };
-  if (n.includes("colangio") && (t.includes("fetge") || t.includes("higado") || t.includes("contrast"))) return { equip1: "RM1", equips: "RM1/RM5/RM2/RM3" };
-  if (n.includes("colangio"))                                                return { equip1: "RM5", equips: "RM5/RM4/RM1/RM2" };
-  if (n.includes("pancrees") || t.includes("pancreas"))                     return { equip1: "RM5", equips: "RM5/RM3/RM2" };
-  if (n.includes("artro") || t.includes("artro") || t.includes("artrografia")) return { equip1: "RM1", equips: "RM1" };
-  if (n.includes("genoll") || t.includes("rodilla"))                        return { equip1: "RM4", equips: "RM4/RM5/RM1" };
-  if (n.includes("espatlla") || t.includes("hombro"))                       return { equip1: "RM4", equips: "RM4/RM1/RM5" };
-  if (n.includes("turmell") || n.includes("peu") || t.includes("tobillo"))  return { equip1: "RM4", equips: "RM4/RM5/RM1" };
-  if (n.includes("maluc") || t.includes("cadera"))                          return { equip1: "RM4", equips: "RM4/RM1/RM5" };
-  if (n.includes("colze") || t.includes("codo") || t.includes("epicondil")) return { equip1: "RM5", equips: "RM5/RM4/RM1" };
-  if (n.includes("sacroil") || t.includes("sacroil"))                       return { equip1: "RM5", equips: "RM5/RM4/RM1" };
-  if (n.includes("lumbar"))                                                  return { equip1: "RM5", equips: "RM5/RM4/RM1/RM2/RM3" };
-  if (n.includes("cervical"))                                                return { equip1: "RM5", equips: "RM5/RM1/RM4/RM2/RM3" };
-  if (n.includes("dorsal"))                                                  return { equip1: "RM1", equips: "RM1/RM5/RM2/RM3/RM4" };
-  if (t.includes("endometriosi") || t.includes("mioma") || t.includes("pelvis femenina")) return { equip1: "RM5", equips: "RM5/RM2/RM3/RM1" };
-  if (t.includes("cervix") || t.includes("neo cervix"))                     return { equip1: "RM2", equips: "RM2/RM3/RM5" };
-  if (n.includes("recte") || n.includes("pròstata") || n.includes("prostata") || t.includes("prostata") || t.includes("fistula")) return { equip1: "RM3", equips: "RM3/RM2/RM4" };
-  if (n.includes("fetge") || n.includes("abdomen") || t.includes("higado")) return { equip1: "RM3", equips: "RM3/RM2/RM1/RM4" };
-  if (n.includes("mama"))                                                    return { equip1: "RM3", equips: "RM3/RM4/RM2/RM1" };
-  if (n.includes("tòrax") || n.includes("torax"))                           return { equip1: "RM4", equips: "RM4/RM1/RM3" };
-  if (n.includes("cos sencer") || t.includes("total body"))                 return { equip1: "RM1", equips: "RM1/RM5" };
-
-  const first = defaultEquip.split("/")[0] ?? defaultEquip;
-  return { equip1: first, equips: defaultEquip };
+function resolveEquip(defaultEquip: string): { equip1: string; equips: string } {
+  const equip1 = defaultEquip.split("/")[0]?.trim() ?? defaultEquip;
+  return { equip1, equips: defaultEquip };
 }
 
 // ── Handler principal ─────────────────────────────────────────────────────
@@ -244,7 +204,7 @@ export async function POST(request: NextRequest) {
 
   // torn con anestesia viene ya indicado en el user message; Claude lo aplica
   const protocol = EXCEL[Math.max(0, parsed.n - 1)] ?? EXCEL[0];
-  const { equip1, equips } = resolveEquip(text, protocol.nom, protocol.equip);
+  const { equip1, equips } = resolveEquip(protocol.equip);
 
   return NextResponse.json({
     nom_protocol: protocol.nom,
