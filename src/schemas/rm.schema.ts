@@ -19,7 +19,7 @@ export const AnalyzeRequestSchema = z.object({
 export type AnalyzeRequest = z.infer<typeof AnalyzeRequestSchema>;
 
 export const ClaudeResultSchema = z.object({
-  n: z.number().int().min(1).max(79),
+  n: z.number().int().min(1).max(80),
   torn: z.enum(["MATI", "TARDA", "FLEXIBLE", "DIMARTS_TARDA", "DIVENDRES_MATI", "ANESTESIA"]),
   maquina_nota: z.string().optional().default(""),
   conf: z.enum(["ALTA", "MITJA", "BAIXA"]),

@@ -94,6 +94,7 @@ export const EXCEL: Protocol[] = [
   {n:77,nom:"RM COS SENSER",ori:"RM cos senser",zona:"cuerpo entero whole body linfoma",contrast:"NO",bomba:"NO",equip:"RM5/RM1/RM3",huecos:"1",nota:null},
   {n:78,nom:"RM COS SENSER",ori:"RM mama amb contrast",zona:"mama cancer",contrast:"SI",bomba:"SI",equip:"RM3/RM4/RM2/RM1",huecos:"1",nota:"NO programar RM2 i RM3 alhora. Solo disponemos de UNA antena de mama."},
   {n:79,nom:"RM COS SENSER",ori:"RM pròtesi",zona:"mama protesis implante",contrast:"NO",bomba:"NO",equip:"RM3/RM4/RM2",huecos:"1",nota:"NO programar RM2 i RM3 alhora. Solo disponemos de UNA antena de mama."},
+  {n:80,nom:"RM HIFU",ori:"Tractament HIFU (High Intensity Focused Ultrasound)",zona:"intervencionisme HIFU",contrast:"NO",bomba:"NO",equip:"RM3",huecos:"MATI",nota:"RM3 EXCLUSIU. SEMPRE MATI. Ocupa tota la sessió de matí."},
 ];
 
 export function buildPromptTable(): string {

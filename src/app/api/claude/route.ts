@@ -18,6 +18,10 @@ function isCartCase(text: string): boolean {
   return /\bcar(?:[\s\-\/]*t)\b/.test(normalized) || normalized.includes("cart");
 }
 
+function isHifuCase(text: string): boolean {
+  return text.toLowerCase().includes("hifu");
+}
+
 function buildPrompt(text: string): string {
   return `Ets un assistent de programació de RM en un hospital espanyol. Entens abreviatures mèdiques en castellà i català.
 
@@ -78,7 +82,7 @@ PRIMER DE TOT: comprova si és un protocol especial:
 Si NO és protocol especial:
 1. Descodifica abreviatures
 2. Identifica zona corporal (columna/neuro/abdomen/msk)
-3. Cerca el protocol correcte de la llista 1-79
+3. Cerca el protocol correcte de la llista 1-80
 4. Determina contrast i bomba
 5. Torn: FLEXIBLE per defecte; MATI si obs conté VER/AVISAR/MIRAR
 6. Indica maquina_nota si hi ha restriccions
@@ -134,6 +138,7 @@ export async function POST(request: NextRequest) {
 
   const { text, anestesia: anestRaw } = validation.data;
   const cartCase = isCartCase(text);
+  const hifuCase = isHifuCase(text);
 
   let anestesia = false;
   let anestMajor: boolean | null = null;
@@ -144,6 +149,26 @@ export async function POST(request: NextRequest) {
       const edad = parseInt(mEdad[1]);
       anestMajor = edad >= 3;
     }
+  }
+
+  if (hifuCase) {
+    const hifuProtocol = EXCEL[79]; // n:80
+    return NextResponse.json({
+      nom_protocol: "RM HIFU",
+      orientacio: "Tractament HIFU (High Intensity Focused Ultrasound)",
+      zona: "intervencionisme HIFU",
+      contrast: "NO",
+      bomba: "NO",
+      equip1: "RM3",
+      equips: "RM3",
+      huecos: hifuProtocol?.huecos ?? "MATI",
+      nota: hifuProtocol?.nota ?? "RM3 EXCLUSIU. SEMPRE MATI.",
+      torn: "MATI",
+      maquina_nota: "HIFU → RM3 EXCLUSIU. SEMPRE MATI.",
+      conf: "ALTA",
+      why: "HIFU detectado: RM3 exclusivo, turno de mañana obligatorio.",
+      raw: "Resolución local por patrón HIFU.",
+    });
   }
 
   if (cartCase) {
