@@ -130,6 +130,7 @@ export async function POST(request: NextRequest) {
   if (!validation.success) return validation.response;
 
   const { text, anestesia: anestRaw } = validation.data;
+  const cartCase = isCartCase(text);
 
   let anestesia = false;
   let anestMajor: boolean | null = null;
@@ -140,6 +141,34 @@ export async function POST(request: NextRequest) {
       const edad = parseInt(mEdad[1]);
       anestMajor = edad >= 3;
     }
+  }
+
+  if (cartCase) {
+    const fallbackProtocol = EXCEL[5];
+    const torn = anestesia
+      ? anestMajor === false
+        ? "DIVENDRES_MATI"
+        : anestMajor === true
+        ? "DIMARTS_TARDA"
+        : "ANESTESIA"
+      : "FLEXIBLE";
+
+    return NextResponse.json({
+      nom_protocol: "RM DE CERVELL SENSE/AMB CONTRAST",
+      orientacio: "Caso especial CAR-T / CART",
+      zona: "neuro",
+      contrast: "NO",
+      bomba: "NO",
+      equip1: "RM3",
+      equips: "RM3",
+      huecos: fallbackProtocol?.huecos ?? "1",
+      nota: "Se recomienda revisar el protocolo clinico completo antes de validar.",
+      torn,
+      maquina_nota: "CAR-T / CART -> RM3",
+      conf: "MITJA",
+      why: "Solicitud de CAR-T / CART sin contexto suficiente: se aplica regla interna de prioridad RM3.",
+      raw: "Resolución local por patrón CAR-T / CART.",
+    });
   }
 
   let claudeRaw = "";
@@ -195,6 +224,31 @@ export async function POST(request: NextRequest) {
     parsed = ClaudeResultSchema.parse(JSON.parse(match[0]));
   } catch {
     console.error("Respuesta no válida de Claude:", claudeRaw);
+    if (cartCase) {
+      const fallbackProtocol = EXCEL[5];
+      const torn = anestesia
+        ? anestMajor === false ? "DIVENDRES_MATI"
+          : anestMajor === true ? "DIMARTS_TARDA"
+          : "ANESTESIA"
+        : "FLEXIBLE";
+
+      return NextResponse.json({
+        nom_protocol: "RM DE CERVELL SENSE/AMB CONTRAST",
+        orientacio: "Caso especial CAR-T / CART",
+        zona: "neuro",
+        contrast: "NO",
+        bomba: "NO",
+        equip1: "RM3",
+        equips: "RM3",
+        huecos: fallbackProtocol?.huecos ?? "1",
+        nota: "Se recomienda revisar el protocolo clinico completo antes de validar.",
+        torn,
+        maquina_nota: "CAR-T / CART -> RM3",
+        conf: "MITJA",
+        why: "Solicitud de CAR-T / CART sin contexto suficiente: se aplica regla interna de prioridad RM3.",
+        raw: claudeRaw,
+      });
+    }
     return NextResponse.json({ error: "El modelo no devolvió una respuesta válida.", raw: claudeRaw }, { status: 502 });
   }
 
