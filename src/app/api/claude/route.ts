@@ -224,32 +224,35 @@ export async function POST(request: NextRequest) {
     parsed = ClaudeResultSchema.parse(JSON.parse(match[0]));
   } catch {
     console.error("Respuesta no válida de Claude:", claudeRaw);
-    if (cartCase) {
-      const fallbackProtocol = EXCEL[5];
-      const torn = anestesia
-        ? anestMajor === false ? "DIVENDRES_MATI"
-          : anestMajor === true ? "DIMARTS_TARDA"
-          : "ANESTESIA"
-        : "FLEXIBLE";
+    const fallbackProtocol = EXCEL[0];
+    const fallbackTorn = anestesia
+      ? anestMajor === false
+        ? "DIVENDRES_MATI"
+        : anestMajor === true
+        ? "DIMARTS_TARDA"
+        : "ANESTESIA"
+      : "FLEXIBLE";
 
-      return NextResponse.json({
-        nom_protocol: "RM DE CERVELL SENSE/AMB CONTRAST",
-        orientacio: "Caso especial CAR-T / CART",
-        zona: "neuro",
-        contrast: "NO",
-        bomba: "NO",
-        equip1: "RM3",
-        equips: "RM3",
-        huecos: fallbackProtocol?.huecos ?? "1",
-        nota: "Se recomienda revisar el protocolo clinico completo antes de validar.",
-        torn,
-        maquina_nota: "CAR-T / CART -> RM3",
-        conf: "MITJA",
-        why: "Solicitud de CAR-T / CART sin contexto suficiente: se aplica regla interna de prioridad RM3.",
-        raw: claudeRaw,
-      });
-    }
-    return NextResponse.json({ error: "El modelo no devolvió una respuesta válida.", raw: claudeRaw }, { status: 502 });
+    return NextResponse.json({
+      nom_protocol: "No clasificado",
+      orientacio: cartCase ? "Caso especial CAR-T / CART" : "La nota no se pudo interpretar de forma fiable",
+      zona: "indeterminada",
+      contrast: "DEPENDE",
+      bomba: "DEPENDE",
+      equip1: "RM3",
+      equips: "RM3",
+      huecos: fallbackProtocol?.huecos ?? "1",
+      nota: cartCase
+        ? "CAR-T / CART -> RM3"
+        : "Requiere revisión manual: la IA devolvió una respuesta no estructurada.",
+      torn: fallbackTorn,
+      maquina_nota: cartCase ? "CAR-T / CART -> RM3" : "",
+      conf: "BAIXA",
+      why: cartCase
+        ? "Solicitud de CAR-T / CART sin contexto suficiente: se aplica regla interna de prioridad RM3."
+        : "La entrada no encaja bien con una nota clínica tipica de RM o la respuesta del modelo no fue parseable.",
+      raw: claudeRaw,
+    });
   }
 
   const protocol = EXCEL[Math.max(0, parsed.n - 1)] ?? EXCEL[0];
