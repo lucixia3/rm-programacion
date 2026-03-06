@@ -4,12 +4,14 @@ export const AnalyzeRequestSchema = z.object({
   text: z
     .string()
     .trim()
-    .min(3, "El texto es demasiado corto")
-    .max(2000, "Máximo 2000 caracteres")
+    .min(2, "La valoracion debe tener al menos 2 caracteres")
+    .regex(/^\S+$/, "La valoracion debe ser una sola palabra sin espacios")
+    .max(2000, "Maximo 2000 caracteres")
     .transform((val) => val.replace(/[<>"'`]/g, "")),
   anestesia: z
     .string()
     .trim()
+    .regex(/^\d{1,3}\+?$/, "La edad de anestesia debe ser un numero (ej. 6, 12 o 12+)")
     .max(50)
     .optional()
     .transform((val) => val?.replace(/[<>"'`]/g, "")),
