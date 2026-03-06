@@ -52,10 +52,12 @@ function buildPrompt(text: string): string {
 5. HIFU → sempre RM3
 6. Menière → RM3, 2 huecos, MATÍ (8:00-13:00h) obligatori
 7. ST simple (cranial) → preferentment RM4 o RM5, deixar RM2/RM3 per casos complexos
-8. Mama → NO programar RM1 i RM2 a la vegada (una sola antena de mama)
+8. Mama → NO programar RM2 i RM3 a la vegada (una sola antena de mama)
 
 === REGLES DE TORN (MATÍ/TARDA) ===
 - Per defecte → FLEXIBLE (pot ser matí o tarda)
+- SEMPRE MATI (sense excepcions): ENTERO-RM, DEFECOGRAFIA, RM RENAL, Quantificació Ferro hígado, HIFU, ESPECTROSCOPIA
+- DIMARTS TARDA exclusiu: RM FETAL CRANI (RM2 exclusiu)
 - Si la nota/observació conté: +ver, ver, avisar, mirar, y ver, y mirar, y avisar:
   → Si és protocol NO NEURO → MATI obligatori
   → Si és protocol NEURO → FLEXIBLE
@@ -110,9 +112,10 @@ function resolveEquip(text: string, nomProtocol: string, defaultEquip: string): 
   if (n.includes("genoll") || t.includes("rodilla")) return { equip1: "RM4", equips: "RM4/RM5/RM1/RM3/RM2" };
   if (n.includes("espatlla") || t.includes("hombro")) return { equip1: "RM4", equips: "RM4/RM1/RM5/RM2/RM3" };
   if (n.includes("turmell") || n.includes("peu") || t.includes("tobillo") || t.includes("pie")) return { equip1: "RM4", equips: "RM4/RM5/RM1/RM3/RM2" };
-  if (n.includes("lumbar") || n.includes("cervical")) return { equip1: "RM5", equips: "RM5/RM1/RM4/RM2/RM3" };
+  if (n.includes("lumbar")) return { equip1: "RM5", equips: "RM5/RM4/RM1/RM2/RM3" };
+  if (n.includes("cervical")) return { equip1: "RM5", equips: "RM5/RM1/RM4/RM2/RM3" };
   if (n.includes("dorsal")) return { equip1: "RM1", equips: "RM1/RM5/RM3/RM2/RM4" };
-  if (t.includes("endometriosi") || t.includes("endometriosis")) return { equip1: "RM5", equips: "RM5/RM2/RM3/RM1" };
+  if (t.includes("endometriosi") || t.includes("endometriosis") || t.includes("mioma") || t.includes("pelvis femenina") || t.includes("endometri")) return { equip1: "RM5", equips: "RM5/RM2/RM3/RM1" };
   if (n.includes("recte") || n.includes("pròstata") || n.includes("prostata") || t.includes("prostata")) return { equip1: "RM2", equips: "RM2/RM3/RM1/RM4" };
   if (n.includes("fetge") || n.includes("abdomen") || t.includes("higado")) return { equip1: "RM3", equips: "RM3/RM2/RM1/RM4" };
   if (n.includes("mama")) return { equip1: "RM3", equips: "RM3/RM4/RM2/RM1" };
@@ -130,6 +133,7 @@ export async function POST(request: NextRequest) {
   if (!validation.success) return validation.response;
 
   const { text, anestesia: anestRaw } = validation.data;
+  const cartCase = isCartCase(text);
 
   let anestesia = false;
   let anestMajor: boolean | null = null;
@@ -140,6 +144,34 @@ export async function POST(request: NextRequest) {
       const edad = parseInt(mEdad[1]);
       anestMajor = edad >= 3;
     }
+  }
+
+  if (cartCase) {
+    const fallbackProtocol = EXCEL[5];
+    const torn = anestesia
+      ? anestMajor === false
+        ? "DIVENDRES_MATI"
+        : anestMajor === true
+        ? "DIMARTS_TARDA"
+        : "ANESTESIA"
+      : "FLEXIBLE";
+
+    return NextResponse.json({
+      nom_protocol: "RM DE CERVELL SENSE/AMB CONTRAST",
+      orientacio: "Caso especial CAR-T / CART",
+      zona: "neuro",
+      contrast: "NO",
+      bomba: "NO",
+      equip1: "RM3",
+      equips: "RM3",
+      huecos: fallbackProtocol?.huecos ?? "1",
+      nota: "Se recomienda revisar el protocolo clinico completo antes de validar.",
+      torn,
+      maquina_nota: "CAR-T / CART -> RM3",
+      conf: "MITJA",
+      why: "Solicitud de CAR-T / CART sin contexto suficiente: se aplica regla interna de prioridad RM3.",
+      raw: "Resolución local por patrón CAR-T / CART.",
+    });
   }
 
   let claudeRaw = "";
@@ -195,7 +227,35 @@ export async function POST(request: NextRequest) {
     parsed = ClaudeResultSchema.parse(JSON.parse(match[0]));
   } catch {
     console.error("Respuesta no válida de Claude:", claudeRaw);
-    return NextResponse.json({ error: "El modelo no devolvió una respuesta válida.", raw: claudeRaw }, { status: 502 });
+    const fallbackProtocol = EXCEL[0];
+    const fallbackTorn = anestesia
+      ? anestMajor === false
+        ? "DIVENDRES_MATI"
+        : anestMajor === true
+        ? "DIMARTS_TARDA"
+        : "ANESTESIA"
+      : "FLEXIBLE";
+
+    return NextResponse.json({
+      nom_protocol: "No clasificado",
+      orientacio: cartCase ? "Caso especial CAR-T / CART" : "La nota no se pudo interpretar de forma fiable",
+      zona: "indeterminada",
+      contrast: "DEPENDE",
+      bomba: "DEPENDE",
+      equip1: "RM3",
+      equips: "RM3",
+      huecos: fallbackProtocol?.huecos ?? "1",
+      nota: cartCase
+        ? "CAR-T / CART -> RM3"
+        : "Requiere revisión manual: la IA devolvió una respuesta no estructurada.",
+      torn: fallbackTorn,
+      maquina_nota: cartCase ? "CAR-T / CART -> RM3" : "",
+      conf: "BAIXA",
+      why: cartCase
+        ? "Solicitud de CAR-T / CART sin contexto suficiente: se aplica regla interna de prioridad RM3."
+        : "La entrada no encaja bien con una nota clínica tipica de RM o la respuesta del modelo no fue parseable.",
+      raw: claudeRaw,
+    });
   }
 
   const protocol = EXCEL[Math.max(0, parsed.n - 1)] ?? EXCEL[0];
