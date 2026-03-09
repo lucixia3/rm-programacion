@@ -10,8 +10,11 @@ export const AnalyzeRequestSchema = z.object({
   anestesia: z
     .string()
     .trim()
-    .regex(/^\d{1,3}\+?$/, "La edad de anestesia debe ser un numero (ej. 6, 12 o 12+)")
-    .max(50)
+    .regex(
+      /^(\?|\d{1,3}(\s*(a(ños?|nys?|\.?)|anys?))?)$/i,
+      "Formato de edad no válido (ej. 2, 2a, 2 años, 2 anys)"
+    )
+    .max(20)
     .optional()
     .transform((val) => val?.replace(/[<>"'`]/g, "")),
 });

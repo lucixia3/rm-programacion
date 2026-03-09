@@ -27,26 +27,32 @@ function buildSystemPrompt(): string {
 
 === ABREVIATURES ===
 ST/ESTANDAR = estàndard sense contrast (llevat +C)
-+C/CTE/CONTRASTE/ELUCIREM = contrast IV
-TOF/ANGIO-RM/ARM = angio RM sense contrast, sense bomba
-PERFU/PERFUSION = perfusió cerebral, SEMPRE contrast+bomba, MAI RM5
-DIFU/DIFUSION/DWI = difusió, SEMPRE contrast+bomba, MAI RM5
-SPECTRO/ESPECTROSCOPIA = espectroscopia cerebral, RM3, SEMPRE MATÍ
-ARTRO/ARTROGRAFIA = artro-RM espatlla/maluc, RM1 EXCLUSIU
-mpMRI/MULTIPARAMETRICA = sempre contrast (pròstata, mama)
-CAIS/CAIs/PENYAL = base de crani / peñascos → MAI RM4 ni RM5
-TSA = troncos supraortics (angio cervical)
-DVP = derivació ventriculoperitoneal
-ATM = articulació temporomandibular
-EM/ESCLEROSI MULTIPLE = esclerosi múltiple → preferir RM2/RM3
-AVC/ICTUS/AIT/STROKE = ictus isquèmic
-EII/CROHN/ENTERO = Entero-RM → SEMPRE MATÍ
-VER/AVISAR/MIRAR = programar matí
-HIFU = ultrasons focalitzats → RM3 EXCLUSIU, SEMPRE MATÍ
-DBS/ECP = estimulació cerebral profunda
-CAR-T/CART = seguiment CAR-T → RM3 sempre
-FETAL = RM fetal cranial → RM2 EXCLUSIU, DIMARTS TARDA
-ANESTESIA/SEDACIO = pediatria → RM1 EXCLUSIU
++C/CTE/CONTRASTE/CON CONTRASTE/ELUCIREM/GADOLINI = contrast IV
+TOF/TOF3D/TOF 3D/TOF-3D/ANGIO-RM/ANGIO RM/ARM/ANGIO WILLIS/WILLIS = angio RM sense contrast, sense bomba
+PERFU/PERFUSION/PERFUSIÓ = perfusió cerebral, SEMPRE contrast+bomba, MAI RM5
+DIFU/DIFUSION/DIFUSIÓ/DWI = difusió cerebral, SEMPRE contrast+bomba, MAI RM5
+SPECTRO/ESPECTRO/ESPECTROSCOPIA = espectroscopia cerebral, RM3, SEMPRE MATÍ
+ARTRO/ARTROGRAFIA/ARTRO-RM = artro-RM espatlla/maluc, RM1 EXCLUSIU
+mpMRI/MULTIPARAMETRIC/MULTIPARAMETRICA/MULTIPARAMÈTRICA = sempre contrast (pròstata, mama)
+CAIS/CAIs/PENYAL/PEÑASCOS/OIDO INTERNO = base de crani / peñascos → MAI RM4 ni RM5
+TSA/TRONCOS SUPRAAOTICS/CAROTIDES = troncos supraortics (angio cervical)
+DVP/VP SHUNT/VENTRICULOPERITONEAL = derivació ventriculoperitoneal
+ATM/TEMPORO/TEMPOROMANDIBULAR = articulació temporomandibular
+EM/ESCLEROSI MULTIPLE/ESCLEROSIS MULTIPLE/DESMIELINITZANT = esclerosi múltiple → preferir RM2/RM3
+AVC/ICTUS/AIT/STROKE/ISQUÈMIC = ictus isquèmic
+EII/CROHN/ENTERO/ENTERO-RM = Entero-RM → SEMPRE MATÍ
+VER/AVISAR/MIRAR/URGENTE/URGENT = programar matí obligatori
+HIFU/ULTRASONS FOCALITZATS = ultrasons focalitzats → RM3 EXCLUSIU, SEMPRE MATÍ
+DBS/ECP/ESTIMULACIÓ CEREBRAL = estimulació cerebral profunda
+CAR-T/CART/CELLT = seguiment CAR-T → RM3 sempre
+FETAL/RM FETAL = RM fetal cranial → RM2 EXCLUSIU, DIMARTS TARDA
+ANESTESIA/SEDACIO/SEDACIÓN/PEDIATRIA = pediatria → RM1 EXCLUSIU
+COLANGIO/CPRM/COLANGIOPANCREA = colangiografia RM
+FERRO/HIERRO HEPATICO/QUANTIFICACIÓ FERRO = quantificació ferro fetge → SEMPRE MATÍ
+MAMA/BREAST = mama diagnòstica o protesi
+PROTESI/IMPLANT MAMARI = control protesi mamaria
+NEO/NEOPLASIA/TUMOR/CARCINOMA/CA = patologia neoplàstica → considerar contrast
+MENIÈRE/MENIERE = RM3 EXCLUSIU, 2 huecos, MATÍ 8-13h
 
 === RESTRICCIONS ABSOLUTES DE MÀQUINA ===
 1. RM5 NO TÉ BOMBA → excloure RM5 si bomba=SI
@@ -77,6 +83,33 @@ FLEXIBLE: tots els altres (llevat que la nota/observació contingui ver/avisar/m
 === LLISTA COMPLETA DE PROTOCOLS (1-66) ===
 ${buildPromptTable()}
 
+=== CASOS FREQÜENTS I AMBIGUS ===
+- "TOF" o "TOF 3D" sol → protocol 14 (Cervell + Angio Willis) si context ictus; sino protocol 15 (RM ICTUS)
+- "RM CERVELL + TOF/WILLIS" → protocol 14
+- "PERFU + DIFU" junts → protocol 66, contrast+bomba, MAI RM5
+- "SPECTRO" sense altra info → protocol 64, RM3, MATÍ, avisar radióleg
+- "mpMRI PRÒSTATA" → protocol 43
+- "mpMRI MAMA" → protocol 58
+- "ST simple cerebral" sense etiologia → protocol 6, preferir RM4/RM5
+- "EM debut" → protocol 4 (debut); "EM brot/brote" → protocol 5
+- "DBS 3T" → protocol 8; "DBS 1.5T" → protocol 9 (RM5 exclusiu)
+- "CARDIO / CARDIOPATIA" → protocol 62, RM2>RM5, MAI RM3/RM4
+- "CAR-T / CART" → protocol 65, RM3 sempre
+- "MENIÈRE" → protocol 18, RM3, 2 huecos, MATÍ 8-13h obligatori
+- "ENTERO / CROHN / EII" → protocol 37, SEMPRE MATÍ
+- "FERRO / HIERRO HEPÀTIC" → protocol 31, SEMPRE MATÍ
+- "COLANGIO + contrast" → protocol 34; "COLANGIO sense contrast" → protocol 35
+- "DEFECO / DEFECOGRAFIA" → protocol 45, MATÍ, MAI RM4
+- "FETAL CRANI" → protocol 46, RM2 EXCLUSIU, DIMARTS TARDA
+- "TOTAL BODY / COS SENCER / LIMFOMA" → protocol 60, RM1/RM5
+- "MÀ / CANELL" → protocol 53, 3T obligatori (RM3>RM2), MAI RM1/RM4/RM5
+- Si la nota conté "ver/avisar/mirar/urgente/urgent" → torn MATI obligatori
+
+=== GUIA DE CONFIANÇA ===
+ALTA: nota molt específica (diagnòstic clar, protocol inequívoc)
+MITJA: zona identificada però protocol o màquina amb dubte
+BAIXA: nota vaga, múltiples protocols possibles, o restriccions que no s'especifiquen
+
 === FORMAT DE RESPOSTA ===
 Retorna ÚNICAMENT aquest JSON, sense cap altre text ni markdown:
 {
@@ -89,7 +122,7 @@ Retorna ÚNICAMENT aquest JSON, sense cap altre text ni markdown:
 }
 
 function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean | null): string {
-  let msg = `Nota clínica: "${text}"`;
+  let msg = `Nota clínica: "${normalizeInput(text)}"`;
   if (anestesia) {
     if (anestMajor === false) msg += "\n[ANESTESIA PEDIÀTRICA: menor de 3 anys → RM1, DIVENDRES MATÍ]";
     else if (anestMajor === true) msg += "\n[ANESTESIA PEDIÀTRICA: 3 anys o més → RM1, DIMARTS TARDA]";
@@ -104,6 +137,64 @@ function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean 
 function resolveEquip(defaultEquip: string): { equip1: string; equips: string } {
   const equip1 = defaultEquip.split("/")[0]?.trim() ?? defaultEquip;
   return { equip1, equips: defaultEquip };
+}
+
+// ── Normalització del vocabulari clínic ──────────────────────────────────
+// Homogeneïtza abreviatures i variants tipogràfiques ABANS d'enviar a Claude.
+
+const CLINICAL_ALIASES: [RegExp, string][] = [
+  // TOF / Angio RM
+  [/\btof[\s_-]?3d\b/gi,                    "TOF 3D"],
+  [/\btof[\s_-]?2d\b/gi,                    "TOF"],
+  [/\bangio[\s_-]?rm\b/gi,                  "TOF"],
+  [/\b(arm|angiorm)\b/gi,                   "TOF"],
+  // Perfusió
+  [/\bperfusi[oó]n?\b/gi,                   "PERFUSION"],
+  [/\bperfu\b/gi,                           "PERFUSION"],
+  // Difusió
+  [/\bdifusi[oó]n?\b/gi,                    "DIFUSION"],
+  [/\bdifu\b/gi,                            "DIFUSION"],
+  [/\bdwi\b/gi,                             "DIFUSION"],
+  // Espectroscòpia
+  [/\bespectroscop[íi]a\b/gi,               "ESPECTROSCOPIA"],
+  [/\bspectro\b/gi,                         "ESPECTROSCOPIA"],
+  // EM / Esclerosi múltiple
+  [/\besclerosi[\s_-]?m[uú]ltiple\b/gi,     "EM"],
+  // Ictus
+  [/\bictus\b/gi,                           "AVC"],
+  [/\bstroke\b/gi,                          "AVC"],
+  [/\bait\b/gi,                             "AVC"],
+  // Entero / Crohn
+  [/\bentero[\s_-]?rm\b/gi,                 "ENTERO"],
+  [/\beii\b/gi,                             "ENTERO"],
+  [/\bcrohn\b/gi,                           "ENTERO"],
+  // Artrografia
+  [/\bartro[\s_-]?rm\b/gi,                  "ARTRO"],
+  [/\bartrografi[ae]\b/gi,                  "ARTRO"],
+  // CAR-T
+  [/\bcart\b/gi,                            "CAR-T"],
+  [/\bcar[\s_-]t\b/gi,                      "CAR-T"],
+  // DVP
+  [/\bv[\s_-]?p[\s_-]?shunt\b/gi,          "DVP"],
+  // DBS / ECP
+  [/\becp\b/gi,                             "DBS"],
+  // TSA
+  [/\btroncos[\s_-]?supraao[rò]tics\b/gi,  "TSA"],
+  // HIFU
+  [/\bultrasons[\s_-]?focalitzats\b/gi,     "HIFU"],
+  // Defecografia
+  [/\bdefeco\b/gi,                          "DEFECOGRAFIA"],
+  // mpMRI / multiparamètrica
+  [/\bmpmri\b/gi,                           "mpMRI"],
+  [/\bmultiparamet[rè]ic[ae]?\b/gi,         "mpMRI"],
+];
+
+function normalizeInput(text: string): string {
+  let out = text;
+  for (const [re, canonical] of CLINICAL_ALIASES) {
+    out = out.replace(re, canonical);
+  }
+  return out;
 }
 
 // ── Handler principal ─────────────────────────────────────────────────────

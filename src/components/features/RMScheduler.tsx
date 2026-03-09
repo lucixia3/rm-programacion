@@ -77,7 +77,8 @@ function DetailRow({ label, children, last }: { label: string; children: React.R
 
 export function RMScheduler() {
   const [medInput, setMedInput] = useState("");
-  const [anestInput, setAnestInput] = useState("");
+  const [anestSi, setAnestSi] = useState(false);
+  const [anestEdad, setAnestEdad] = useState("");
   const [result, setResult] = useState<RMResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -115,7 +116,7 @@ export function RMScheduler() {
       const res = await fetch("/api/claude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, anestesia: anestInput.trim() || undefined }),
+        body: JSON.stringify({ text, anestesia: anestSi ? (anestEdad.trim() || "?") : undefined }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "Error en la solicitud");
@@ -156,7 +157,8 @@ export function RMScheduler() {
 
   function clearInput() {
     setMedInput("");
-    setAnestInput("");
+    setAnestSi(false);
+    setAnestEdad("");
     setResult(null);
     setError(null);
   }
@@ -223,20 +225,40 @@ export function RMScheduler() {
             />
 
             <div>
-              <Label style={{ marginBottom: 6 }}>
-                Anestesia{" "}
-                <span style={{ fontWeight: 400, textTransform: "none", fontSize: 10, color: "var(--text3)", letterSpacing: 0 }}>(opcional)</span>
-              </Label>
-              <input
-                type="text"
-                value={anestInput}
-                onChange={(e) => setAnestInput(e.target.value)}
-                placeholder="Edad del paciente para anestesia (opcional)"
-                title="Indica la edad del paciente si necesita anestesia"
-                style={{ width: "100%", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", color: "var(--text)", fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "9px 12px", outline: "none", transition: "border-color 0.15s" }}
-                onFocus={(e) => { e.target.style.borderColor = "var(--accent)"; }}
-                onBlur={(e) => { e.target.style.borderColor = "var(--border)"; }}
-              />
+              <Label style={{ marginBottom: 8 }}>Anestesia pediàtrica</Label>
+              <div style={{ display: "flex", gap: 8, marginBottom: anestSi ? 10 : 0 }}>
+                {(["No", "Sí"] as const).map((opt) => {
+                  const active = opt === "Sí" ? anestSi : !anestSi;
+                  return (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => { setAnestSi(opt === "Sí"); if (opt === "No") setAnestEdad(""); }}
+                      style={{
+                        flex: 1, padding: "8px 0", borderRadius: "var(--radius-sm)", fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all 0.15s",
+                        background: active ? (opt === "Sí" ? "rgba(167,139,250,.18)" : "var(--surface2)") : "var(--surface2)",
+                        border: active ? `1px solid ${opt === "Sí" ? "rgba(167,139,250,.5)" : "var(--border2)"}` : "1px solid var(--border)",
+                        color: active ? (opt === "Sí" ? "#a78bfa" : "var(--text)") : "var(--text3)",
+                      }}
+                    >
+                      {opt === "Sí" ? "💉 Sí" : "No"}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {anestSi && (
+                <input
+                  type="text"
+                  value={anestEdad}
+                  onChange={(e) => setAnestEdad(e.target.value)}
+                  placeholder="Edad: 2, 2a, 2 años, 2 anys…"
+                  autoFocus
+                  style={{ width: "100%", background: "var(--surface2)", border: "1px solid rgba(167,139,250,.4)", borderRadius: "var(--radius-sm)", color: "var(--text)", fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "9px 12px", outline: "none", transition: "border-color 0.15s", boxSizing: "border-box" }}
+                  onFocus={(e) => { e.target.style.borderColor = "#a78bfa"; }}
+                  onBlur={(e) => { e.target.style.borderColor = "rgba(167,139,250,.4)"; }}
+                />
+              )}
             </div>
 
             <button
