@@ -51,6 +51,15 @@ export default function AdminPage() {
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // Reset modal state
+  const [showReset, setShowReset] = useState(false);
+  const [resetPwd, setResetPwd] = useState("");
+  const [resetError, setResetError] = useState("");
+  const [resetLoading, setResetLoading] = useState(false);
+
+  // Delete single row
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+
   const fetchFeedbacks = useCallback(async (pwd: string) => {
     setLoading(true);
     setFetchError("");
@@ -98,6 +107,33 @@ export default function AdminPage() {
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     fetchFeedbacks(password);
+  }
+
+  async function deleteRow(id: string) {
+    setDeletingId(id);
+    await fetch("/api/admin/feedback", {
+      method: "DELETE",
+      headers: { "x-admin-password": password, "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    setRows((prev) => prev.filter((r) => r.id !== id));
+    setDeletingId(null);
+  }
+
+  async function handleReset(e: React.FormEvent) {
+    e.preventDefault();
+    setResetError("");
+    setResetLoading(true);
+    const res = await fetch("/api/admin/feedback", {
+      method: "DELETE",
+      headers: { "x-admin-password": resetPwd },
+    });
+    setResetLoading(false);
+    if (res.status === 401) { setResetError("Contrasenya incorrecta"); return; }
+    if (!res.ok) { setResetError("Error en el reset"); return; }
+    setRows([]);
+    setShowReset(false);
+    setResetPwd("");
   }
 
   const total = rows.length;
@@ -252,6 +288,18 @@ export default function AdminPage() {
           {loading ? "Carregant..." : "Actualitzar"}
         </button>
         <button
+          onClick={() => { setShowReset(true); setResetPwd(""); setResetError(""); }}
+          style={{
+            padding: "6px 14px", borderRadius: 20,
+            border: "1px solid rgba(247,111,111,.3)",
+            background: "rgba(247,111,111,.07)",
+            cursor: "pointer",
+            fontSize: 12, color: "#f76f6f",
+          }}
+        >
+          Reset historial
+        </button>
+        <button
           onClick={() => { setAuthed(false); setRows([]); setPassword(""); }}
           style={{
             padding: "6px 14px", borderRadius: 20,
@@ -376,7 +424,7 @@ export default function AdminPage() {
               }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid var(--border)" }}>
-                    {["Data", "Nota radiòleg", "Protocol IA", "Torn IA", "Equip IA", "Decisió", "Correcció"].map((h) => (
+                    {["Data", "Nota radiòleg", "Protocol IA", "Torn IA", "Equip IA", "Decisió", "Correcció", ""].map((h) => (
                       <th key={h} style={{
                         padding: "10px 16px",
                         textAlign: "left",
@@ -460,6 +508,25 @@ export default function AdminPage() {
                           <span style={{ color: "var(--text3)" }}>—</span>
                         )}
                       </td>
+                      <td style={{ padding: "6px 12px" }}>
+                        <button
+                          onClick={() => deleteRow(row.id)}
+                          disabled={deletingId === row.id}
+                          title="Eliminar fila"
+                          style={{
+                            padding: "3px 8px", borderRadius: 6,
+                            border: "1px solid rgba(247,111,111,.2)",
+                            background: "transparent",
+                            color: "#f76f6f",
+                            cursor: deletingId === row.id ? "not-allowed" : "pointer",
+                            fontSize: 11, opacity: deletingId === row.id ? 0.4 : 0.6,
+                          }}
+                          onMouseEnter={(e) => { (e.target as HTMLButtonElement).style.opacity = "1"; }}
+                          onMouseLeave={(e) => { (e.target as HTMLButtonElement).style.opacity = deletingId === row.id ? "0.4" : "0.6"; }}
+                        >
+                          {deletingId === row.id ? "…" : "✕"}
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -468,6 +535,87 @@ export default function AdminPage() {
           )}
         </div>
       </main>
+
+      {/* Reset modal */}
+      {showReset && (
+        <div
+          onClick={() => setShowReset(false)}
+          style={{
+            position: "fixed", inset: 0,
+            background: "rgba(0,0,0,.55)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            zIndex: 100,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: 360,
+              background: "var(--surface)",
+              border: "1px solid var(--border)",
+              borderRadius: "var(--radius-lg)",
+              padding: "28px 24px",
+            }}
+          >
+            <p style={{ fontSize: 15, fontWeight: 700, marginBottom: 6 }}>Resetar historial</p>
+            <p style={{ fontSize: 12, color: "var(--text3)", marginBottom: 20 }}>
+              S&apos;eliminaran <strong style={{ color: "var(--text)" }}>{total}</strong> registres. Confirma la contrasenya per continuar.
+            </p>
+            <form onSubmit={handleReset} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <input
+                type="password"
+                value={resetPwd}
+                onChange={(e) => setResetPwd(e.target.value)}
+                placeholder="Contrasenya..."
+                autoFocus
+                style={{
+                  width: "100%",
+                  background: "var(--surface2)",
+                  border: `1px solid ${resetError ? "rgba(247,111,111,.5)" : "var(--border)"}`,
+                  borderRadius: "var(--radius-sm)",
+                  color: "var(--text)",
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: 13,
+                  padding: "10px 12px",
+                  outline: "none",
+                  boxSizing: "border-box",
+                }}
+              />
+              {resetError && (
+                <p style={{ fontSize: 11, color: "#f76f6f", marginTop: -6 }}>{resetError}</p>
+              )}
+              <div style={{ display: "flex", gap: 10 }}>
+                <button
+                  type="button"
+                  onClick={() => setShowReset(false)}
+                  style={{
+                    flex: 1, padding: "10px", borderRadius: "var(--radius)",
+                    border: "1px solid var(--border)",
+                    background: "var(--surface2)",
+                    color: "var(--text3)", fontSize: 13, cursor: "pointer",
+                  }}
+                >
+                  Cancel·lar
+                </button>
+                <button
+                  type="submit"
+                  disabled={resetLoading || !resetPwd}
+                  style={{
+                    flex: 1, padding: "10px", borderRadius: "var(--radius)",
+                    border: "none",
+                    background: resetLoading || !resetPwd ? "var(--surface3)" : "rgba(247,111,111,.85)",
+                    color: resetLoading || !resetPwd ? "var(--text3)" : "white",
+                    fontSize: 13, fontWeight: 600,
+                    cursor: resetLoading || !resetPwd ? "not-allowed" : "pointer",
+                  }}
+                >
+                  {resetLoading ? "Eliminant..." : "Confirmar reset"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
