@@ -28,18 +28,18 @@ interface HistoryItem {
 type StatusState = "idle" | "ok" | "error" | "checking";
 
 const TORN_CONFIG: Record<string, { label: string; icon: string; color: string; bg: string; border: string }> = {
-  MATI:           { label: "MAÑANA obligatorio",                    icon: "☀",  color: "#4ade80", bg: "rgba(74,222,128,.08)",   border: "rgba(74,222,128,.2)"   },
-  TARDA:          { label: "TARDE",                                  icon: "🌙", color: "#fb923c", bg: "rgba(251,146,60,.08)",   border: "rgba(251,146,60,.2)"   },
-  FLEXIBLE:       { label: "Flexible — mañana o tarde",              icon: "◎",  color: "#94a3b8", bg: "rgba(148,163,184,.06)",  border: "rgba(148,163,184,.15)" },
-  DIMARTS_TARDA:  { label: "Anestesia ≥3 años → Martes tarde",       icon: "💉", color: "#a78bfa", bg: "rgba(167,139,250,.08)",  border: "rgba(167,139,250,.2)"  },
-  DIVENDRES_MATI: { label: "Anestesia <3 años → Viernes mañana",     icon: "💉", color: "#60a5fa", bg: "rgba(96,165,250,.08)",   border: "rgba(96,165,250,.2)"   },
-  ANESTESIA:      { label: "Anestesia → RM1",                        icon: "💉", color: "#a78bfa", bg: "rgba(167,139,250,.08)",  border: "rgba(167,139,250,.2)"  },
+  MATI:           { label: "MATÍ obligatori",                        icon: "☀",  color: "#4ade80", bg: "rgba(74,222,128,.08)",   border: "rgba(74,222,128,.2)"   },
+  TARDA:          { label: "TARDA",                                   icon: "🌙", color: "#fb923c", bg: "rgba(251,146,60,.08)",   border: "rgba(251,146,60,.2)"   },
+  FLEXIBLE:       { label: "Flexible — matí o tarda",                 icon: "◎",  color: "#94a3b8", bg: "rgba(148,163,184,.06)",  border: "rgba(148,163,184,.15)" },
+  DIMARTS_TARDA:  { label: "Anestèsia ≥3 anys → Dimarts tarda",      icon: "💉", color: "#a78bfa", bg: "rgba(167,139,250,.08)",  border: "rgba(167,139,250,.2)"  },
+  DIVENDRES_MATI: { label: "Anestèsia <3 anys → Divendres matí",     icon: "💉", color: "#60a5fa", bg: "rgba(96,165,250,.08)",   border: "rgba(96,165,250,.2)"   },
+  ANESTESIA:      { label: "Anestèsia → RM1 (edat no especificada)",  icon: "💉", color: "#a78bfa", bg: "rgba(167,139,250,.08)",  border: "rgba(167,139,250,.2)"  },
 };
 
 const CONF_CONFIG: Record<string, { label: string; color: string; dot: string }> = {
   ALTA:  { label: "Alta",  color: "#4ade80", dot: "#4ade80" },
-  MITJA: { label: "Media", color: "#f7a84f", dot: "#f7a84f" },
-  BAIXA: { label: "Baja",  color: "#f76f6f", dot: "#f76f6f" },
+  MITJA: { label: "Mitja", color: "#f7a84f", dot: "#f7a84f" },
+  BAIXA: { label: "Baixa", color: "#f76f6f", dot: "#f76f6f" },
 };
 
 const BADGE_STYLES = {
@@ -119,7 +119,7 @@ export function RMScheduler() {
         body: JSON.stringify({ text, anestesia: anestSi ? (anestEdad.trim() || "?") : undefined }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "Error en la solicitud");
+      if (!res.ok) throw new Error(data.error ?? "Error en la sol·licitud");
 
       const newResult = data as RMResult;
       setResult(newResult);
@@ -131,7 +131,7 @@ export function RMScheduler() {
       setHistory(newHistory);
       localStorage.setItem("rm_hist", JSON.stringify(newHistory));
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error desconocido");
+      setError(err instanceof Error ? err.message : "Error desconegut");
     } finally {
       setLoading(false);
     }
@@ -140,13 +140,13 @@ export function RMScheduler() {
   function copyResult() {
     if (!result) return;
     const lines = [
-      `PRESTACION: ${result.nom_protocol}`,
-      `ORIENTACION: ${result.orientacio}`,
-      `TURNO: ${TORN_CONFIG[result.torn]?.label ?? result.torn}`,
-      `CONTRASTE: ${result.contrast}`,
+      `PRESTACIÓ: ${result.nom_protocol}`,
+      `ORIENTACIÓ: ${result.orientacio}`,
+      `TORN: ${TORN_CONFIG[result.torn]?.label ?? result.torn}`,
+      `CONTRAST: ${result.contrast}`,
       `BOMBA: ${result.bomba}`,
-      `EQUIPO: ${result.equip1}`,
-      `ORDEN EQUIPOS: ${result.equips}`,
+      `EQUIP: ${result.equip1}`,
+      `ORDRE EQUIPS: ${result.equips}`,
       `HUECOS: ${result.huecos}`,
       result.nota ? `NOTA: ${result.nota}` : null,
     ].filter(Boolean).join("\n");
@@ -165,9 +165,9 @@ export function RMScheduler() {
 
   const statusDot = {
     idle:     { color: "var(--text3)", glow: false, pulse: false, label: "—" },
-    ok:       { color: "#3ecfb0",      glow: true,  pulse: false, label: "Conectado" },
-    error:    { color: "#f76f6f",      glow: false, pulse: false, label: "Sin conexión" },
-    checking: { color: "#f7a84f",      glow: false, pulse: true,  label: "Comprobando..." },
+    ok:       { color: "#3ecfb0",      glow: true,  pulse: false, label: "Connectat" },
+    error:    { color: "#f76f6f",      glow: false, pulse: false, label: "Sense connexió" },
+    checking: { color: "#f7a84f",      glow: false, pulse: true,  label: "Comprovant..." },
   }[status];
 
   const hasInput = medInput.trim().length > 0;
@@ -180,18 +180,17 @@ export function RMScheduler() {
         <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0 }}>
           <div style={{ width: 38, height: 38, borderRadius: 10, background: "linear-gradient(135deg, #4f8ef7 0%, #3ecfb0 100%)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 800, color: "white", letterSpacing: -0.5, boxShadow: "0 0 20px rgba(79,142,247,.3)" }}>RM</div>
           <div>
-            <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: -0.3, lineHeight: 1.2 }}>Programación RM</div>
-            <div style={{ fontSize: 11, color: "var(--text2)", letterSpacing: 0.2 }}>Radiología — Asistente de programación</div>
+            <div style={{ fontSize: 14, fontWeight: 700, letterSpacing: -0.3, lineHeight: 1.2 }}>Programació RM</div>
+            <div style={{ fontSize: 11, color: "var(--text2)", letterSpacing: 0.2 }}>Radiologia — Assistent de programació</div>
           </div>
         </div>
 
-        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-        </div>
+        <div style={{ flex: 1 }} />
 
         <button
           onClick={checkConnection}
           style={{ display: "flex", alignItems: "center", gap: 7, padding: "6px 14px", borderRadius: 20, border: "1px solid var(--border)", background: "var(--surface2)", cursor: "pointer", fontSize: 12, color: "var(--text2)" }}
-          title="Comprobar conexión"
+          title="Comprovar connexió"
         >
           <div style={{ width: 7, height: 7, borderRadius: "50%", background: statusDot.color, boxShadow: statusDot.glow ? `0 0 8px ${statusDot.color}` : undefined, animation: statusDot.pulse ? "pulse 1s infinite" : undefined, flexShrink: 0 }} />
           {statusDot.label}
@@ -206,10 +205,10 @@ export function RMScheduler() {
           <div style={{ flex: 1, padding: "20px 24px", display: "flex", flexDirection: "column", gap: 14, overflowY: "auto" }}>
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <Label>Valoración del radiólogo</Label>
+              <Label>Valoració del radiòleg</Label>
               {hasInput && (
                 <button onClick={clearInput} style={{ fontSize: 11, color: "var(--text3)", background: "none", border: "none", cursor: "pointer", padding: "2px 6px", borderRadius: 4 }}>
-                  Limpiar
+                  Netejar
                 </button>
               )}
             </div>
@@ -218,14 +217,14 @@ export function RMScheduler() {
               value={medInput}
               onChange={(e) => setMedInput(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); analyze(); } }}
-              placeholder="Pega o escribe la valoración médica..."
+              placeholder="Enganxa o escriu la valoració mèdica..."
               style={{ flex: 1, width: "100%", minHeight: 220, background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: "var(--radius)", color: "var(--text)", fontFamily: "'Inter', sans-serif", fontSize: 13, lineHeight: 1.7, padding: "14px 16px", resize: "none", outline: "none", transition: "border-color 0.15s" }}
               onFocus={(e) => { e.target.style.borderColor = "var(--accent)"; }}
               onBlur={(e) => { e.target.style.borderColor = "var(--border)"; }}
             />
 
             <div>
-              <Label style={{ marginBottom: 8 }}>Anestesia</Label>
+              <Label style={{ marginBottom: 8 }}>Anestèsia</Label>
               <div style={{ display: "flex", gap: 8, marginBottom: anestSi ? 10 : 0 }}>
                 {(["No", "Sí"] as const).map((opt) => {
                   const active = opt === "Sí" ? anestSi : !anestSi;
@@ -252,7 +251,7 @@ export function RMScheduler() {
                   type="text"
                   value={anestEdad}
                   onChange={(e) => setAnestEdad(e.target.value)}
-                  placeholder="Edad: 2, 2a, 2 años, 2 anys…"
+                  placeholder="Edat: 2, 2a, 2 anys…"
                   autoFocus
                   style={{ width: "100%", background: "var(--surface2)", border: "1px solid rgba(167,139,250,.4)", borderRadius: "var(--radius-sm)", color: "var(--text)", fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "9px 12px", outline: "none", transition: "border-color 0.15s", boxSizing: "border-box" }}
                   onFocus={(e) => { e.target.style.borderColor = "#a78bfa"; }}
@@ -269,22 +268,22 @@ export function RMScheduler() {
               {loading ? (
                 <>
                   <div style={{ width: 16, height: 16, border: "2px solid rgba(255,255,255,.2)", borderTopColor: "white", borderRadius: "50%", animation: "spin 0.7s linear infinite" }} />
-                  Analizando...
+                  Analitzant...
                 </>
               ) : (
                 <>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                  Analizar y Programar
+                  Analitzar i Programar
                 </>
               )}
             </button>
 
             <p style={{ fontSize: 10, color: "var(--text3)", textAlign: "center" }}>
-                            Enter para analizar
+              Enter per analitzar
             </p>
           </div>
 
-          {/* History */}
+          {/* Historial */}
           {history.length > 0 && (
             <div style={{ borderTop: "1px solid var(--border)", padding: "14px 24px" }}>
               <Label style={{ marginBottom: 10 }}>Historial</Label>
@@ -317,8 +316,8 @@ export function RMScheduler() {
                 <div style={{ position: "absolute", inset: 0, border: "3px solid transparent", borderTopColor: "var(--accent)", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
               </div>
               <div style={{ textAlign: "center" }}>
-                <p style={{ fontSize: 14, fontWeight: 600 }}>Procesando valoración...</p>
-                <p style={{ fontSize: 12, color: "var(--text2)", marginTop: 4 }}>Claude está analizando el caso</p>
+                <p style={{ fontSize: 14, fontWeight: 600 }}>Processant valoració...</p>
+                <p style={{ fontSize: 12, color: "var(--text2)", marginTop: 4 }}>Claude està analitzant el cas</p>
               </div>
             </div>
           )}
@@ -334,91 +333,91 @@ export function RMScheduler() {
             </div>
           )}
 
-          {/* Empty state */}
+          {/* Estat buit */}
           {!loading && !error && !result && (
             <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12, padding: "80px 20px", color: "var(--text3)" }}>
               <div style={{ width: 64, height: 64, borderRadius: 16, background: "var(--surface2)", border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, fontWeight: 800, fontFamily: "'JetBrains Mono', monospace", color: "var(--text3)" }}>RM</div>
               <div style={{ textAlign: "center" }}>
-                <p style={{ fontSize: 14, fontWeight: 600, color: "var(--text2)" }}>Listo para analizar</p>
+                <p style={{ fontSize: 14, fontWeight: 600, color: "var(--text2)" }}>Llest per analitzar</p>
                 <p style={{ fontSize: 12, color: "var(--text3)", marginTop: 4, maxWidth: 260, lineHeight: 1.6 }}>
-                  Introduce la valoración del radiólogo y pulsa <strong style={{ color: "var(--text2)" }}>Analizar y Programar</strong>
+                  Introdueix la valoració del radiòleg i prem <strong style={{ color: "var(--text2)" }}>Analitzar i Programar</strong>
                 </p>
               </div>
             </div>
           )}
 
-          {/* Result */}
+          {/* Resultat */}
           {!loading && result && (
             <div style={{ display: "flex", flexDirection: "column", gap: 14, animation: "fadeIn 0.2s ease-out" }}>
 
-              {/* Main card */}
+              {/* Targeta principal */}
               <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden" }}>
 
-                {/* Card header */}
+                {/* Capçalera targeta */}
                 <div style={{ padding: "14px 20px", borderBottom: "1px solid var(--border)", background: "var(--surface2)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                     <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--accent2)", boxShadow: "0 0 8px var(--accent2)", animation: "pulse 2s infinite" }} />
-                    <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: -0.2 }}>Resultado de programación</span>
+                    <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: -0.2 }}>Resultat de programació</span>
                   </div>
                   <button
                     onClick={copyResult}
                     style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, padding: "5px 12px", borderRadius: "var(--radius-sm)", background: copied ? "rgba(62,207,176,.15)" : "rgba(255,255,255,.05)", border: `1px solid ${copied ? "rgba(62,207,176,.3)" : "var(--border)"}`, color: copied ? "var(--accent2)" : "var(--text2)", cursor: "pointer", transition: "all 0.2s" }}
                   >
                     {copied ? (
-                      <><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg> Copiado</>
+                      <><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg> Copiat</>
                     ) : (
                       <><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar</>
                     )}
                   </button>
                 </div>
 
-                {/* Protocol + equip hero */}
+                {/* Prestació + equip */}
                 <div style={{ padding: "20px", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 4 }}>Prestación</p>
+                    <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 4 }}>Prestació</p>
                     <p style={{ fontSize: 16, fontWeight: 700, letterSpacing: -0.3, lineHeight: 1.3 }}>{result.nom_protocol}</p>
                     <p style={{ fontSize: 12, color: "var(--text2)", marginTop: 4, lineHeight: 1.5 }}>{result.orientacio}</p>
                   </div>
                   <div style={{ flexShrink: 0, textAlign: "center" }}>
-                    <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>Equipo</p>
+                    <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>Equip</p>
                     <div style={{ width: 72, height: 72, borderRadius: 16, background: "linear-gradient(135deg, rgba(79,142,247,.15), rgba(62,207,176,.1))", border: "2px solid rgba(79,142,247,.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, fontWeight: 800, fontFamily: "'JetBrains Mono', monospace", color: "var(--accent)", letterSpacing: -1, boxShadow: "0 0 20px rgba(79,142,247,.15)" }}>
                       {result.equip1}
                     </div>
                   </div>
                 </div>
 
-                {/* Turno */}
+                {/* Torn */}
                 {result.torn && TORN_CONFIG[result.torn] && (() => {
                   const t = TORN_CONFIG[result.torn];
                   return (
                     <div style={{ padding: "12px 20px", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", gap: 10, background: t.bg }}>
                       <span style={{ fontSize: 18 }}>{t.icon}</span>
                       <div>
-                        <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: t.color, opacity: 0.7, marginBottom: 1 }}>Turno</p>
+                        <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: t.color, opacity: 0.7, marginBottom: 1 }}>Torn</p>
                         <p style={{ fontSize: 13, fontWeight: 700, color: t.color }}>{t.label}</p>
                       </div>
                     </div>
                   );
                 })()}
 
-                {/* Details */}
+                {/* Detalls */}
                 <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column" }}>
                   <DetailRow label="Zona corporal">
                     <span style={{ fontSize: 12, color: "var(--text2)" }}>{result.zona}</span>
                   </DetailRow>
 
-                  <DetailRow label="Contraste / Bomba">
+                  <DetailRow label="Contrast / Bomba">
                     <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                       <Badge color={result.contrast === "SI" ? "orange" : result.contrast === "DEPENDE" ? "blue" : "green"}>
-                        {result.contrast === "SI" ? "Con contraste" : result.contrast === "DEPENDE" ? "Contraste según caso" : "Sin contraste"}
+                        {result.contrast === "SI" ? "Amb contrast" : result.contrast === "DEPENDE" ? "Contrast segons cas" : "Sense contrast"}
                       </Badge>
                       <Badge color={result.bomba === "SI" ? "orange" : result.bomba === "DEPENDE" ? "blue" : "green"}>
-                        {result.bomba === "SI" ? "Bomba inyectora" : result.bomba === "DEPENDE" ? "Bomba según caso" : "Sin bomba"}
+                        {result.bomba === "SI" ? "Bomba injectora" : result.bomba === "DEPENDE" ? "Bomba segons cas" : "Sense bomba"}
                       </Badge>
                     </div>
                   </DetailRow>
 
-                  <DetailRow label="Orden equipos">
+                  <DetailRow label="Ordre equips">
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                       {result.equips.split("/").map((e, i) => (
                         <span key={i} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, padding: "3px 10px", borderRadius: 5, border: i === 0 ? "1px solid rgba(79,142,247,.4)" : "1px solid var(--border)", color: i === 0 ? "var(--accent)" : "var(--text3)", background: i === 0 ? "rgba(79,142,247,.12)" : "transparent", fontWeight: i === 0 ? 700 : 400 }}>
@@ -432,7 +431,7 @@ export function RMScheduler() {
                     <Badge color="blue">{result.huecos} {result.huecos === "1" ? "hueco" : "huecos"}</Badge>
                   </DetailRow>
 
-                  <DetailRow label="Confianza IA">
+                  <DetailRow label="Confiança IA">
                     {(() => {
                       const c = CONF_CONFIG[result.conf];
                       return (
@@ -445,33 +444,33 @@ export function RMScheduler() {
                   </DetailRow>
 
                   {result.maquina_nota && (
-                    <DetailRow label="Nota máquina">
+                    <DetailRow label="Nota màquina">
                       <span style={{ fontSize: 12, color: "var(--warn)", fontWeight: 500 }}>{result.maquina_nota}</span>
                     </DetailRow>
                   )}
 
-                  <DetailRow label="Razonamiento" last>
+                  <DetailRow label="Raonament" last>
                     <span style={{ fontSize: 12, color: "var(--text2)", lineHeight: 1.6, fontStyle: "italic" }}>{result.why}</span>
                   </DetailRow>
                 </div>
               </div>
 
-              {/* Nota importante */}
+              {/* Nota important */}
               {result.nota && (
                 <div style={{ display: "flex", gap: 12, background: "rgba(247,168,79,.06)", border: "1px solid rgba(247,168,79,.2)", borderRadius: "var(--radius)", padding: "14px 18px" }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7a84f" strokeWidth="2" strokeLinecap="round" style={{ flexShrink: 0, marginTop: 1 }}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                   <div>
-                    <p style={{ fontSize: 12, fontWeight: 700, color: "#f7a84f", marginBottom: 3 }}>Nota importante</p>
+                    <p style={{ fontSize: 12, fontWeight: 700, color: "#f7a84f", marginBottom: 3 }}>Nota important</p>
                     <p style={{ fontSize: 12, color: "#c4923a", lineHeight: 1.6 }}>{result.nota}</p>
                   </div>
                 </div>
               )}
 
-              {/* Disclaimer */}
+              {/* Avís */}
               <div style={{ display: "flex", alignItems: "flex-start", gap: 8, padding: "10px 14px", background: "var(--surface2)", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)" }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" strokeWidth="2" strokeLinecap="round" style={{ flexShrink: 0, marginTop: 1 }}><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                 <p style={{ fontSize: 11, color: "var(--text3)", lineHeight: 1.6 }}>
-                  Herramienta de apoyo para administrativas. Verificar siempre con el radiólogo responsable en casos de duda o confianza baja.
+                  Eina de suport per a administratives. Verificar sempre amb el radiòleg responsable en casos de dubte o confiança baixa.
                 </p>
               </div>
 
@@ -479,7 +478,7 @@ export function RMScheduler() {
               {result.raw && (
                 <div>
                   <button onClick={() => setShowRaw(!showRaw)} style={{ fontSize: 11, color: "var(--text3)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", padding: 0 }}>
-                    {showRaw ? "Ocultar" : "Ver"} respuesta raw del modelo
+                    {showRaw ? "Amagar" : "Veure"} resposta raw del model
                   </button>
                   {showRaw && (
                     <div style={{ marginTop: 8, background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", padding: 12, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "var(--text3)", lineHeight: 1.7, whiteSpace: "pre-wrap", wordBreak: "break-all", maxHeight: 120, overflowY: "auto" }}>
@@ -495,4 +494,3 @@ export function RMScheduler() {
     </div>
   );
 }
-

@@ -299,9 +299,30 @@ export async function POST(request: NextRequest) {
     });
   }
 
-  // torn con anestesia viene ya indicado en el user message; Claude lo aplica
   const protocol = EXCEL[Math.max(0, parsed.n - 1)] ?? EXCEL[0];
   const { equip1, equips } = resolveEquip(protocol.equip);
+
+  // ── Torn: anestèsia sempre imposa el torn, independentment de Claude ──────
+  let torn = parsed.torn;
+  if (anestesia) {
+    if (anestMajor === false) torn = "DIVENDRES_MATI";
+    else if (anestMajor === true) torn = "DIMARTS_TARDA";
+    else torn = "ANESTESIA";
+  }
+
+  // ── Nota màquina: generada de forma determinista per consistència ─────────
+  function buildMaquinaNota(): string {
+    if (anestesia) {
+      if (anestMajor === false) return "RM1 exclusiu · Divendres matí (pacient <3 anys)";
+      if (anestMajor === true)  return "RM1 exclusiu · Dimarts tarda (pacient ≥3 anys)";
+      return "RM1 exclusiu · Edat no especificada";
+    }
+    if (!protocol.nota) return "";
+    const n = protocol.nota.replace(/^⚠\s*/, "");
+    // Mostrar nota màquina només si conté restricció de màquina rellevant
+    if (/EXCLUSIU|MAI RM|NO RM|3T obligatori|MAI RM4|MAI RM5/i.test(n)) return n;
+    return "";
+  }
 
   return NextResponse.json({
     nom_protocol: protocol.nom,
@@ -313,8 +334,8 @@ export async function POST(request: NextRequest) {
     equips,
     huecos: protocol.huecos,
     nota: protocol.nota,
-    torn: parsed.torn,
-    maquina_nota: parsed.maquina_nota ?? "",
+    torn,
+    maquina_nota: buildMaquinaNota(),
     conf: parsed.conf,
     why: parsed.why,
     raw: claudeRaw,
