@@ -17,6 +17,10 @@ const serverEnvSchema = z.object({
   // Upstash — opcionales en desarrollo local, recomendadas en producción
   UPSTASH_REDIS_REST_URL: z.string().url().optional(),
   UPSTASH_REDIS_REST_TOKEN: z.string().optional(),
+  // Supabase — feedback loop
+  SUPABASE_URL: z.string().url().optional(),
+  SUPABASE_ANON_KEY: z.string().optional(),
+  ADMIN_PASSWORD: z.string().default("rm2026"),
 });
 
 // ─── Variables públicas (visibles en el browser, prefijo NEXT_PUBLIC_) ────────
@@ -36,6 +40,9 @@ export function getServerEnv() {
     NODE_ENV: process.env.NODE_ENV,
     UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
     UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
+    SUPABASE_URL: process.env.SUPABASE_URL,
+    SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
+    ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   });
 }
 

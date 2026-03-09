@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { PROTOCOL_LIST } from "@/data/protocols-client";
 
 interface RMResult {
+  protocol_n?: number;
   nom_protocol: string;
   orientacio: string;
   zona: string;
@@ -87,6 +89,13 @@ export function RMScheduler() {
   const [showRaw, setShowRaw] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  // Feedback states
+  const [feedbackMode, setFeedbackMode] = useState<null | "correcting">(null);
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  const [corrN, setCorrN] = useState(0);
+  const [corrTorn, setCorrTorn] = useState("");
+  const [corrComment, setCorrComment] = useState("");
+
   useEffect(() => {
     const saved = localStorage.getItem("rm_hist");
     if (saved) setHistory(JSON.parse(saved));
@@ -104,6 +113,44 @@ export function RMScheduler() {
     }
   }, []);
 
+  async function sendFeedback(
+    decisio: "acceptat" | "corregit",
+    correccio?: {
+      correccio_protocol_n?: number;
+      correccio_nom_protocol?: string;
+      correccio_torn?: string;
+      correccio_equip1?: string;
+      correccio_comment?: string;
+    }
+  ) {
+    if (!result) return;
+    try {
+      await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nota_radioleg: medInput,
+          anestesia: anestSi ? anestEdad || "?" : undefined,
+          ia_protocol_n: result.protocol_n,
+          ia_nom_protocol: result.nom_protocol,
+          ia_torn: result.torn,
+          ia_equip1: result.equip1,
+          ia_equips: result.equips,
+          ia_contrast: result.contrast,
+          ia_bomba: result.bomba,
+          ia_conf: result.conf,
+          ia_why: result.why,
+          decisio,
+          ...correccio,
+        }),
+      });
+    } catch {
+      // Feedback is best-effort, don't block the user
+    }
+    setFeedbackSent(true);
+    setFeedbackMode(null);
+  }
+
   async function analyze() {
     const text = medInput.trim();
     if (!text || loading) return;
@@ -111,6 +158,8 @@ export function RMScheduler() {
     setError(null);
     setResult(null);
     setShowRaw(false);
+    setFeedbackSent(false);
+    setFeedbackMode(null);
 
     try {
       const res = await fetch("/api/claude", {
@@ -454,6 +503,205 @@ export function RMScheduler() {
                   </DetailRow>
                 </div>
               </div>
+
+              {/* Feedback loop */}
+              {!feedbackSent && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {feedbackMode !== "correcting" && (
+                    <div style={{ display: "flex", gap: 10 }}>
+                      <button
+                        onClick={() => sendFeedback("acceptat")}
+                        style={{
+                          flex: 1, padding: "10px 16px", borderRadius: "var(--radius-sm)",
+                          border: "1px solid rgba(74,222,128,.35)",
+                          background: "rgba(74,222,128,.08)",
+                          color: "#4ade80", fontSize: 13, fontWeight: 600,
+                          cursor: "pointer", transition: "all 0.15s",
+                        }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(74,222,128,.16)"; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(74,222,128,.08)"; }}
+                      >
+                        Correcte
+                      </button>
+                      <button
+                        onClick={() => {
+                          setFeedbackMode("correcting");
+                          const firstN = PROTOCOL_LIST[0]?.n ?? 1;
+                          setCorrN(firstN);
+                          setCorrTorn("");
+                          setCorrComment("");
+                        }}
+                        style={{
+                          flex: 1, padding: "10px 16px", borderRadius: "var(--radius-sm)",
+                          border: "1px solid rgba(247,168,79,.35)",
+                          background: "rgba(247,168,79,.08)",
+                          color: "#f7a84f", fontSize: 13, fontWeight: 600,
+                          cursor: "pointer", transition: "all 0.15s",
+                        }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(247,168,79,.16)"; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(247,168,79,.08)"; }}
+                      >
+                        Corregir
+                      </button>
+                    </div>
+                  )}
+
+                  {feedbackMode === "correcting" && (() => {
+                    const selectedProtocol = PROTOCOL_LIST.find((p) => p.n === corrN);
+                    const corrEquip1 = selectedProtocol
+                      ? (() => {
+                          // Intenta trobar l'equip del protocol seleccionat; si no, deixa buit
+                          return "";
+                        })()
+                      : "";
+                    void corrEquip1;
+                    return (
+                      <div style={{
+                        background: "var(--surface)",
+                        border: "1px solid rgba(247,168,79,.25)",
+                        borderRadius: "var(--radius)",
+                        padding: "16px 18px",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 12,
+                      }}>
+                        <p style={{ fontSize: 12, fontWeight: 700, color: "#f7a84f", marginBottom: 2 }}>
+                          Quina seria la programació correcta?
+                        </p>
+
+                        {/* Select protocol */}
+                        <div>
+                          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
+                            Protocol
+                          </p>
+                          <select
+                            value={corrN}
+                            onChange={(e) => setCorrN(parseInt(e.target.value))}
+                            style={{
+                              width: "100%",
+                              background: "var(--surface2)",
+                              border: "1px solid var(--border)",
+                              borderRadius: "var(--radius-sm)",
+                              color: "var(--text)",
+                              fontFamily: "'JetBrains Mono', monospace",
+                              fontSize: 12,
+                              padding: "8px 10px",
+                              outline: "none",
+                              cursor: "pointer",
+                            }}
+                          >
+                            {PROTOCOL_LIST.map((p) => (
+                              <option key={p.n} value={p.n}>
+                                {p.n} — {p.nom}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {/* Torn botons ràpids */}
+                        <div>
+                          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
+                            Torn correcte
+                          </p>
+                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                            {["MATI", "TARDA", "FLEXIBLE", "DIMARTS_TARDA", "DIVENDRES_MATI"].map((t) => (
+                              <button
+                                key={t}
+                                type="button"
+                                onClick={() => setCorrTorn(corrTorn === t ? "" : t)}
+                                style={{
+                                  padding: "6px 12px",
+                                  borderRadius: "var(--radius-sm)",
+                                  border: corrTorn === t
+                                    ? "1px solid rgba(79,142,247,.5)"
+                                    : "1px solid var(--border)",
+                                  background: corrTorn === t
+                                    ? "rgba(79,142,247,.18)"
+                                    : "var(--surface2)",
+                                  color: corrTorn === t ? "var(--accent)" : "var(--text2)",
+                                  fontSize: 11, fontWeight: 600,
+                                  cursor: "pointer", transition: "all 0.12s",
+                                  fontFamily: "'JetBrains Mono', monospace",
+                                }}
+                              >
+                                {t}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Comentari */}
+                        <div>
+                          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
+                            Comentari (opcional)
+                          </p>
+                          <textarea
+                            value={corrComment}
+                            onChange={(e) => setCorrComment(e.target.value)}
+                            placeholder="Comentari opcional..."
+                            rows={2}
+                            style={{
+                              width: "100%",
+                              background: "var(--surface2)",
+                              border: "1px solid var(--border)",
+                              borderRadius: "var(--radius-sm)",
+                              color: "var(--text)",
+                              fontFamily: "'Inter', sans-serif",
+                              fontSize: 12,
+                              padding: "8px 10px",
+                              resize: "none",
+                              outline: "none",
+                              boxSizing: "border-box",
+                            }}
+                          />
+                        </div>
+
+                        {/* Botons enviar / cancel·lar */}
+                        <div style={{ display: "flex", gap: 8 }}>
+                          <button
+                            onClick={() => {
+                              const sel = PROTOCOL_LIST.find((p) => p.n === corrN);
+                              sendFeedback("corregit", {
+                                correccio_protocol_n: corrN || undefined,
+                                correccio_nom_protocol: sel?.nom,
+                                correccio_torn: corrTorn || undefined,
+                                correccio_comment: corrComment || undefined,
+                              });
+                            }}
+                            style={{
+                              flex: 1, padding: "9px 16px", borderRadius: "var(--radius-sm)",
+                              border: "none",
+                              background: "linear-gradient(135deg, #f7a84f 0%, #e8913a 100%)",
+                              color: "white", fontSize: 13, fontWeight: 600,
+                              cursor: "pointer",
+                            }}
+                          >
+                            Enviar correcció
+                          </button>
+                          <button
+                            onClick={() => setFeedbackMode(null)}
+                            style={{
+                              padding: "9px 16px", borderRadius: "var(--radius-sm)",
+                              border: "1px solid var(--border)",
+                              background: "var(--surface2)",
+                              color: "var(--text3)", fontSize: 13,
+                              cursor: "pointer",
+                            }}
+                          >
+                            Cancel·lar
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
+
+              {feedbackSent && (
+                <p style={{ fontSize: 12, color: "#4ade80", fontWeight: 600, textAlign: "center", padding: "6px 0" }}>
+                  Gràcies! Feedback guardat.
+                </p>
+              )}
 
               {/* Nota important */}
               {result.nota && (

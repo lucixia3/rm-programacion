@@ -13,9 +13,29 @@ import { EXCEL, buildPromptTable } from "@/data/excel";
 
 const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 
+// ── Few-shot dinàmic des de Supabase (correccions reals de les administratives) ──
+
+async function fetchFewShots(supabaseUrl: string, supabaseKey: string): Promise<string> {
+  try {
+    const url = `${supabaseUrl}/rest/v1/rm_feedback?decisio=eq.corregit&order=created_at.desc&limit=15&select=nota_radioleg,correccio_protocol_n,correccio_nom_protocol,correccio_torn,correccio_equip1,correccio_comment`;
+    const r = await fetch(url, {
+      headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
+    });
+    if (!r.ok) return "";
+    const rows = await r.json();
+    if (!rows.length) return "";
+    const examples = rows.map((row: Record<string, string | number | null>, i: number) =>
+      `[${i + 1}] Nota: "${row.nota_radioleg}" → Protocol correcte: ${row.correccio_protocol_n} (${row.correccio_nom_protocol}), Torn: ${row.correccio_torn}, Equip: ${row.correccio_equip1}${row.correccio_comment ? `, Nota: ${row.correccio_comment}` : ""}`
+    ).join("\n");
+    return `\n=== CORRECCIONS REALS DE LES ADMINISTRATIVES (aprèn d'aquests casos) ===\n${examples}\n`;
+  } catch {
+    return "";
+  }
+}
+
 // ── System prompt: todo el conocimiento de la chuleta ────────────────────
 
-function buildSystemPrompt(): string {
+function buildSystemPrompt(fewShots: string = ""): string {
   return `Ets un assistent expert en programació de resonàncies magnètiques (RM) de l'Hospital de Sant Pau. El teu únic rol és analitzar notes clíniques i retornar el protocol, màquina, torn i altres dades de programació.
 
 === MÀQUINES DISPONIBLES ===
@@ -116,6 +136,7 @@ ALTA: nota molt específica (diagnòstic clar, protocol inequívoc)
 MITJA: zona identificada però protocol o màquina amb dubte
 BAIXA: nota vaga, múltiples protocols possibles, o restriccions que no s'especifiquen
 
+${fewShots}
 === FORMAT DE RESPOSTA ===
 Retorna ÚNICAMENT aquest JSON, sense cap altre text ni markdown:
 {
@@ -223,6 +244,13 @@ export async function POST(request: NextRequest) {
     if (m) anestMajor = parseInt(m[1]) >= 3;
   }
 
+  // ── Few-shot dinàmic: correccions reals de Supabase ──────────────────────
+  const supabaseUrl = process.env.SUPABASE_URL ?? "";
+  const supabaseKey = process.env.SUPABASE_ANON_KEY ?? "";
+  const fewShots = supabaseUrl && supabaseKey
+    ? await fetchFewShots(supabaseUrl, supabaseKey)
+    : "";
+
   // ── Llamada a Claude con system prompt completo ───────────────────────────
 
   let claudeRaw = "";
@@ -238,7 +266,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         model: "claude-haiku-4-5-20251001",
         max_tokens: 300,
-        system: buildSystemPrompt(),
+        system: buildSystemPrompt(fewShots),
         messages: [{ role: "user", content: buildUserMessage(text, anestesia, anestMajor) }],
       }),
     });
@@ -254,7 +282,7 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           model: "claude-sonnet-4-6",
           max_tokens: 300,
-          system: buildSystemPrompt(),
+          system: buildSystemPrompt(fewShots),
           messages: [{ role: "user", content: buildUserMessage(text, anestesia, anestMajor) }],
         }),
       });
@@ -325,6 +353,7 @@ export async function POST(request: NextRequest) {
   }
 
   return NextResponse.json({
+    protocol_n: protocol.n,
     nom_protocol: protocol.nom,
     orientacio: protocol.ori,
     zona: protocol.zona,
