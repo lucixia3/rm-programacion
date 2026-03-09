@@ -25,6 +25,8 @@ export async function POST(request: NextRequest) {
       correccio_nom_protocol,
       correccio_torn,
       correccio_equip1,
+      correccio_contrast,
+      correccio_bomba,
       correccio_comment,
     } = body;
 
@@ -63,6 +65,8 @@ export async function POST(request: NextRequest) {
     if (correccio_nom_protocol !== undefined) payload.correccio_nom_protocol = correccio_nom_protocol;
     if (correccio_torn !== undefined) payload.correccio_torn = correccio_torn;
     if (correccio_equip1 !== undefined) payload.correccio_equip1 = correccio_equip1;
+    if (correccio_contrast !== undefined) payload.correccio_contrast = correccio_contrast;
+    if (correccio_bomba !== undefined) payload.correccio_bomba = correccio_bomba;
     if (correccio_comment !== undefined) payload.correccio_comment = correccio_comment;
 
     const res = await fetch(`${supabaseUrl}/rest/v1/rm_feedback`, {

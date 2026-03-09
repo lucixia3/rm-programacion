@@ -23,6 +23,8 @@ interface FeedbackRow {
   correccio_nom_protocol: string | null;
   correccio_torn: string | null;
   correccio_equip1: string | null;
+  correccio_contrast: string | null;
+  correccio_bomba: string | null;
   correccio_comment: string | null;
 }
 
@@ -498,7 +500,13 @@ export default function AdminPage() {
                               <span style={{ fontSize: 11, color: "var(--text3)" }}>Torn: {row.correccio_torn}</span>
                             )}
                             {row.correccio_equip1 && (
-                              <span style={{ fontSize: 11, color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}>{row.correccio_equip1}</span>
+                              <span style={{ fontSize: 11, color: "var(--accent)", fontFamily: "'JetBrains Mono', monospace" }}>Equip: {row.correccio_equip1}</span>
+                            )}
+                            {row.correccio_contrast && (
+                              <span style={{ fontSize: 11, color: "#f7a84f" }}>Contrast: {row.correccio_contrast}</span>
+                            )}
+                            {row.correccio_bomba && (
+                              <span style={{ fontSize: 11, color: "#3ecfb0" }}>Bomba: {row.correccio_bomba}</span>
                             )}
                             {row.correccio_comment && (
                               <span style={{ fontSize: 11, color: "var(--text3)", fontStyle: "italic" }}>{truncate(row.correccio_comment, 40)}</span>

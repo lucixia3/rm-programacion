@@ -94,6 +94,9 @@ export function RMScheduler() {
   const [feedbackSent, setFeedbackSent] = useState(false);
   const [corrN, setCorrN] = useState(0);
   const [corrTorn, setCorrTorn] = useState("");
+  const [corrEquip, setCorrEquip] = useState("");
+  const [corrContrast, setCorrContrast] = useState("");
+  const [corrBomba, setCorrBomba] = useState("");
   const [corrComment, setCorrComment] = useState("");
 
   useEffect(() => {
@@ -120,6 +123,8 @@ export function RMScheduler() {
       correccio_nom_protocol?: string;
       correccio_torn?: string;
       correccio_equip1?: string;
+      correccio_contrast?: string;
+      correccio_bomba?: string;
       correccio_comment?: string;
     }
   ) {
@@ -529,6 +534,9 @@ export function RMScheduler() {
                           const firstN = PROTOCOL_LIST[0]?.n ?? 1;
                           setCorrN(firstN);
                           setCorrTorn("");
+                          setCorrEquip("");
+                          setCorrContrast("");
+                          setCorrBomba("");
                           setCorrComment("");
                         }}
                         style={{
@@ -630,6 +638,90 @@ export function RMScheduler() {
                           </div>
                         </div>
 
+                        {/* Màquina */}
+                        <div>
+                          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
+                            Màquina correcta
+                          </p>
+                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                            {["RM1", "RM2", "RM3", "RM4", "RM5"].map((m) => (
+                              <button
+                                key={m}
+                                type="button"
+                                onClick={() => setCorrEquip(corrEquip === m ? "" : m)}
+                                style={{
+                                  padding: "6px 14px",
+                                  borderRadius: "var(--radius-sm)",
+                                  border: corrEquip === m ? "1px solid rgba(79,142,247,.5)" : "1px solid var(--border)",
+                                  background: corrEquip === m ? "rgba(79,142,247,.18)" : "var(--surface2)",
+                                  color: corrEquip === m ? "var(--accent)" : "var(--text2)",
+                                  fontSize: 12, fontWeight: 700,
+                                  cursor: "pointer", transition: "all 0.12s",
+                                  fontFamily: "'JetBrains Mono', monospace",
+                                }}
+                              >
+                                {m}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Contrast */}
+                        <div>
+                          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
+                            Contrast
+                          </p>
+                          <div style={{ display: "flex", gap: 6 }}>
+                            {(["SI", "NO", "DEPENDE"] as const).map((v) => (
+                              <button
+                                key={v}
+                                type="button"
+                                onClick={() => setCorrContrast(corrContrast === v ? "" : v)}
+                                style={{
+                                  flex: 1, padding: "6px 8px",
+                                  borderRadius: "var(--radius-sm)",
+                                  border: corrContrast === v ? "1px solid rgba(247,168,79,.5)" : "1px solid var(--border)",
+                                  background: corrContrast === v ? "rgba(247,168,79,.18)" : "var(--surface2)",
+                                  color: corrContrast === v ? "#f7a84f" : "var(--text2)",
+                                  fontSize: 11, fontWeight: 600,
+                                  cursor: "pointer", transition: "all 0.12s",
+                                  fontFamily: "'JetBrains Mono', monospace",
+                                }}
+                              >
+                                {v}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Bomba */}
+                        <div>
+                          <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
+                            Bomba injectora
+                          </p>
+                          <div style={{ display: "flex", gap: 6 }}>
+                            {(["SI", "NO", "DEPENDE"] as const).map((v) => (
+                              <button
+                                key={v}
+                                type="button"
+                                onClick={() => setCorrBomba(corrBomba === v ? "" : v)}
+                                style={{
+                                  flex: 1, padding: "6px 8px",
+                                  borderRadius: "var(--radius-sm)",
+                                  border: corrBomba === v ? "1px solid rgba(62,207,176,.5)" : "1px solid var(--border)",
+                                  background: corrBomba === v ? "rgba(62,207,176,.18)" : "var(--surface2)",
+                                  color: corrBomba === v ? "#3ecfb0" : "var(--text2)",
+                                  fontSize: 11, fontWeight: 600,
+                                  cursor: "pointer", transition: "all 0.12s",
+                                  fontFamily: "'JetBrains Mono', monospace",
+                                }}
+                              >
+                                {v}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
                         {/* Comentari */}
                         <div>
                           <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "var(--text3)", marginBottom: 6 }}>
@@ -665,6 +757,9 @@ export function RMScheduler() {
                                 correccio_protocol_n: corrN || undefined,
                                 correccio_nom_protocol: sel?.nom,
                                 correccio_torn: corrTorn || undefined,
+                                correccio_equip1: corrEquip || undefined,
+                                correccio_contrast: corrContrast || undefined,
+                                correccio_bomba: corrBomba || undefined,
                                 correccio_comment: corrComment || undefined,
                               });
                             }}
