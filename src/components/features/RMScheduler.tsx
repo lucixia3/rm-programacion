@@ -225,7 +225,7 @@ export function RMScheduler() {
             />
 
             <div>
-              <Label style={{ marginBottom: 8 }}>Anestesia pediàtrica</Label>
+              <Label style={{ marginBottom: 8 }}>Anestesia</Label>
               <div style={{ display: "flex", gap: 8, marginBottom: anestSi ? 10 : 0 }}>
                 {(["No", "Sí"] as const).map((opt) => {
                   const active = opt === "Sí" ? anestSi : !anestSi;
