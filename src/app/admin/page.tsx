@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
+
+const AUTO_REFRESH_INTERVAL = 30_000; // 30 seconds
 
 interface FeedbackRow {
   id: string;
@@ -46,6 +48,8 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [rows, setRows] = useState<FeedbackRow[]>([]);
   const [fetchError, setFetchError] = useState("");
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const fetchFeedbacks = useCallback(async (pwd: string) => {
     setLoading(true);
@@ -69,12 +73,27 @@ export default function AdminPage() {
       setRows(data);
       setAuthed(true);
       setAuthError("");
+      setLastUpdated(new Date());
     } catch {
       setFetchError("Error de xarxa");
     } finally {
       setLoading(false);
     }
   }, []);
+
+  // Auto-refresh every 30 s while logged in
+  useEffect(() => {
+    if (!authed) {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      return;
+    }
+    intervalRef.current = setInterval(() => {
+      fetchFeedbacks(password);
+    }, AUTO_REFRESH_INTERVAL);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [authed, password, fetchFeedbacks]);
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -210,6 +229,11 @@ export default function AdminPage() {
           </div>
         </div>
         <div style={{ flex: 1 }} />
+        {lastUpdated && (
+          <span style={{ fontSize: 11, color: "var(--text3)" }}>
+            Actualitzat: {lastUpdated.toLocaleTimeString("ca-ES", { hour: "2-digit", minute: "2-digit", second: "2-digit" })}
+          </span>
+        )}
         <button
           onClick={() => fetchFeedbacks(password)}
           disabled={loading}
