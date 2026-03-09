@@ -71,14 +71,16 @@ MENIÈRE/MENIERE = RM3 EXCLUSIU, 2 huecos, MATÍ 8-13h
 14. Anestesia ≥3a → RM1, DIMARTS TARDA
 15. Defecografia → MATÍ, MAI RM4
 16. Renal → MATÍ
-17. Ferro hígado → MATÍ
+17. Ferro hígado → MATÍ, NOMÉS RM5/RM4 (ja no es fa a RM1)
 18. Espectroscopia → RM3, MATÍ, avisar radióleg
 19. Neo Cervix → MATÍ, avisar radióleg
+20. Crani + T2 DRIVE de CAIS → 1 hueco, sense contrast
 
 === REGLES DE TORN ===
 SEMPRE MATÍ: ENTERO-RM, DEFECOGRAFIA, RENAL, FERRO, HIFU, ESPECTROSCOPIA, NEO CERVIX
 DIMARTS TARDA: FETAL CRANI
 FLEXIBLE: tots els altres (llevat que la nota/observació contingui ver/avisar/mirar → MATÍ)
+EXCEPCIÓ NEURO + VER/AVISAR: si és neuro i hi ha ver/avisar, dijous i divendres pot ser TARDA igualment
 
 === LLISTA COMPLETA DE PROTOCOLS (1-66) ===
 ${buildPromptTable()}
@@ -97,13 +99,17 @@ ${buildPromptTable()}
 - "CAR-T / CART" → protocol 65, RM3 sempre
 - "MENIÈRE" → protocol 18, RM3, 2 huecos, MATÍ 8-13h obligatori
 - "ENTERO / CROHN / EII" → protocol 37, SEMPRE MATÍ
-- "FERRO / HIERRO HEPÀTIC" → protocol 31, SEMPRE MATÍ
+- "FERRO / HIERRO HEPÀTIC" → protocol 31, SEMPRE MATÍ, RM5/RM4 (MAI RM1)
 - "COLANGIO + contrast" → protocol 34; "COLANGIO sense contrast" → protocol 35
 - "DEFECO / DEFECOGRAFIA" → protocol 45, MATÍ, MAI RM4
 - "FETAL CRANI" → protocol 46, RM2 EXCLUSIU, DIMARTS TARDA
 - "TOTAL BODY / COS SENCER / LIMFOMA" → protocol 60, RM1/RM5
 - "MÀ / CANELL" → protocol 53, 3T obligatori (RM3>RM2), MAI RM1/RM4/RM5
+- "EPILÈPSIA" → protocol 10, preferir RM3/RM2 (no RM5 com a primera opció)
+- "CARA / SINS / FOSA NASAL" → protocol 21, equip RM2/RM3 primer (no RM5/RM4)
+- "CRANI + T2 DRIVE / CAIS" → 1 hueco, sense contrast (protocol 17)
 - Si la nota conté "ver/avisar/mirar/urgente/urgent" → torn MATI obligatori
+- EXCEPCIÓ: si és NEURO + ver/avisar + dijous o divendres → pot ser TARDA igualment
 
 === GUIA DE CONFIANÇA ===
 ALTA: nota molt específica (diagnòstic clar, protocol inequívoc)
