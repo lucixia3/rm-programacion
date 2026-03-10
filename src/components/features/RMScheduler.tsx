@@ -799,12 +799,13 @@ export function RMScheduler() {
               )}
 
               {/* Nota important */}
-              {result.nota && (
+              {(result.nota || result.maquina_nota) && (
                 <div style={{ display: "flex", gap: 12, background: "rgba(247,168,79,.06)", border: "1px solid rgba(247,168,79,.2)", borderRadius: "var(--radius)", padding: "14px 18px" }}>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7a84f" strokeWidth="2" strokeLinecap="round" style={{ flexShrink: 0, marginTop: 1 }}><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                   <div>
                     <p style={{ fontSize: 12, fontWeight: 700, color: "#f7a84f", marginBottom: 3 }}>Nota important</p>
-                    <p style={{ fontSize: 12, color: "#c4923a", lineHeight: 1.6 }}>{result.nota}</p>
+                    {result.maquina_nota && <p style={{ fontSize: 12, color: "#c4923a", lineHeight: 1.6, fontWeight: 600 }}>{result.maquina_nota}</p>}
+                    {result.nota && <p style={{ fontSize: 12, color: "#c4923a", lineHeight: 1.6, marginTop: result.maquina_nota ? 4 : 0 }}>{result.nota}</p>}
                   </div>
                 </div>
               )}
