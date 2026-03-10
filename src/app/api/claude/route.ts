@@ -356,12 +356,14 @@ export async function POST(request: NextRequest) {
   const protocol = EXCEL[Math.max(0, parsed.n - 1)] ?? EXCEL[0];
   const { equip1, equips } = resolveEquip(protocol.equip);
 
-  // ── Torn: anestèsia sempre imposa el torn, independentment de Claude ──────
+  // ── Torn: anestèsia i fetal imposen el torn, independentment de Claude ──────
   let torn = parsed.torn;
   if (anestesia) {
     if (anestMajor === false) torn = "DIVENDRES_MATI";
     else if (anestMajor === true) torn = "DIMARTS_TARDA";
     else torn = "ANESTESIA";
+  } else if (protocol.n === 46) {
+    torn = "DIMARTS_TARDA";
   }
 
   // ── CRI: override determinista de màquina ─────────────────────────────────
@@ -382,6 +384,10 @@ export async function POST(request: NextRequest) {
     if (isCRI) return "⚠ CRI: EXCLUSIU RM3 (prioritari) o RM5. MAI RM1, RM2 ni RM4. Màxim 3 dies des de la sol·licitud.";
     // Fetal: nota específica
     if (protocol.n === 46) return "⚠ RM2 EXCLUSIU. Dimarts tarda a partir de les 15h. Dra. Gomez Chiari present.";
+    // Cervico-dorsal o dorsal-lumbar: avisar RM4 = 2 huecos
+    const isCervicoDorsal = protocol.n === 26 || /cervic[ao][\s_-]?dorsal|dorsal[\s_-]?cervic[ao]/i.test(text);
+    const isDorsalLumbar = /dorsal[\s_-]?lumbar|lumbar[\s_-]?dorsal/i.test(text);
+    if (isCervicoDorsal || isDorsalLumbar) return "⚠ Si RM4: 2 huecos";
     // Mama: recordatori si RM1
     if (protocol.n === 58 || protocol.n === 59) {
       const mamaNota = "NO programar RM2 i RM3 alhora (1 sola antena). Si RM1: preguntar peso y altura al paciente!";
