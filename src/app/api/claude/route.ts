@@ -60,6 +60,7 @@ DVP/VP SHUNT/VENTRICULOPERITONEAL = derivació ventriculoperitoneal
 ATM/TEMPORO/TEMPOROMANDIBULAR = articulació temporomandibular
 EM/ESCLEROSI MULTIPLE/ESCLEROSIS MULTIPLE/DESMIELINITZANT = esclerosi múltiple → preferir RM2/RM3
 AVC/ICTUS/AIT/STROKE/ISQUÈMIC = ictus isquèmic
+CRI/CIRCUITO RAPIDO DE ICTUS/CIRCUIT RAPID ICTUS = ⚠️ PRIORITAT MÀXIMA: protocol 15, EXCLUSIU RM3>RM5, MAI RM1/RM2/RM4, màxim 3 dies des de sol·licitud
 EII/CROHN/ENTERO/ENTERO-RM = Entero-RM → SEMPRE MATÍ
 VER/AVISAR/MIRAR/URGENTE/URGENT = programar matí obligatori
 HIFU/ULTRASONS FOCALITZATS = ultrasons focalitzats → RM3 EXCLUSIU, SEMPRE MATÍ
@@ -95,6 +96,7 @@ MENIÈRE/MENIERE = RM3 EXCLUSIU, 2 huecos, MATÍ 8-13h
 18. Espectroscopia → RM3, MATÍ, avisar radióleg
 19. Neo Cervix → MATÍ, avisar radióleg
 20. Crani + T2 DRIVE de CAIS → 1 hueco, sense contrast
+21. CRI (Circuito Rápido de Ictus) → protocol 15, EXCLUSIU RM3 (prioritari) o RM5. MAI RM1, RM2 ni RM4. Programar en màxim 3 dies naturals des de la sol·licitud.
 
 === REGLES DE TORN ===
 SEMPRE MATÍ: ENTERO-RM, DEFECOGRAFIA, RENAL, FERRO, HIFU, ESPECTROSCOPIA, NEO CERVIX
@@ -127,6 +129,7 @@ ${buildPromptTable()}
 - "MÀ / CANELL" → protocol 53, 3T obligatori (RM3>RM2), MAI RM1/RM4/RM5
 - "EPILÈPSIA" → protocol 10, preferir RM3/RM2 (no RM5 com a primera opció)
 - "CARA / SINS / FOSA NASAL" → protocol 21, equip RM2/RM3 primer (no RM5/RM4)
+- "CRI" o "CIRCUITO RAPIDO DE ICTUS" → protocol 15, EXCLUSIU RM3>RM5, MAI RM1/RM2/RM4, màxim 3 dies
 - "CRANI + T2 DRIVE / CAIS" → 1 hueco, sense contrast (protocol 17)
 - Si la nota conté "ver/avisar/mirar/urgente/urgent" → torn MATI obligatori
 - EXCEPCIÓ: si és NEURO + ver/avisar + dijous o divendres → pot ser TARDA igualment
@@ -148,12 +151,15 @@ Retorna ÚNICAMENT aquest JSON, sense cap altre text ni markdown:
 }`;
 }
 
-function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean | null): string {
+function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean | null, isCRI: boolean): string {
   let msg = `Nota clínica: "${normalizeInput(text)}"`;
   if (anestesia) {
     if (anestMajor === false) msg += "\n[ANESTESIA PEDIÀTRICA: menor de 3 anys → RM1, DIVENDRES MATÍ]";
     else if (anestMajor === true) msg += "\n[ANESTESIA PEDIÀTRICA: 3 anys o més → RM1, DIMARTS TARDA]";
     else msg += "\n[ANESTESIA PEDIÀTRICA: edat no especificada → RM1]";
+  }
+  if (isCRI) {
+    msg += "\n[CRI — CIRCUITO RÁPIDO DE ICTUS: protocol 15, EXCLUSIU RM3 (prioritari) o RM5. MAI RM1, RM2 ni RM4. Màxim 3 dies des de la sol·licitud.]";
   }
   return msg;
 }
@@ -214,6 +220,9 @@ const CLINICAL_ALIASES: [RegExp, string][] = [
   // mpMRI / multiparamètrica
   [/\bmpmri\b/gi,                           "mpMRI"],
   [/\bmultiparamet[rè]ic[ae]?\b/gi,         "mpMRI"],
+  // CRI — Circuito Rápido de Ictus
+  [/\bcircuito[\s_-]?r[aá]pido[\s_-]?(?:de[\s_-]?)?ictus\b/gi, "CRI"],
+  [/\bcircuit[\s_-]?r[aà]pid[\s_-]?(?:d['']?)?ictus\b/gi,      "CRI"],
 ];
 
 function normalizeInput(text: string): string {
@@ -244,6 +253,9 @@ export async function POST(request: NextRequest) {
     if (m) anestMajor = parseInt(m[1]) >= 3;
   }
 
+  // ── Detecció determinista de CRI ──────────────────────────────────────────
+  const isCRI = /\bcri\b|circuito[\s_-]?r[aá]pido[\s_-]?(?:de[\s_-]?)?ictus|circuit[\s_-]?r[aà]pid[\s_-]?(?:d['']?)?ictus/i.test(text);
+
   // ── Few-shot dinàmic: correccions reals de Supabase ──────────────────────
   const supabaseUrl = process.env.SUPABASE_URL ?? "";
   const supabaseKey = process.env.SUPABASE_ANON_KEY ?? "";
@@ -267,7 +279,7 @@ export async function POST(request: NextRequest) {
         model: "claude-haiku-4-5-20251001",
         max_tokens: 300,
         system: buildSystemPrompt(fewShots),
-        messages: [{ role: "user", content: buildUserMessage(text, anestesia, anestMajor) }],
+        messages: [{ role: "user", content: buildUserMessage(text, anestesia, anestMajor, isCRI) }],
       }),
     });
 
@@ -283,7 +295,7 @@ export async function POST(request: NextRequest) {
           model: "claude-sonnet-4-6",
           max_tokens: 300,
           system: buildSystemPrompt(fewShots),
-          messages: [{ role: "user", content: buildUserMessage(text, anestesia, anestMajor) }],
+          messages: [{ role: "user", content: buildUserMessage(text, anestesia, anestMajor, isCRI) }],
         }),
       });
     }
@@ -338,6 +350,14 @@ export async function POST(request: NextRequest) {
     else torn = "ANESTESIA";
   }
 
+  // ── CRI: override determinista de màquina ─────────────────────────────────
+  let finalEquip1 = equip1;
+  let finalEquips = equips;
+  if (isCRI) {
+    finalEquip1 = "RM3";
+    finalEquips = "RM3/RM5";
+  }
+
   // ── Nota màquina: generada de forma determinista per consistència ─────────
   function buildMaquinaNota(): string {
     if (anestesia) {
@@ -345,6 +365,7 @@ export async function POST(request: NextRequest) {
       if (anestMajor === true)  return "RM1 exclusiu · Dimarts tarda (pacient ≥3 anys)";
       return "RM1 exclusiu · Edat no especificada";
     }
+    if (isCRI) return "⚠ CRI: EXCLUSIU RM3 (prioritari) o RM5. MAI RM1, RM2 ni RM4. Màxim 3 dies des de la sol·licitud.";
     if (!protocol.nota) return "";
     const n = protocol.nota.replace(/^⚠\s*/, "");
     // Mostrar nota màquina només si conté restricció de màquina rellevant
@@ -359,8 +380,8 @@ export async function POST(request: NextRequest) {
     zona: protocol.zona,
     contrast: protocol.contrast,
     bomba: protocol.bomba,
-    equip1,
-    equips,
+    equip1: finalEquip1,
+    equips: finalEquips,
     huecos: protocol.huecos,
     nota: protocol.nota,
     torn,
