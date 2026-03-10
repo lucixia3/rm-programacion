@@ -90,6 +90,15 @@ Las prioridades de máquina se leen de izquierda a derecha: asignar la primera d
 - Máquinas: RM5 > RM3 > RM1
 - Huecos: 1 | Turno: Flexible (≈22% mañana — predomina tarde)
 
+**CRI — CIRCUITO RÀPID D'ICTUS** ⚠️ PRIORITAT MÀXIMA
+- Indicación: CRI / Circuito Rápido de Ictus / Circuit Ràpid d'Ictus / o qualsevol expressió equivalent
+- Contraste: NO | Bomba: —
+- Máquinas: **RM3 > RM5** (prioritari RM3; RM5 si RM3 no disponible)
+- Huecos: 1 | Turno: Flexible
+- **RESTRICCIÓ TEMPORAL ABSOLUTA: Ha de programar-se en un màxim de 3 dies naturals des de la data de sol·licitud. Mai superar els 3 dies.**
+- **RESTRICCIÓ DE MÀQUINA: Exclusivament RM3 o RM5. No assignar a RM1, RM2 ni RM4.**
+- Nota: Si el volant conté "CRI", "circuito rapido de ictus", "circuit rapid ictus", "circuito rápido ictus" o expressions similars, aplicar sempre aquestes restriccions sense excepció.
+
 ---
 
 **RM HIPOFISI / HIPOFISIS AMB CONTRAST**
@@ -433,6 +442,7 @@ Estas restricciones no pueden saltarse bajo ninguna circunstancia. Ante cualquie
 | **RM5 NUNCA para DIFUSIÓ-PERFUSIÓ** | Perfusión siempre requiere bomba; RM5 no la tiene. |
 | **RM5 NUNCA para MENIÈRE** | Menière es exclusivo de RM3. |
 | **RM5 NUNCA para HIFU** | HIFU es exclusivo de RM3. |
+| **CRI: solo RM3 o RM5** | CRI (Circuito Rápido de Ictus) nunca en RM1, RM2 ni RM4. Siempre RM3 (prioritario) o RM5. Máximo 3 días desde la solicitud. |
 
 ### 3.2 Restricciones de máquina exclusiva
 
@@ -549,6 +559,7 @@ Antes de asignar máquina, comprobar:
 - ¿Es DBS 3T? → Solo RM3. ¿Es DBS 1.5T? → Solo RM5.
 - ¿Es DIFUSIÓ-PERFUSIÓ? → Excluir RM5; siempre contraste + bomba.
 - ¿Es CAR-T? → Solo RM3.
+- ¿Contiene "CRI", "circuito rapido de ictus", "circuit rapid ictus" o similar? → **Solo RM3 o RM5 (prioritario RM3). Nunca RM1, RM2 ni RM4. Programar en máximo 3 días naturales desde la solicitud.**
 
 ### Paso 3: Aplicar prioridad de máquina
 De las máquinas restantes (tras excluir las prohibidas), asignar la primera disponible según el orden de prioridad indicado en la tabla del procedimiento.
