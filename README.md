@@ -1,4 +1,4 @@
-# 🧲 RM Scheduler — AI-Powered MRI Scheduling Assistant
+# RM Scheduler — AI-Powered MRI Scheduling Assistant
 
 > **Intelligent decision support for MRI scheduling at Hospital de la Santa Creu i Sant Pau (Barcelona)**
 > Converts unstructured clinical notes into precise machine assignments, protocol recommendations, and shift planning — in real time.
@@ -27,7 +27,7 @@ This tool does all of that automatically. Administrative staff paste a free-text
 ## Features
 
 ### 🤖 Hybrid AI + Rule Engine
-The system combines a **large language model** (Claude, Anthropic) for natural language understanding with a **deterministic constraint layer** that enforces all hard rules. The LLM interprets ambiguous, multilingual, abbreviation-heavy clinical notes — the rule engine guarantees safety. Hard constraints (e.g., *RM5 has no automatic injector — never schedule contrast exams there*) can never be overridden by the model.
+The system combines a **large language model** for natural language understanding with a **deterministic constraint layer** that enforces all hard rules. The LLM interprets ambiguous, multilingual, abbreviation-heavy clinical notes — the rule engine guarantees safety. Hard constraints (e.g., *RM5 has no automatic injector — never schedule contrast exams there*) can never be overridden by the model.
 
 ### 📚 Comprehensive Knowledge Base
 Encodes the full scheduling logic of a 5-scanner department:
@@ -68,7 +68,7 @@ Each recommendation comes with a confidence level (`HIGH / MEDIUM / LOW`) and a 
 └────────────────────────┬────────────────────────────────┘
                          │ API call
 ┌────────────────────────▼────────────────────────────────┐
-│              Edge Function — /api/claude                 │
+│              Edge Function — /api/              │
 │                                                          │
 │  1. Fetch recent validated corrections from Supabase     │
 │  2. Build system prompt (knowledge base + few-shots)     │
@@ -109,7 +109,7 @@ Each recommendation comes with a confidence level (`HIGH / MEDIUM / LOW`) and a 
 These are enforced deterministically — the LLM cannot override them:
 
 - `RM5` → **never** if protocol requires injector
-- `RM5` & `RM4` → **never** for pituitary (RM HIPÒFISI)
+- `RM5` & `RM4` → **never** for pituitary 
 - `RM3` → **exclusive** for HIFU, Menière, CAR-T, Parkinson preECP, DBS 3T, CRI (priority)
 - `RM2` → **exclusive** for fetal MRI (Tuesday afternoon only)
 - `RM1` → **exclusive** for arthrography (shoulder/hip), pediatric anesthesia
@@ -166,7 +166,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Variable | Description |
 |---|---|
-| `ANTHROPIC_API_KEY` | Anthropic API key for Claude |
+| `ANTHROPIC_API_KEY` | Anthropic API key |
 | `SUPABASE_URL` | Supabase project URL |
 | `SUPABASE_ANON_KEY` | Supabase anonymous key |
 
@@ -184,10 +184,9 @@ The tool is designed to assist — not replace — human judgment. All AI sugges
 
 If you use this work or build on it, please cite:
 
-> *AI-Assisted MRI Scheduling: A Large Language Model–Based Decision Support System with Continuous Learning from Radiologist Feedback.* Radiological Society of North America (RSNA) Annual Meeting, 2025.
 
 ---
 
 ## License
 
-For academic and research use. Contact the Radiology Department of Hospital de Sant Pau for institutional licensing inquiries.
+For academic and research use. Contact the author for institutional licensing inquiries.
