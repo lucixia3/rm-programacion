@@ -556,7 +556,7 @@ export default function AdminPage() {
                               <span style={{ fontSize: 11, color: "#3ecfb0" }}>Bomba: {row.correccio_bomba}</span>
                             )}
                             {row.correccio_comment && (
-                              <span style={{ fontSize: 11, color: "var(--text3)", fontStyle: "italic" }}>{truncate(row.correccio_comment, 40)}</span>
+                              <span style={{ fontSize: 11, color: "var(--text3)", fontStyle: "italic", whiteSpace: "normal", wordBreak: "break-word" }}>{row.correccio_comment}</span>
                             )}
                           </div>
                         ) : (
