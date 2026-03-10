@@ -49,8 +49,10 @@ function buildSystemPrompt(fewShots: string = ""): string {
 ST/ESTANDAR = estàndard sense contrast (llevat +C)
 +C/CTE/CONTRASTE/CON CONTRASTE/ELUCIREM/GADOLINI = contrast IV
 TOF/TOF3D/TOF 3D/TOF-3D/ANGIO-RM/ANGIO RM/ARM/ANGIO WILLIS/WILLIS = angio RM sense contrast, sense bomba
-PERFU/PERFUSION/PERFUSIÓ = perfusió cerebral, SEMPRE contrast+bomba, MAI RM5
-DIFU/DIFUSION/DIFUSIÓ/DWI = difusió cerebral, SEMPRE contrast+bomba, MAI RM5
+PERFU/PERFUSION/PERFUSIÓ = perfusió cerebral → SEMPRE contrast+bomba, MAI RM5
+DIFU/DIFUSION/DIFUSIÓ = difusió cerebral (equivalent a PERFU si apareix sol: contrast+bomba, MAI RM5)
+DWI = difusió simple (sense perfusió) → NO requereix bomba ni contrast, pot anar a RM4/RM5
+Si nota conté PERFU + DWI o PERFU + DIFU conjuntament → protocol 66 (contrast+bomba, MAI RM5)
 SPECTRO/ESPECTRO/ESPECTROSCOPIA = espectroscopia cerebral, RM3, SEMPRE MATÍ
 ARTRO/ARTROGRAFIA/ARTRO-RM = artro-RM espatlla/maluc, RM1 EXCLUSIU
 mpMRI/MULTIPARAMETRIC/MULTIPARAMETRICA/MULTIPARAMÈTRICA = sempre contrast (pròstata, mama)
@@ -86,7 +88,7 @@ MENIÈRE/MENIERE = RM3 EXCLUSIU, 2 huecos, MATÍ 8-13h
 8. Mama → NO programar RM2 i RM3 alhora (1 sola antena)
 9. Mà/canell → RM3>RM2 ÚNICAMENT (3T obligatori)
 10. Cardio → RM2>RM5, MAI RM3/RM4
-11. PERFU/DIFU → contrast+bomba obligatori, MAI RM5
+11. PERFUSION/PERFU/DIFU/DIFUSION → contrast+bomba obligatori, MAI RM5. DWI sol (sense PERFU) → pot anar a RM4/RM5, sense bomba obligatòria
 12. Fetal → RM2 EXCLUSIU, DIMARTS TARDA
 13. Anestesia <3a → RM1, DIVENDRES MATÍ
 14. Anestesia ≥3a → RM1, DIMARTS TARDA
@@ -100,9 +102,15 @@ MENIÈRE/MENIERE = RM3 EXCLUSIU, 2 huecos, MATÍ 8-13h
 
 === REGLES DE TORN ===
 SEMPRE MATÍ: ENTERO-RM, DEFECOGRAFIA, RENAL, FERRO, HIFU, ESPECTROSCOPIA, NEO CERVIX
-DIMARTS TARDA: FETAL CRANI
+DIMARTS TARDA (a partir 15h): FETAL CRANI
 FLEXIBLE: tots els altres (llevat que la nota/observació contingui ver/avisar/mirar → MATÍ)
 EXCEPCIÓ NEURO + VER/AVISAR: si és neuro i hi ha ver/avisar, dijous i divendres pot ser TARDA igualment
+
+=== REGLES HUECOS COLUMNA COMBINADA ===
+- Cervical-Dorsal o Dorsal-Lumbar: 1 hueco a RM1/RM2/RM3/RM5. Si RM4 → 2 huecos (indica-ho a maquina_nota)
+- Cervical-Lumbar: SEMPRE 2 huecos (totes les màquines sense excepció)
+- Sacro-lumbar / Lumbo-sacro: 1 hueco
+- Sacroilíaques + Lumbar (dues zones separades): 2 huecos
 
 === LLISTA COMPLETA DE PROTOCOLS (1-66) ===
 ${buildPromptTable()}
@@ -110,7 +118,8 @@ ${buildPromptTable()}
 === CASOS FREQÜENTS I AMBIGUS ===
 - "TOF" o "TOF 3D" sol → protocol 14 (Cervell + Angio Willis) si context ictus; sino protocol 15 (RM ICTUS)
 - "RM CERVELL + TOF/WILLIS" → protocol 14
-- "PERFU + DIFU" junts → protocol 66, contrast+bomba, MAI RM5
+- "PERFU + DIFU/DWI" junts → protocol 66, contrast+bomba, MAI RM5
+- "DWI" sol (sense PERFU/PERFUSION) → difusió simple, pot RM4/RM5, NO bomba obligatòria. Usa protocol de cervell estàndard o ictus segons context
 - "SPECTRO" sense altra info → protocol 64, RM3, MATÍ, avisar radióleg
 - "mpMRI PRÒSTATA" → protocol 43
 - "mpMRI MAMA" → protocol 58
@@ -124,7 +133,12 @@ ${buildPromptTable()}
 - "FERRO / HIERRO HEPÀTIC" → protocol 31, SEMPRE MATÍ, RM5/RM4 (MAI RM1)
 - "COLANGIO + contrast" → protocol 34; "COLANGIO sense contrast" → protocol 35
 - "DEFECO / DEFECOGRAFIA" → protocol 45, MATÍ, MAI RM4
-- "FETAL CRANI" → protocol 46, RM2 EXCLUSIU, DIMARTS TARDA
+- "FETAL CRANI" → protocol 46, RM2 EXCLUSIU, DIMARTS TARDA a partir de les 15h, 1 hueco, nota: "Dra. Gomez Chiari present"
+- "RM MAMA" (protocol 58/59) → si s'assigna a RM1: avisar "Si RM1 preguntar peso y altura al paciente!"
+- "CERVICAL + DORSAL" o "DORSAL + LUMBAR" → 1 hueco (si RM4: 2 huecos)
+- "CERVICAL + LUMBAR" → 2 huecos (sempre)
+- "SACRO-LUMBAR" o "LUMBO-SACRO" → 1 hueco
+- "SACROILÍAQUES + LUMBAR" → 2 huecos
 - "TOTAL BODY / COS SENCER / LIMFOMA" → protocol 60, RM1/RM5
 - "MÀ / CANELL" → protocol 53, 3T obligatori (RM3>RM2), MAI RM1/RM4/RM5
 - "EPILÈPSIA" → protocol 10, preferir RM3/RM2 (no RM5 com a primera opció)
@@ -187,7 +201,7 @@ const CLINICAL_ALIASES: [RegExp, string][] = [
   // Difusió
   [/\bdifusi[oó]n?\b/gi,                    "DIFUSION"],
   [/\bdifu\b/gi,                            "DIFUSION"],
-  [/\bdwi\b/gi,                             "DIFUSION"],
+  // DWI NO s'aliasa a DIFUSION: DWI sol pot anar a RM4/RM5 sense bomba
   // Espectroscòpia
   [/\bespectroscop[íi]a\b/gi,               "ESPECTROSCOPIA"],
   [/\bspectro\b/gi,                         "ESPECTROSCOPIA"],
@@ -366,6 +380,13 @@ export async function POST(request: NextRequest) {
       return "RM1 exclusiu · Edat no especificada";
     }
     if (isCRI) return "⚠ CRI: EXCLUSIU RM3 (prioritari) o RM5. MAI RM1, RM2 ni RM4. Màxim 3 dies des de la sol·licitud.";
+    // Fetal: nota específica
+    if (protocol.n === 46) return "⚠ RM2 EXCLUSIU. Dimarts tarda a partir de les 15h. Dra. Gomez Chiari present.";
+    // Mama: recordatori si RM1
+    if (protocol.n === 58 || protocol.n === 59) {
+      const mamaNota = "NO programar RM2 i RM3 alhora (1 sola antena). Si RM1: preguntar peso y altura al paciente!";
+      return mamaNota;
+    }
     if (!protocol.nota) return "";
     const n = protocol.nota.replace(/^⚠\s*/, "");
     // Mostrar nota màquina només si conté restricció de màquina rellevant
