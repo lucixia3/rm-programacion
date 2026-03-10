@@ -17,7 +17,7 @@ const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 
 async function fetchFewShots(supabaseUrl: string, supabaseKey: string): Promise<string> {
   try {
-    const url = `${supabaseUrl}/rest/v1/rm_feedback?decisio=eq.corregit&order=created_at.desc&limit=15&select=nota_radioleg,correccio_protocol_n,correccio_nom_protocol,correccio_torn,correccio_equip1,correccio_comment`;
+    const url = `${supabaseUrl}/rest/v1/rm_feedback?decisio=eq.validat&order=created_at.desc&limit=15&select=nota_radioleg,correccio_protocol_n,correccio_nom_protocol,correccio_torn,correccio_equip1,correccio_comment`;
     const r = await fetch(url, {
       headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
     });

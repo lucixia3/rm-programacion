@@ -62,6 +62,9 @@ export default function AdminPage() {
   // Delete single row
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
+  // Validate single row
+  const [validatingId, setValidatingId] = useState<string | null>(null);
+
   const fetchFeedbacks = useCallback(async (pwd: string) => {
     setLoading(true);
     setFetchError("");
@@ -138,11 +141,24 @@ export default function AdminPage() {
     setResetPwd("");
   }
 
+  async function validateRow(id: string) {
+    setValidatingId(id);
+    await fetch("/api/admin/feedback", {
+      method: "PATCH",
+      headers: { "x-admin-password": password, "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    setRows((prev) => prev.map((r) => r.id === id ? { ...r, decisio: "validat" } : r));
+    setValidatingId(null);
+  }
+
   const total = rows.length;
   const acceptats = rows.filter((r) => r.decisio === "acceptat").length;
   const corregits = rows.filter((r) => r.decisio === "corregit").length;
+  const validats = rows.filter((r) => r.decisio === "validat").length;
   const pctAcc = total > 0 ? Math.round((acceptats / total) * 100) : 0;
   const pctCorr = total > 0 ? Math.round((corregits / total) * 100) : 0;
+  const pctVal = total > 0 ? Math.round((validats / total) * 100) : 0;
 
   // ── Login screen ────────────────────────────────────────────────────────
   if (!authed) {
@@ -330,7 +346,7 @@ export default function AdminPage() {
         )}
 
         {/* Stats cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
           {/* Total */}
           <div style={{
             background: "var(--surface)",
@@ -368,7 +384,7 @@ export default function AdminPage() {
             </div>
           </div>
 
-          {/* Corregits */}
+          {/* Corregits (pendent de validar) */}
           <div style={{
             background: "var(--surface)",
             border: "1px solid rgba(247,168,79,.2)",
@@ -376,7 +392,7 @@ export default function AdminPage() {
             padding: "20px 24px",
           }}>
             <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "#f7a84f", opacity: 0.7, marginBottom: 8 }}>
-              Corregits
+              Corregits (pendent)
             </p>
             <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
               <p style={{ fontSize: 32, fontWeight: 800, letterSpacing: -1, color: "#f7a84f" }}>
@@ -385,6 +401,28 @@ export default function AdminPage() {
               {total > 0 && (
                 <span style={{ fontSize: 14, fontWeight: 600, color: "#f7a84f", opacity: 0.7 }}>
                   {pctCorr}%
+                </span>
+              )}
+            </div>
+          </div>
+
+          {/* Validats (few-shots actius) */}
+          <div style={{
+            background: "var(--surface)",
+            border: "1px solid rgba(99,179,237,.2)",
+            borderRadius: "var(--radius)",
+            padding: "20px 24px",
+          }}>
+            <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: "uppercase", color: "#63b3ed", opacity: 0.7, marginBottom: 8 }}>
+              Validats (few-shots)
+            </p>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+              <p style={{ fontSize: 32, fontWeight: 800, letterSpacing: -1, color: "#63b3ed" }}>
+                {validats}
+              </p>
+              {total > 0 && (
+                <span style={{ fontSize: 14, fontWeight: 600, color: "#63b3ed", opacity: 0.7 }}>
+                  {pctVal}%
                 </span>
               )}
             </div>
@@ -426,7 +464,7 @@ export default function AdminPage() {
               }}>
                 <thead>
                   <tr style={{ borderBottom: "1px solid var(--border)" }}>
-                    {["Data", "Nota radiòleg", "Protocol IA", "Torn IA", "Equip IA", "Decisió", "Correcció", ""].map((h) => (
+                    {["Data", "Nota radiòleg", "Protocol IA", "Torn IA", "Equip IA", "Decisió", "Correcció", "", ""].map((h) => (
                       <th key={h} style={{
                         padding: "10px 16px",
                         textAlign: "left",
@@ -477,6 +515,15 @@ export default function AdminPage() {
                           }}>
                             Acceptat
                           </span>
+                        ) : row.decisio === "validat" ? (
+                          <span style={{
+                            display: "inline-flex", alignItems: "center", padding: "3px 10px",
+                            borderRadius: 20, fontSize: 11, fontWeight: 600,
+                            background: "rgba(99,179,237,.12)", color: "#63b3ed",
+                            border: "1px solid rgba(99,179,237,.25)",
+                          }}>
+                            ✓ Validat
+                          </span>
                         ) : (
                           <span style={{
                             display: "inline-flex", alignItems: "center", padding: "3px 10px",
@@ -514,6 +561,26 @@ export default function AdminPage() {
                           </div>
                         ) : (
                           <span style={{ color: "var(--text3)" }}>—</span>
+                        )}
+                      </td>
+                      <td style={{ padding: "6px 4px" }}>
+                        {row.decisio === "corregit" && (
+                          <button
+                            onClick={() => validateRow(row.id)}
+                            disabled={validatingId === row.id}
+                            title="Validar per few-shots"
+                            style={{
+                              padding: "3px 8px", borderRadius: 6,
+                              border: "1px solid rgba(99,179,237,.3)",
+                              background: "rgba(99,179,237,.08)",
+                              color: "#63b3ed",
+                              cursor: validatingId === row.id ? "not-allowed" : "pointer",
+                              fontSize: 11, opacity: validatingId === row.id ? 0.4 : 1,
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            {validatingId === row.id ? "…" : "✓ Validar"}
+                          </button>
                         )}
                       </td>
                       <td style={{ padding: "6px 12px" }}>

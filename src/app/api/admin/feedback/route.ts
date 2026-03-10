@@ -93,3 +93,53 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: "Error intern del servidor" }, { status: 500 });
   }
 }
+
+/**
+ * PATCH /api/admin/feedback
+ * Body: { id: string } — marca una correcció com a 'validat' perquè entri als few-shots
+ */
+export async function PATCH(request: NextRequest) {
+  const adminPassword = process.env.ADMIN_PASSWORD ?? "rm2026";
+  const providedPassword = request.headers.get("x-admin-password");
+
+  if (!providedPassword || providedPassword !== adminPassword) {
+    return NextResponse.json({ error: "No autoritzat" }, { status: 401 });
+  }
+
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseKey = process.env.SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseKey) {
+    return NextResponse.json({ error: "Servei no disponible" }, { status: 503 });
+  }
+
+  try {
+    const { id } = await request.json();
+    if (!id) return NextResponse.json({ error: "Falta id" }, { status: 400 });
+
+    const res = await fetch(
+      `${supabaseUrl}/rest/v1/rm_feedback?id=eq.${encodeURIComponent(id)}`,
+      {
+        method: "PATCH",
+        headers: {
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+          "Content-Type": "application/json",
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({ decisio: "validat" }),
+      }
+    );
+
+    if (!res.ok) {
+      const err = await res.text();
+      console.error("Error Supabase PATCH:", err);
+      return NextResponse.json({ error: "Error en validar" }, { status: 502 });
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("Error admin PATCH route:", err);
+    return NextResponse.json({ error: "Error intern del servidor" }, { status: 500 });
+  }
+}
