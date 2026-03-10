@@ -17,7 +17,7 @@ const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 
 async function fetchFewShots(supabaseUrl: string, supabaseKey: string): Promise<string> {
   try {
-    const url = `${supabaseUrl}/rest/v1/rm_feedback?decisio=eq.validat&order=created_at.desc&limit=15&select=nota_radioleg,correccio_protocol_n,correccio_nom_protocol,correccio_torn,correccio_equip1,correccio_comment`;
+    const url = `${supabaseUrl}/rest/v1/rm_feedback?decisio=eq.validat&order=created_at.desc&limit=15&select=nota_radioleg,correccio_torn,correccio_equip1,correccio_comment`;
     const r = await fetch(url, {
       headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` },
     });
@@ -25,7 +25,7 @@ async function fetchFewShots(supabaseUrl: string, supabaseKey: string): Promise<
     const rows = await r.json();
     if (!rows.length) return "";
     const examples = rows.map((row: Record<string, string | number | null>, i: number) =>
-      `[${i + 1}] Nota: "${row.nota_radioleg}" → Protocol correcte: ${row.correccio_protocol_n} (${row.correccio_nom_protocol}), Torn: ${row.correccio_torn}, Equip: ${row.correccio_equip1}${row.correccio_comment ? `, Nota: ${row.correccio_comment}` : ""}`
+      `[${i + 1}] Nota: "${row.nota_radioleg}" → Torn: ${row.correccio_torn}, Equip: ${row.correccio_equip1}${row.correccio_comment ? `, Nota: ${row.correccio_comment}` : ""}`
     ).join("\n");
     return `\n=== CORRECCIONS REALS DE LES ADMINISTRATIVES (aprèn d'aquests casos) ===\n${examples}\n`;
   } catch {
