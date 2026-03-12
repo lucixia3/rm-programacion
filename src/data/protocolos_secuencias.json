@@ -1,0 +1,6010 @@
+{
+  "by_machine": {
+    "RM1": {
+      "CRANEO": {
+        "CRANEO ESTANDARD": [
+          "T1w 3D IR TFE",
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE Gd",
+          "T1w SE Gd"
+        ],
+        "ICTUS": [
+          "DWI",
+          "FLAIR 3D SPIR",
+          "SWI",
+          "T2w TSE Tra",
+          "T1w SE Tra",
+          "3D TOF"
+        ],
+        "PARES CRANEALES": [
+          "BFFE Tra",
+          "T1w 3D DIXON",
+          "T1w 3D Gd"
+        ],
+        "ORBITAS": [
+          "T2w DIXON Tra",
+          "T2w DIXON Cor",
+          "T1w 3D DIXON",
+          "T1w 3D DIXON Gd",
+          "DWI TSE"
+        ],
+        "HIPOFISIS": [
+          "FLAIR 3D SPIR",
+          "T1w SE Sag",
+          "T2w TSE Cor",
+          "T1w SE Cor",
+          "T2w TSE Sag",
+          "DWI TSE",
+          "T1w TSE dinamico Cor",
+          "T1w SE Sag Gd",
+          "T1w SE Cor Gd"
+        ],
+        "EPILEPSIA": [
+          "FLAIR 3D SPIR",
+          "DWI",
+          "T2w TSE DRIVE",
+          "T2w IR",
+          "T2w 3D TFE",
+          "SWI"
+        ],
+        "CAI ESTANDARD": [
+          "DWI",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "FLAIR 3D SPIR",
+          "T2w 3D DRIVE",
+          "T1w 3D DIXON",
+          "BBFE Tra"
+        ],
+        "CAI COLESTEATOMA": [
+          "DWI",
+          "T2w TSE Tra",
+          "3D BrainVIEW FLAIR",
+          "T2w TSE Cor",
+          "T2w 3D DRIVE",
+          "3D T1w DIXON Tra",
+          "DWI Cor"
+        ],
+        "IMPLANTE COCLEAR": [
+          "DWI",
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T2w TSE Cor",
+          "T2w 3D DRIVE",
+          "3D T1w DIXON Tra"
+        ],
+        "CAI GADO": [
+          "DWI SPIR",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "FLAIR 3D SPIR",
+          "T1w 3D DIXON",
+          "BFFE Tra",
+          "T1w 3D DIXON Gd"
+        ],
+        "CARA SENOS": [
+          "T1w DIXON TSE Sag",
+          "T2w DIXON TSE Tra",
+          "T1w DIXON TSE Tra",
+          "T1w DIXON TSE Cor",
+          "T2w DIXON TSE Cor",
+          "DWI",
+          "3D DIXON MRA",
+          "T1w DIXON Sag Gd",
+          "T1w DIXON Cor Gd"
+        ],
+        "CRANEO TUMOR DTI": [
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "DWI",
+          "SWI",
+          "DTI",
+          "Neuronavegador",
+          "FE EPI",
+          "Neuronavegador Gd",
+          "T1w Tra Gd"
+        ],
+        "TROMBOSIS VENOSA": [
+          "DWI SPIR",
+          "T2w TSE Tra",
+          "3D PCA SINUS",
+          "T2w TSE DRIVE",
+          "3D BrainVIEW FLAIR",
+          "T1w SE Cor",
+          "SWI"
+        ],
+        "FETAL CRANI": [
+          "SS Sag",
+          "SS Tra",
+          "SS Cor",
+          "DWI",
+          "SS MRCP",
+          "BTFE Tra",
+          "BTFE Sag"
+        ],
+        "FETAL UTERO MADRE": [
+          "BTFE Cor utero",
+          "BTFE Sag utero",
+          "BTFE Tra utero",
+          "T2w SS TSE neuro",
+          "T2w SS TSE body",
+          "BTFE FIESTA",
+          "T1w BH",
+          "DWI",
+          "SV PRESS 31 (espectro single voxel)"
+        ],
+        "EM": [
+          "DWI",
+          "SWI",
+          "T2w TSE Tra",
+          "3D FLAIR",
+          "T1w 3D IR TFE",
+          "T1w 3D Gd"
+        ],
+        "DBS": [
+          "Neuronavegador",
+          "DTI",
+          "3D FLAIR",
+          "T1w 3D TFE",
+          "T1w PRESTO"
+        ],
+        "ATM": [
+          "T2w DIXON Cor",
+          "PDw TSE Sag (cerrada)",
+          "T2w TSE Sag (cerrada)",
+          "PDw TSE Sag (abierta)",
+          "T2w TSE Sag (abierta)"
+        ]
+      },
+      "CUELLO": {
+        "PAROTIDA": [
+          "T2w DIXON TSE Tra",
+          "T2w DIXON TSE Cor",
+          "T1w DXON TSE Tra",
+          "DWI",
+          "T2w GRASE Tra",
+          "THRIVE dinamico Tra",
+          "T1w DIXON Tra Gd",
+          "T1w DIXON Cor Gd",
+          "T2w SS"
+        ],
+        "CUELLO STD": [
+          "T1w DIXON TSE Sag",
+          "T2w DIXON TSE Tra",
+          "T1w DIXON TSE Tra",
+          "T1w DIXON TSE Cor",
+          "T2w DIXON TSE Cor",
+          "DWI",
+          "3D DIXON MRA",
+          "T1w DIXON Sag Gd",
+          "T1w DIXON Cor Gd"
+        ],
+        "ATM": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "FFE Sag",
+          "T1w FFE Sag",
+          "MOVIE Tra",
+          "FFE Tra Sag"
+        ],
+        "ATM ANTENA DE CRANEO": [
+          "MOVIE 3 dinamicos",
+          "T2w TSE 2 Cor",
+          "T2w DIXON Cor"
+        ],
+        "CARA SENOS": [
+          "T1w DIXON TSE Sag",
+          "T2w DIXON TSE Tra",
+          "T1w DIXON TSE Tra",
+          "T1w DIXON TSE Cor",
+          "T2w DIXON TSE Cor",
+          "DWI",
+          "3D DIXON MRA",
+          "T1w DIXON Sag Gd",
+          "T1w DIXON Cor Gd"
+        ]
+      },
+      "COLUMNA": {
+        "TODA COLUMNA": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "STIR TSE dorsal",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T1w TSE Tra",
+          "T2w TSE Tra"
+        ],
+        "COLUMNA COMPLETA DIXON": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "T2w DIXON TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "T2w DIXON TSE dorsal",
+          "T2w TSE Tra",
+          "T1w TSE Tra"
+        ],
+        "CRANEO+MEDULAR": [
+          "DWI",
+          "T2w TSE Tra",
+          "3D FLAIR",
+          "T1w 3D IR TFE",
+          "SWI",
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "STIR TSE dorsal",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T1w TSE Tra"
+        ],
+        "CERVICAL": [
+          "T1w TSE Sag",
+          "T2w TSE Sag",
+          "STIR TSE Sag",
+          "T2w DRIVE 3D",
+          "T1w 3D TFE",
+          "MYELO radial",
+          "T2w TSE Cor"
+        ],
+        "CERVICAL DIXON": [
+          "T1w TSE Sag",
+          "T2w TSE DIXON Sag",
+          "T2w DRIVE 3D",
+          "T1w 3D TFE",
+          "MYELO radial",
+          "T2w TSE Cor"
+        ],
+        "CERVICAL LIGAMENTOS": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE Cor",
+          "T2w DRIVE 3D",
+          "T1w 3D TFE",
+          "T2w FFE cervical",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "3D TOF",
+          "T2w DRIVE 3D"
+        ],
+        "LUMBAR": [
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "MYELO radial",
+          "DWI",
+          "T2w TSE Cor"
+        ],
+        "LUMBAR DIXON": [
+          "T2w TSE DIXON Sag",
+          "T1w TSE Sag",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "MYELO radial",
+          "DWI",
+          "T2w TSE Cor"
+        ],
+        "LUMBAR MARS": [
+          "T2w TSE MARS",
+          "T1w TSE MARS",
+          "STIR TSE MARS Sag",
+          "T2w TSE MARS Tra",
+          "T1w TSE MARS Tra"
+        ],
+        "LUMBAR+SACRO": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T1w TSE Cor sacro",
+          "STIR TSE Cor sacro",
+          "DWI"
+        ],
+        "SACROILIACA": [
+          "T1w TSE Cor",
+          "STIR Cor"
+        ],
+        "PLEXO": [
+          "3D STIR Cor",
+          "DWIBS",
+          "T1w DIXON TSE Cor",
+          "T1w DIXON Cor Gd"
+        ],
+        "MEDULA+NERVIO": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "T1w DIXON TSE Cor",
+          "T2w TSE Cor cervical",
+          "T2w TSE Cor dorsal",
+          "T2w TSE Cor lumbar",
+          "DWI TSE",
+          "T1w DIXON Cor Gd cervical",
+          "T1w DIXON Cor Gd dorsal",
+          "T1w DIXON Cor Gd lumbar",
+          "T1w DIXON Sag Gd lumbar"
+        ],
+        "TODA COLUMNA SAR BAJO": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "STIR TSE dorsal",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T1w TSE Tra",
+          "T2w TSE Tra"
+        ]
+      },
+      "TORAX": {
+        "ELASTOFIBROMA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra"
+        ],
+        "ESTRECHO TORACICO": [
+          "T1w TSE Tra",
+          "T1w TSE ADD Sag",
+          "T1w TSE ABD Sag",
+          "3D ANGIO ABD",
+          "2D BOLUSTRAK",
+          "3D ANGIO ABD"
+        ],
+        "TIMO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SPAIR Tra",
+          "dual FFE Tra",
+          "DWI",
+          "THRIVE dinamico"
+        ]
+      },
+      "MAMA": {
+        "MAMA DINAMICO": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "DWI",
+          "THRIVE dinamico"
+        ],
+        "MAMA PROTESIS": [
+          "T2w TSE Tra",
+          "STIR Tra",
+          "Silicone only Tra",
+          "Silicone supresion Tra"
+        ],
+        "MAMA TIDE": [
+          "T2w TSE Tra",
+          "STIR Tra",
+          "THRIVE dinamico"
+        ]
+      },
+      "ABDOMEN": {
+        "COLANGIO": [
+          "T2w TSE Tra",
+          "MRCP radial",
+          "3D MRCP",
+          "DWI",
+          "Dual FFE Tra",
+          "T2w TSE Cor",
+          "T2w TSE SPAIR HR Cor"
+        ],
+        "HIGADO": [
+          "T2w TSE Tra",
+          "Dual FFE Tra",
+          "T2w TSE Cor",
+          "T2w SPAIR Tra",
+          "DWI",
+          "DIXON quant",
+          "THRIVE dinamico"
+        ],
+        "ESTUDIO SUPRARRENAL": [
+          "T2w TSE Cor",
+          "Dual FFE Cor",
+          "DWI",
+          "T2w TSE Tra",
+          "Dual FFE Tra",
+          "T1w THRIVE",
+          "THRIVE supresion"
+        ],
+        "FETAL COS": [
+          "SS Sag",
+          "SS Cor",
+          "SS Tra",
+          "BTFE Sag",
+          "BTFE Tra"
+        ],
+        "CUANTIFICACION HIERRO QBODY": [
+          "DP/FFE/SEDIA/6C",
+          "T2/FFE/SEDIA/6C"
+        ],
+        "ENTERO RM + CINES PREBUSCAPINA": [
+          "BTFE prebuscapina Cor 1",
+          "BTFE prebuscapina Cor 2",
+          "BTFE prebuscapina Cor 3",
+          "BTFE prebuscapina Cor 4",
+          "T2w TSE poner buscapina",
+          "BTFE Tra",
+          "BTFE Cor",
+          "DIXON fat sat Cor"
+        ]
+      },
+      "EESS": {
+        "HOMBRO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "PDw TSE SPAIR Sag",
+          "T1w TSE Sag",
+          "DWI SPIR Tra"
+        ],
+        "CODO": [
+          "PDw TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "FFE Sag",
+          "PDw TSE SPAIR Cor",
+          "PDw TSE SPAIR Sag"
+        ],
+        "MANO/CARPO GADO": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "3D FFE",
+          "T2w TSE SPAIR Tra",
+          "T2w FFE",
+          "T1w TSE Sag",
+          "T1w TSE Cor Gd"
+        ],
+        "MA": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "STIR TSE Cor",
+          "T1w TSE Sag",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "FFE Tra"
+        ],
+        "ARTRO ESPATLLA": [
+          "T1w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "PDw TSE Sag",
+          "PDw SPIR Cor",
+          "FFE Tra"
+        ],
+        "TUMOR EESS": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE SPIR Tra"
+        ],
+        "PLEXO BRAQUIAL": [
+          "STIR Cor",
+          "T1w TSE Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "DWIBS",
+          "T1w TSE Sag"
+        ]
+      },
+      "EEII": {
+        "CADERAS": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T2w TSE SPAIR Tra",
+          "PDw TSE Sag"
+        ],
+        "ARTRO CADERA": [
+          "T1w FFE Tra",
+          "T1w SPIR Tra",
+          "T1w Tra",
+          "T1w SPIR Cor",
+          "T1w Cor",
+          "T1w FFE Cor",
+          "PDw TSE Tra",
+          "PDw SPAIR radial"
+        ],
+        "SACRO TUMOR": [
+          "T1w TSE Cor",
+          "STIR Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "DIXON Tra Gd",
+          "Cor Gd"
+        ],
+        "LUMBAR+SACRO": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T1w TSE Cor sacro",
+          "STIR Cor sacro",
+          "DWI"
+        ],
+        "SACROILIACAS": [
+          "T1w TSE Sag",
+          "STIR Cor oblicuo",
+          "T1w Cor oblicuo",
+          "T2w SPAIR Tra oblicuo",
+          "DWI"
+        ],
+        "RODILLA": [
+          "PDw TSE Sag",
+          "PDw TSE SPAIR Sag",
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "T2w TSE",
+          "PDw 3D SPAIR"
+        ],
+        "RODILLA GADO": [
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T2w TSE Tra",
+          "T1w TSE Cor Gd",
+          "T1w TSE Tra Gd",
+          "T1w TSE SPIR Tra Gd"
+        ],
+        "RODILLA DERECHA MARS": [
+          "T1w TSE SEMAC Sag",
+          "STIR SEMAC Sag",
+          "T2w TSE SEMAC Tra",
+          "T1w TSE SEMAC Sag",
+          "T1w TSE SEMAC Tra Gd",
+          "T1w TSE SEMAC Sag Gd"
+        ],
+        "PIE TOBILLO GADO": [
+          "STIR TSE Sag",
+          "T1w TSE Sag",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T2w TSE Tra",
+          "T1w TSE Sag Gd",
+          "T1w TSE Tra Gd",
+          "T1w SPIR Tra Gd"
+        ],
+        "PIE TOBILLO XR": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "PDw TSE SPAIR Cor",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "PDw TSE SPAIR Tra"
+        ],
+        "TUMOR EEII 2020": [
+          "T1w TSE Cor",
+          "STIR Cor",
+          "T1w DIXON TSE Tra",
+          "T2w TSE Tra",
+          "DWIBS",
+          "T1w TSE Cor Gd",
+          "T1w TSE DIXON Tra Gd",
+          "THRIVE dinamico"
+        ],
+        "EEII MARS": [
+          "STIR SEMAC Cor",
+          "T1w TSE Cor",
+          "T1w TSE SEMAC Tra",
+          "T2w TSE SEMAC Tra"
+        ],
+        "EEII DWIBS": [
+          "DWIBS Tra 1",
+          "DWIBS Tra 2",
+          "DWIBS Tra 3",
+          "DWIBS Tra 4"
+        ],
+        "EEII COMPLETAS": [
+          "STIR Cor 1",
+          "STIR Cor 2",
+          "STIR Cor 3",
+          "STIR Cor 4",
+          "T1w Tra"
+        ],
+        "TOTAL EEII": [
+          "STIR Cor 1",
+          "STIR Cor 2",
+          "STIR Cor 3",
+          "STIR Cor 4",
+          "T1w Tra 1",
+          "T1w Tra 2",
+          "T1w Tra 3",
+          "T1w Tra 4"
+        ],
+        "TUMOR EESS": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE SPIR Tra"
+        ],
+        "3D LAB": [
+          "STIR Cor",
+          "T1w TSE DIXON Cor",
+          "PDw 3D SPAIR",
+          "T2w 3D",
+          "T1w 3D"
+        ]
+      },
+      "PELVIS": {
+        "MIOMA / MIOMA ATIPICO": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w TSE SPAIR Tra",
+          "T1w TSE Tra",
+          "DWI",
+          "THRIVE dinamico Sag",
+          "THRIVE dinamico Tra"
+        ],
+        "MIOMA PREEMBOLIZACION": [
+          "T2w TSE Tra",
+          "T2w Sag",
+          "THRIVE Tra",
+          "THRIVE Sag",
+          "3D dinamico",
+          "2D BOLUSTRAK",
+          "3D dinamico",
+          "3D dinamico (venas)",
+          "THRIVE Tra Gd",
+          "THRIVE Sag Gd"
+        ],
+        "CERVIX": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w TSE SPAIR",
+          "T1w TSE Tra",
+          "DWI",
+          "THRIVE Sag Gd",
+          "THRIVE Tra Gd"
+        ],
+        "NEO ENDOMETRIO": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w TSE SPAIR",
+          "T1w TSE Tra",
+          "DWI",
+          "THRIVE Sag Gd",
+          "THRIVE Tra Gd"
+        ],
+        "ENDOMETRIOSIS": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor oblicuo",
+          "T1w TSE SPAIR",
+          "T1w TSE SPAIR",
+          "T1w TSE Tra",
+          "T2w TSE",
+          "DWI"
+        ],
+        "PROSTATA": [
+          "T2w Sag",
+          "T1w Tra",
+          "T2w Tra",
+          "T2w Cor",
+          "DWI",
+          "THRIVE dinamico"
+        ],
+        "FISTULA": [
+          "T2w TSE Sag",
+          "T1w TSE Cor",
+          "T2w TSE Cor",
+          "T2w SPAIR Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T2w SPAIR Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Cor Gd"
+        ],
+        "RECTO": [
+          "T2w Sag",
+          "T2w Cor",
+          "T2w 3D",
+          "T1w Tra",
+          "T1w SPIR Tra",
+          "T2w Cor oblicuo",
+          "T2w Tra oblicuo",
+          "DWI"
+        ],
+        "DEFECO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SS Sag BASAL",
+          "T2w SS Sag KEGEL",
+          "T2w SS Sag VALSALVA",
+          "T2w SS Sag DEFECO"
+        ],
+        "BRAQUITERAPIA": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra"
+        ]
+      }
+    },
+    "RM2": {
+      "NEURO": {
+        "CRANEO ESTANDARD": [
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE Gd",
+          "T1w SE Gd"
+        ],
+        "FOSA POSTERIOR": [
+          "T1w TSE Sag",
+          "T1w SE Tra",
+          "T2w HR DIXON TSE Tra",
+          "T1w HR DIXON TSE Tra"
+        ],
+        "EPILEPSIA": [
+          "SWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "DWI",
+          "T2w TSE Cor",
+          "T1w IR Cor"
+        ],
+        "ICTUS": [
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T2w TSE Tra",
+          "T1w SE Tra",
+          "3D TOF"
+        ],
+        "EA descartar ARIA": [
+          "FLAIR SPIR Tra",
+          "T2w FFE Tra",
+          "DWI",
+          "3D BrainView FLAIR Sag",
+          "SWI",
+          "T1w 3D TFE"
+        ],
+        "CARA / SENOS": [
+          "DWI",
+          "T1w SE Tra",
+          "T2w TSE DIXON Cor",
+          "T1w TSE DIXON Cor",
+          "T1w TSE DIXON Tra",
+          "T2w TSE DIXON Sag",
+          "FLAIR Tra",
+          "T1w TSE DIXON Cor Gd",
+          "T1w TSE DIXON Tra Gd"
+        ],
+        "DISECCION CAROTIDA": [
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "T2w DIXON TSE RL Tra (cuello)",
+          "T1w DIXON TSE RL Tra (cuello)",
+          "T1w 3D TSE SPIR Tra (cuello)",
+          "T1w TSE SPIR Tra (cuello)",
+          "3D CAROTIDS",
+          "2D BOLUSTRAK",
+          "3D CAROTIDS",
+          "3D CAROTIDS"
+        ],
+        "COVID": [
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "DTI",
+          "3D BrainVIEW Black Blood",
+          "Flip 5",
+          "Flip 15",
+          "Permeabilidad",
+          "3D BrainVIEW Black Blood Gd",
+          "SV_35 (single voxel)",
+          "SV_144 (single voxel)"
+        ],
+        "ESCLEROSIS MULTIPLE": [
+          "DWI",
+          "SWI",
+          "T1w 3D TFE",
+          "3D DIR",
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE Gd",
+          "T1w SE Tra Gd"
+        ],
+        "HIPOFISIS": [
+          "FLAIR 3D SPIR",
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "DWI TSE Cor",
+          "T1w TSE dinamico",
+          "T1w TSE Sag Gd",
+          "T1w TSE Cor Gd"
+        ],
+        "PARES CRANEALES - NEURALGIA": [
+          "T2w TSE Tra",
+          "DWI",
+          "T2w 3D DRIVE",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "3D TOF",
+          "3D T2 BrainVIEW",
+          "T1w 3D DIXON Gd"
+        ],
+        "ORBITAS": [
+          "T2w DIXON Tra",
+          "T2w DIXON Cor",
+          "3D T1w DIXON",
+          "DWI TSE Tra",
+          "3D T1w DIXON Gd"
+        ],
+        "TROMBOSIS VENOSA": [
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "3D PCA SINUS",
+          "T2w TSE Cor",
+          "T1w SE Cor"
+        ],
+        "TUMOR - DIAGNOSTICO": [
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "APT",
+          "DTI",
+          "Neuronavegador",
+          "FE EPI",
+          "T2w TSE Sag",
+          "SV PRESS 35 (espectro single voxel)",
+          "SV PRESS 144 (espectro single voxel)",
+          "2D PRESS 144 (espectro multi voxel)"
+        ],
+        "TUMOR - SEGUIMIENTO": [
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "APT",
+          "T1w 3D TFE",
+          "FE EPI",
+          "T1w 3D TFE Gd",
+          "T2w TSE Sag",
+          "SV PRESS 35 (espectro single voxel)"
+        ],
+        "CAR-T": [
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "DTI",
+          "3D BrainVIEW Black Blood",
+          "APT",
+          "Pre FA5",
+          "Pre FA15",
+          "Permeabilidad",
+          "T1w 3D TFE Gd",
+          "3D BrainVIEW Black Blood Gd"
+        ],
+        "MALFORMACION VASCULAR": [
+          "3D TOF",
+          "4D TRANCE",
+          "Angio post Gd",
+          "SWI",
+          "3D PCA SINUS"
+        ],
+        "ATM": [
+          "T2w TSE Tra",
+          "T2w TSE DIXON Cor",
+          "PDw TSE Sag (cerrada)",
+          "T2w TSE Sag (cerrada)",
+          "PDw TSE Sag (abierta)",
+          "T2w TSE Sag (abierta)"
+        ],
+        "PARKINSON preECP": [
+          "Neuronavegador",
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "DTI",
+          "FLAIR 3D SPIR",
+          "fMRI"
+        ]
+      },
+      "SV_35 (espectro single voxel)": {
+        "NEURO: CAIS": [
+          "COLESTEATOMA",
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T2w TSE localizador CAI",
+          "T2w 3D DRIVE CAI",
+          "DWI TSE Cor CAI"
+        ]
+      },
+      "NEURO: CUELLO": {
+        "ATM": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "T1w FFE Sag",
+          "MOVIE Tra"
+        ],
+        "CUELLO 2025": [
+          "T2w HR mDIXON TSE RL Cor",
+          "T1w HR mDIXON TSE RL Cor",
+          "T2w HR mDIXON TSE RL Tra",
+          "T1w HR mDIXON TSE RL Tra",
+          "DWI STIR Tra",
+          "T1w DIXON Sag",
+          "DIXON dinamico Tra"
+        ],
+        "PAROTIDA": [
+          "T2w mDIXON TSE Tra",
+          "T2w mDIXON TSE Cor",
+          "T1w mDIXON TSE Tra",
+          "T1w mDIXON TSE Cor",
+          "DWI STIR",
+          "THIRVE dinamico Tra",
+          "THRIVE Tra"
+        ]
+      },
+      "COLUMNA": {
+        "CERVICAL": [
+          "T1w TSE Sag",
+          "T2w TSE Sag",
+          "STIR TSE Sag",
+          "Tw2 DRIVE 3D",
+          "T1w TFE 3D",
+          "MYELO radial"
+        ],
+        "CERVICAL DIXON": [
+          "T1w TSE Sag",
+          "T2w TSE DIXON Sag",
+          "T2w DRIVE 3D",
+          "T1w TFE 3D",
+          "MYELO radial"
+        ],
+        "CERVICAL MOTION FREE": [
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "T2w TSE DIXON Sag",
+          "T1w TSE Cor",
+          "T2w TSE Cor",
+          "T2w ZOOM Cor",
+          "FFE Tra",
+          "FFE 3D VANE",
+          "T2w TSE Tra",
+          "T2w DRIVE",
+          "BFFE Tra"
+        ],
+        "DORSAL": [
+          "T1w TSE Sag",
+          "T2w TSE Sag",
+          "STIR TSE Sag",
+          "Tw2 DRIVE 3D",
+          "T1w TFE 3D"
+        ],
+        "DORSAL DIXON": [
+          "T1w TSE Sag",
+          "T2w TSE DIXON Sag",
+          "Tw2 DRIVE 3D",
+          "T1w TFE 3D",
+          "T2w TSE Cor"
+        ],
+        "LUMBAR": [
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "MYELO 3D"
+        ],
+        "LUMBAR DIXON": [
+          "T2w TSE DIXON Sag",
+          "T1w TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "MYELO 3D",
+          "T2w_TSE Cor"
+        ],
+        "PLEXO CERVICAL": [
+          "3D STIR",
+          "3D Nerve VIEW",
+          "MYELO radial",
+          "DWIBS Tra",
+          "T1w DIXON TSE FH Cor",
+          "T1w DIXON TSE FH Cor Gd"
+        ],
+        "PLEXO LUMBAR": [
+          "3D Nerve VIEW",
+          "MYELO 3D",
+          "PROSET",
+          "DWIBS Tra"
+        ],
+        "COLUMNA COMPLETA 2 STACKS": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T2w TSE Tra",
+          "T1w TSE Tra"
+        ],
+        "COLUMNA COMPLETA 3 STACKS": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "STIR TSE dorsal",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T2w TSE Tra",
+          "T1w TSE Tra"
+        ]
+      },
+      "TORAX": {
+        "TIMOMA": [
+          "T2w Tra",
+          "T2w SPIR Tra",
+          "3D VANE",
+          "DWIBS Tra",
+          "THRIVE dinamico",
+          "3D VANE"
+        ],
+        "ELASTOFIBROMA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra"
+        ],
+        "TIMO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SPIR Tra",
+          "DWIBS Tra",
+          "FFE IP-OP Tra",
+          "3D DIXON dinamico"
+        ]
+      },
+      "TOTAL BODY": {
+        "TOTAL mDIXON Quant": [
+          "mDIXON Quant BH 1",
+          "mDIXON Quant BH 2",
+          "mDIXON Quant BH 3",
+          "mDIXON Quant BH 4",
+          "mDIXON Quant BH 5",
+          "mDIXON Quant BH 6",
+          "mDIXON Quant BH 7"
+        ],
+        "TOTAL BODY Axial": [
+          "T1w Tra (1)",
+          "STIR Tra (1)",
+          "T1w Tra (2)",
+          "STIR Tra (2)",
+          "T1w Tra (3)",
+          "STIR Tra (3)",
+          "T1w Tra (4)",
+          "STIR Tra (4)",
+          "T1w Tra (5)",
+          "STIR Tra (5)",
+          "T1w Tra (6)",
+          "STIR Tra (6)"
+        ],
+        "TOTAL BODY Coronal": [
+          "T1w Cor (1)",
+          "STIR Cor (1)",
+          "T1w Cor (2)",
+          "STIR Cor (2)",
+          "T1w Cor (3)",
+          "STIR Cor (3)",
+          "T1w Cor (4)",
+          "STIR Cor (4)",
+          "T1w Cor (5)",
+          "STIR Cor (5)",
+          "T1w Cor (6)",
+          "STIR Cor (6)"
+        ],
+        "TOTAL BODY DWIBS": [
+          "DWIBS Tra 1",
+          "DWIBS Tra 2",
+          "DWIBS Tra 3",
+          "DWIBS Tra 4",
+          "DWIBS Tra 5"
+        ]
+      },
+      "MAMA": {
+        "MAMA DINAMICO": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "DWI Tra",
+          "THRIVE dinamico DIXON"
+        ],
+        "MAMA PROTESIS": [
+          "T2w TSE Tra",
+          "STIR Tra",
+          "Silicone suppresion Tra",
+          "Silicone only Tra"
+        ],
+        "MAMA TIDE": [
+          "STIR Tra",
+          "T2w TSE Tra",
+          "THRIVE dinamico"
+        ]
+      },
+      "ABDOMEN": {
+        "QUANTIFICACIO GREIX - Bio89": [
+          "T2w TSE Tra",
+          "FFE MEDSPACE"
+        ],
+        "COLANGIO + HIGADO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "MRCP radial",
+          "3D GRASE",
+          "3D GRASE",
+          "DWI",
+          "T2w SPIR HR Tra",
+          "Dinamico 3D DIXON"
+        ],
+        "ENTERO RM + CINES PREBUSCAPINA": [
+          "BTFE prebuscapina Cor 1",
+          "BTFE prebuscapina Cor 2",
+          "BTFE prebuscapina Cor 3",
+          "BTFE prebuscapina Cor 4",
+          "T2w TSE poner buscapina",
+          "BTFE Tra",
+          "T2w TSE Tra",
+          "BTFE Tra",
+          "BTFE Cor",
+          "T2w SPAIR Cor",
+          "T2w TSE Cor",
+          "DIXON Cor",
+          "SS CINE Cor"
+        ],
+        "SUPRARENALES": [
+          "T2w TSE Cor",
+          "FFE dual Cor",
+          "FFE OP-IP Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "DIXON Tra"
+        ],
+        "ABDOMEN PEDIATRIA": [
+          "T2w TSE Sag",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "T1w TFE IP Tra",
+          "T1w TFE OP Tra"
+        ],
+        "COLANGIO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "MRCP radial",
+          "DWI",
+          "3D GRASE",
+          "3D GRASE",
+          "T2w HR Tra",
+          "T2w TSE Tra",
+          "3D MRCP",
+          "T2w SPAIR Cor",
+          "T2w TSE Tra"
+        ],
+        "HIGADO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "DIXON Quant",
+          "DWI",
+          "T2w SPIR HR Tra",
+          "Dinamico 3D DIXON",
+          "3D Vane",
+          "T2w TSE SPAIR Tra"
+        ],
+        "NICOFIB": [
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "DIXON Quant Tra"
+        ],
+        "CIBERDEM": [
+          "T2w TSE Cor",
+          "FFE OP-IP Tra",
+          "DIXON quant",
+          "T2w TSE Tra",
+          "FFE MEDSPACE"
+        ]
+      },
+      "EESS": {
+        "PLEXO CERVICAL MUSCULO": [
+          "T1w TSE Cor",
+          "3D STIR",
+          "3D NerveVIEW",
+          "DWIBS Tra",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T2w TSE Sag"
+        ],
+        "HOMBRO ARTRO": [
+          "FFE Tra",
+          "T1w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "PDw TSE SPAIR Sag",
+          "PDw TSE SPAIR Cor",
+          "3D WATSf",
+          "3D FFE bone"
+        ],
+        "HOMBRO CAPSULITIS": [
+          "T2w TSE SPAIR Cor",
+          "T1w TSE Sag",
+          "DWI",
+          "DIXON HR",
+          "4D Trak",
+          "2D BOLUSTRAK",
+          "4D Trak",
+          "DIXON HR Tra Gd",
+          "T1w TSE Sag Gd"
+        ],
+        "HOMBRO ESTANDARD DERECHO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw SPIR Cor",
+          "T1w TSE Sag",
+          "PDw SPAIR Sag"
+        ],
+        "HOMBRO ESTANDARD IZQUIERDO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw SPIR Cor",
+          "T1w TSE Sag",
+          "PDw SPAIR Sag"
+        ],
+        "HOMBRO TUMOR": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Sag Gd",
+          "DIXON HR Cor Gd"
+        ],
+        "HUESOS LARGOS - TUMOR": [
+          "STIR Sag",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE Cor Gd",
+          "DIXON HR Tra Gd"
+        ],
+        "CODO ESTANDARD": [
+          "PDw TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "T2w FFE Cor",
+          "PDw TSE SPAIR Cor",
+          "PDw TSE SPAIR Sag"
+        ],
+        "CODO TUMOR": [
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Cor Gd",
+          "T1w DIXON TSE Tra"
+        ],
+        "MUÑECA ESTANDARD DERECHA": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "3D FFE",
+          "T2w TSE SPAIR Tra",
+          "T2w FFE Tra",
+          "T1w TSE Sag"
+        ],
+        "MUÑECA ESTANDARD IZQUIERDA": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "3D FFE",
+          "T2w TSE SPAIR Tra",
+          "T2w FFE Tra",
+          "T1w TSE Sag"
+        ],
+        "MUÑECA TUMOR DERECHA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE SPIR Tra",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Cor Gd",
+          "T1w TSE Tra Gd",
+          "T1w TSE DIXON Tra Gd"
+        ],
+        "MUÑECA TUMOR IZQUIERDA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE SPIR Tra",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Cor Gd",
+          "T1w TSE Tra Gd",
+          "T1w TSE DIXON Tra Gd"
+        ],
+        "MANO ESTANDARD DERECHA": [
+          "T1w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Sag",
+          "T2w FFE Tra"
+        ],
+        "MANO ESTANDARD IZQUIERDA": [
+          "T1w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Sag",
+          "T2w FFE Tra"
+        ],
+        "DEDOS": [
+          "PDw TSE SPAIR Tra",
+          "T2w FFE Sag",
+          "T1w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "T1w TSE Tra",
+          "T2w TSE SPAIR Cor",
+          "TSE Tra Gd",
+          "TSE Cor Gd",
+          "SPIR Gd"
+        ]
+      },
+      "EEII": {
+        "PIE ESTANDARD": [
+          "T1w TSE Sag",
+          "PDw TSE SPAIR Sag",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE Tra"
+        ],
+        "SACROILIACAS ESTANDARD": [
+          "T1w TSE Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "T2w SPAIR Tra",
+          "DWIBS Tra",
+          "3D FFE bone"
+        ],
+        "SACROILIACAS CONTRASTE": [
+          "T2w TSE Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWIBS Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE Cor Gd"
+        ],
+        "CADERA ARTRO": [
+          "T1w TSE Cor",
+          "T1w FFE Cor",
+          "T1w TSE SPIR Cor",
+          "T1w TSE Tra",
+          "T1w FFE Tra",
+          "T1w TSE SPIR Tra",
+          "3D WATSf"
+        ],
+        "CADERA UNILATERAL": [
+          "T2w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "PDw TSE Cor",
+          "T2w TSE SPAIR Tra",
+          "3d FFE WATS",
+          "PDw TSE SPAIR Cor",
+          "PDw TSE Sag"
+        ],
+        "CADERA ESTANDARD": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T2w TSE SPAIR Tra",
+          "PDW TSE Sag"
+        ],
+        "CADERA - OMAR XD": [
+          "PDw TSE SEMAC Cor",
+          "STIR SEMAC Cor",
+          "T2w TSE SEMAC Cor",
+          "T2w TSE SEMAC Tra",
+          "STIR MARS Tra",
+          "PDw TSE SEMAC Sag"
+        ],
+        "MUSLO TUMOR": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE DIXON Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "T1w TSE DIXON Tra Gd",
+          "T1w TSE DIXON Cor Gd",
+          "Perfusion T1",
+          "T1w DIXON HR Cor Gd"
+        ],
+        "RODILLA ESTANDARD DERECHA": [
+          "PDw Sag",
+          "PDW SPIR Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "3D WATSf"
+        ],
+        "RODILLA ESTANDARD IZQUIERDA": [
+          "PDw Sag",
+          "PDW SPIR Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "3D WATSf"
+        ],
+        "RODILLA TUMOR": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI STIR Tra",
+          "T2w TSE Tra",
+          "T1w TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra"
+        ],
+        "RODILLA - OMAR XD": [
+          "T1w TSE SEMAC Sag",
+          "STIR SEMAC Sag",
+          "T2w TSE SEMAC Tra",
+          "T1w TSE SEMAC Tra",
+          "T1w TSE SEMAC Sag Gd",
+          "T1w TSE SEMAC Tra Gd"
+        ],
+        "PIERNA TUMOR": [
+          "T1w TSE",
+          "STIR TSE",
+          "T1w TSE DIXON Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "T1w TSE DIXON Tra",
+          "T1w TSE DIXON Cor"
+        ],
+        "TOBILLO ESTANDARD": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor"
+        ],
+        "TOBILLO CONTRASTE": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "T1w TSE Sag Gd",
+          "T1w TSE Tra Gd",
+          "T1w TSE SPIR Tra Gd"
+        ],
+        "PIE CONTRASTE": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "T1w TSE SPIR Cor",
+          "DWI TSE",
+          "T1w TSE Sag",
+          "T1w TSE Cor",
+          "T1w TSE SPIR Cor"
+        ],
+        "ANTEPIE - MORTON": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "PDw TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "T2w TSE SPAIR Tra"
+        ]
+      },
+      "PELVIS": {
+        "MIOMA / MIOMA ATIPICO": [
+          "T2w TSE Sag",
+          "T2w 3D HR",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI",
+          "DIXON dinamico Sag"
+        ],
+        "CERVIX": [
+          "T2w TSE Sag",
+          "T2w 3D HR",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w SPIR",
+          "T1w TSE Tra",
+          "DWI",
+          "DIXON dinamico Sag",
+          "DIXON dinamico Tra"
+        ],
+        "FISTULA": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w Tra",
+          "T2w SPAIR Tra",
+          "T2w SPAIR Cor",
+          "T1w SPIR Cor",
+          "T1w SPIR Tra",
+          "T1w SPIR Cor Gd",
+          "T1w SPIR Tra Gd"
+        ],
+        "NEO ENDOMETRIO": [
+          "T2w TSE Sag",
+          "T2w 3D HR",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w TSE Tra",
+          "T1w TSE SPIR",
+          "DWI",
+          "DIXON dinamico Sag",
+          "DIXON dinamico Tra oblicuo"
+        ],
+        "ENDOMETRIOSIS": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR"
+        ],
+        "PELVIS FEMENINA": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR",
+          "DWI",
+          "DIXON dinamico Tra"
+        ],
+        "PROSTATA": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "DWI",
+          "T1w TSE Tra",
+          "DIXON dinamico Tra",
+          "DIXON dinamico Tra"
+        ],
+        "RECTO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI",
+          "T2w 3D HR"
+        ],
+        "DEFECO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SS dinamico Sag (basal)",
+          "T2w SS dinamico Sag (kegel)",
+          "T2w SS dinamico Sag (valsalva)",
+          "T2w SS dinamico Sag (defeco)"
+        ]
+      },
+      "SARCOMA": {
+        "DEDOS": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ],
+        "CODO - MANO - MUÑECA - PIE": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ],
+        "MUSLO UNILATERAL": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ],
+        "PELVIS INGUINAL - MUSLOS BILATERAL": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ]
+      },
+      "PEDIATRIA": {
+        "CRANEO PEDIATRICO STD": [
+          "T1w 3D IR TFE Tra",
+          "DWI",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "HEMOSIDERINA",
+          "T1w SE Tra",
+          "FLAIR Tra",
+          "FLAIR Long TR Tra",
+          "FLAIR SPIR Tra"
+        ],
+        "CRANEO ESTANDARD < 6 MESES": [
+          "T1w 3D IR TFE Tra",
+          "T2w TSE Tra",
+          "T2w DRIVE TSE Cor",
+          "DWI",
+          "HEMOSIDERINA",
+          "PDw TSE (epilepsia)",
+          "T2w TSE Sag"
+        ],
+        "CRANEO ESTANDARD > 6 MESES": [
+          "T1w 3D IR TFE Tra",
+          "T2w TSE Tra",
+          "T2w DRIVE TSE Cor",
+          "T2w FLAIR Cor",
+          "DWI",
+          "HEMOSIDERINA",
+          "PDw TSE (epilepsia)",
+          "T2w FLAIR Tra"
+        ],
+        "ANGIO SENSE CONTRAST TOTAL BODY": [
+          "3D TOF 1",
+          "3D TOF 2",
+          "3D TOF 3",
+          "REACT 1",
+          "REACT 2",
+          "REACT 3"
+        ],
+        "ANGIO SENSE CONTRAST TORAX": [
+          "BTFE",
+          "3D TFE Tra (corazon)",
+          "3D TFE",
+          "3D TFE DIXON"
+        ]
+      }
+    },
+    "RM3": {
+      "CUELLO": {
+        "ATM": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "T2w TSE Sag",
+          "MOVIE Tra"
+        ],
+        "CUELLO": [
+          "T2w HR mDIXON TSE RL Cor",
+          "T1w HR mDIXON TSE RL Cor",
+          "T2w Hr mDIXON TSE RL Tra",
+          "T1w HR mDIXON TSE RL Tra",
+          "DWI STIR Tra",
+          "STIR SAG",
+          "THRIVE Dinamico",
+          "3D T1w DIXON Gd"
+        ],
+        "PAROTIDA": [
+          "T2w HR mDIXON TSE RL Cor",
+          "T1w HR mDIXON TSE RL Cor",
+          "3D T1w mDIXON",
+          "T2w HR mDIXON TSE RL Tra",
+          "DWI STIR Tra",
+          "THRIVE Dinamico",
+          "3D T1w DIXON Gd",
+          "T1w mDIXON Sag Gd"
+        ]
+      },
+      "COLUMNA": {
+        "CERVICAL": [
+          "T1w TSE Sag",
+          "T2w TSE Sag",
+          "STIR TSE Sag",
+          "Tw2 DRIVE 3D",
+          "T1w TFE 3D",
+          "MYELO radial"
+        ],
+        "CERVICAL DIXON": [
+          "T1w TSE Sag",
+          "T2w TSE DIXON Sag",
+          "T2w DRIVE 3D",
+          "T1w TFE 3D",
+          "MYELO radial",
+          "Tw2 TSE Cor"
+        ],
+        "DORSAL": [
+          "T1w TSE Sag",
+          "T2w TSE Sag",
+          "STIR TSE Sag",
+          "Tw2 DRIVE 3D",
+          "T1w TFE 3D"
+        ],
+        "DORSAL DIXON": [
+          "T1w TSE Sag",
+          "T2w TSE DIXON Sag",
+          "Tw2 DRIVE 3D",
+          "T1w TFE 3D"
+        ],
+        "LUMBAR": [
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "MYELO 3D",
+          "T2w_TSE Cor"
+        ],
+        "LUMBAR DIXON": [
+          "T2w TSE DIXON Sag",
+          "T1w TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "MYELO 3D",
+          "T2w_TSE Cor"
+        ],
+        "COLUMNA COMPLETA 3 STACKS": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "STIR TSE dorsal",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar"
+        ],
+        "COLUMNA COMPLETA 2 STACKS": [
+          "T2w TSE cervical",
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T2w TSE lumbar",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T2w TSE Tra",
+          "T1w TSE Tra"
+        ],
+        "COLUMNA COMPLETA 2 STACKS DIXON": [
+          "T2w TSE DIXON cervical",
+          "T1w TSE cervical",
+          "T2w TSE DIXON lumbar",
+          "T1w TSE lumbar",
+          "T2w TSE Tra",
+          "T1w TSE Tra"
+        ],
+        "PLEXO CERVICAL": [
+          "3D STIR",
+          "3D Nerve VIEW",
+          "MYELO radial",
+          "DWIBS Tra",
+          "T1w DIXON TSE FH Cor",
+          "T1w DIXON TSE FH Cor Gd"
+        ],
+        "PLEXO LUMBAR": [
+          "3D Nerve VIEW",
+          "MYELO 3D",
+          "PROSET",
+          "DWIBS Tra"
+        ]
+      },
+      "NEURO": {
+        "DISECCION CAROTIDA": [
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "T2w DIXON TSE RL Tra (cuello)",
+          "T1w DIXON TSE RL Tra (cuello)",
+          "T1w 3D TSE SPIR Tra (cuello)",
+          "T1w TSE SPIR Tra (cuello)",
+          "3D CAROTIDS",
+          "2D BOLUSTRAK",
+          "3D CAROTIDS",
+          "3D CAROTIDS"
+        ],
+        "CRANEO ESTANDARD": [
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE Gd",
+          "T1w SE Gd"
+        ],
+        "PARKINSON preECP": [
+          "Neuronavegador",
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "DTI",
+          "FLAIR 3D SPIR",
+          "fMRI"
+        ],
+        "EA descartar ARIA": [
+          "FLAIR SPIR Tra",
+          "T2w FFE Tra",
+          "DWI",
+          "3D BrainView FLAIR Sag",
+          "SWI",
+          "T1w 3D TFE"
+        ],
+        "EPILEPSIA": [
+          "SWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "DWI",
+          "T2w TSE Cor",
+          "T1w IR Cor",
+          "T1w IR Cor"
+        ],
+        "ESCLEROSIS MULTIPLE": [
+          "DWI",
+          "SWI",
+          "T1w 3D TFE",
+          "3D DIR",
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE Gd"
+        ],
+        "ESCLEROSIS MULTIPLE DEBUT": [
+          "SWI",
+          "T1w 3D TFE",
+          "FLAIR 3D SPIR",
+          "3D DIR",
+          "T2w TSE Tra",
+          "DWI",
+          "T2w TSE Cervical",
+          "T1w TSE Cervical",
+          "STIR TSE Cervical",
+          "T2w TSE dorsal",
+          "T1w TSE dorsal",
+          "STIR TSE dorsal",
+          "T2w TSE T_col",
+          "T1w TSE T_col",
+          "T1w TSE cervical Gd",
+          "T1w TSE dorsal Gd"
+        ],
+        "HIPOFISIS": [
+          "FLAIR 3D SPIR",
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "DWI TSE Cor",
+          "T1w TSE dinamico",
+          "T1w TSE Sag Gd",
+          "T1w TSE Cor Gd"
+        ],
+        "ICTUS": [
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T2w TSE Tra",
+          "T1w SE Tra",
+          "3D TOF",
+          "MDME TSE"
+        ],
+        "CRANEO ESTEROTAXIA": [
+          "T1w 3D TFE",
+          "T2w 3D BrainVIEW",
+          "B0 map",
+          "fMRI",
+          "DTI",
+          "fMRI",
+          "DTI",
+          "FLAIR 3D SPIR",
+          "3D SWI"
+        ],
+        "CARA / SENOS": [
+          "T2w TSE Tra",
+          "T1w SE Tra",
+          "T2w HR DIXON TSE RL Cor",
+          "T1w HR DIXON TSE RL Cor",
+          "DWI",
+          "3D T1 DIXON Gd"
+        ],
+        "FOSA POSTERIOR": [
+          "T1w TSE Sag",
+          "T1w SE Tra",
+          "T2w HR DIXON TSE Tra",
+          "T1w HR DIXON TSE Tra"
+        ],
+        "ORBITAS": [
+          "T2w DIXON Tra",
+          "T2w DIXON Cor",
+          "3D T1w DIXON",
+          "DWI TSE Tra",
+          "3D T1w DIXON Gd",
+          "DWI TSE Cor"
+        ],
+        "PARES CRANEALES - NEURALGIA": [
+          "T2w TSE Tra",
+          "DWI",
+          "T2w 3D DRIVE",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "3D TOF",
+          "3D T2 BrainVIEW",
+          "T1w 3D DIXON Gd"
+        ],
+        "TROMBOSIS VENOSA": [
+          "SWI",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "3D PCA SINUS",
+          "T2w TSE Cor",
+          "T1w SE Cor"
+        ],
+        "TUMOR - DIAGNOSTICO": [
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "APT",
+          "DTI",
+          "Neuronavegador",
+          "T2w TSE Sag",
+          "SV PRESS 35 (espectro single voxel)",
+          "SV PRESS 144 (espectro single voxel)",
+          "2D PRESS 144 (espectro multi voxel)"
+        ],
+        "TUMOR - SEGUIMIENTO": [
+          "T2w TSE Tra",
+          "DWI",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "APT",
+          "T1w 3D TFE",
+          "FE EPI",
+          "T1w 3D TFE Gd",
+          "T2w TSE Sag",
+          "SV PRESS 35 (espectro single voxel)"
+        ],
+        "QUANTIFICACIO LCR": [
+          "CSF DRIVE Sag",
+          "CSF PCA Sag",
+          "CSF Qflow"
+        ],
+        "MALFORMACION VASCULAR": [
+          "3D TOF",
+          "4D TRANCE",
+          "Angio post Gd",
+          "SWI",
+          "3D PCA SINUS"
+        ],
+        "CAR-T": [
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "DTI",
+          "3D BrainVIEW Black Blood",
+          "APT",
+          "Pre FA5",
+          "Pre FA15",
+          "Permeabilidad",
+          "T1w 3D TFE Gd",
+          "3D BrainVIEW Black Blood Gd",
+          "SV_35 (espectro single voxel)",
+          "SV_144 (espectro single voxel)"
+        ],
+        "COVID": [
+          "FLAIR 3D SPIR",
+          "T1w 3D TFE",
+          "T2w TSE Tra",
+          "SWI",
+          "DWI",
+          "DTI",
+          "3D BrainVIEW Black Blood",
+          "Flip 5",
+          "Flip 15",
+          "Permeabilidad",
+          "3D BrainVIEW Black Blood Gd",
+          "SV_35 (single voxel)",
+          "SV_144 (single voxel)"
+        ],
+        "HIFU PRE/POST": [
+          "Neuronavegador",
+          "FLAIR 3D SPIR",
+          "Wmnull",
+          "SWI",
+          "DWI",
+          "DTI",
+          "pCASL",
+          "T2w TSE Tra",
+          "3D FFE Bone"
+        ]
+      },
+      "NEURO: CAI": {
+        "CAIs ESTANDARD": [
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "DWI",
+          "T2w TSE localizador CAI",
+          "T2w 3D DRIVE CAI",
+          "T1w 3D DIXON CAI"
+        ],
+        "CAIs CONTRASTE": [
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T2w TSE localizador CAI",
+          "T2w 3D DRIVE CAI",
+          "T1w 3D DIXON CAI",
+          "T1w 3D DIXON Gd CAI"
+        ],
+        "COLESTEATOMA": [
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T2w TSE localizador CAI",
+          "T2w 3D DRIVE CAI",
+          "T1w 3D DIXON CAI",
+          "DWI TSE Cor CAI"
+        ],
+        "CAI IMPLANTE COCLEAR": [
+          "T2w TSE Tra",
+          "DWI",
+          "FLAIR 3D SPIR",
+          "T2w TSE localizador CAI",
+          "T2w 3D DRIVE CAI"
+        ],
+        "MENIERE": [
+          "T2w TSE Tra",
+          "T2w TSE localizador CAI",
+          "T2w 3D DRIVE CAI",
+          "3D IR Meniere",
+          "3D FLAIR Meniere"
+        ]
+      },
+      "NEURO: CUELLO": {
+        "ATM": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "T1w FFE Sag",
+          "MOVIE Tra"
+        ],
+        "CUELLO 2025": [
+          "T2w HR mDIXON TSE RL Cor",
+          "T1w HR mDIXON TSE RL Cor",
+          "T2w Hr mDIXON TSE RL Tra",
+          "T1w HR mDIXON TSE RL Tra",
+          "DWI STIR Tra",
+          "T1w DIXON Sag",
+          "THRIVE Dinamico",
+          "3D T1w DIXON Gd"
+        ],
+        "PAROTIDA": [
+          "T2w HR mDIXON TSE RL Cor",
+          "T1w HR mDIXON TSE RL Cor",
+          "3D T1w mDIXON",
+          "T2w HR mDIXON TSE RL Tra",
+          "DWI STIR Tra",
+          "THRIVE Dinamico",
+          "3D T1w DIXON Gd",
+          "T1w mDIXON Sag Gd"
+        ]
+      },
+      "NEURO: PSIQUIATRIA": {
+        "DBS Depre Pre": [
+          "DTI",
+          "fMRI ojos cerrados",
+          "fMRI ojos cerrados",
+          "DTI",
+          "DTI",
+          "T1w 3D",
+          "T2w 3D BrainVIEW"
+        ],
+        "DBS Depre Post": [
+          "fMRI ojos cerrados",
+          "fMRI ojos cerrados",
+          "DTI",
+          "DTI",
+          "T1w 3D"
+        ],
+        "Depre": [
+          "fMRI",
+          "Sbref",
+          "fMRI ojos cerrados",
+          "DWI",
+          "DTI",
+          "T1w 3D",
+          "T2w 3D BrainVIEW"
+        ]
+      },
+      "TOTAL BODY": {
+        "TOTAL BODY Axial 2024": [
+          "T1w Tra (1)",
+          "STIR Tra (1)",
+          "T1w Tra (2)",
+          "STIR Tra (2)",
+          "T1w Tra (3)",
+          "STIR Tra (3)",
+          "T1w Tra (4)",
+          "STIR Tra (4)",
+          "T1w Tra (5)",
+          "STIR Tra (5)",
+          "T1w Tra (6)",
+          "STIR Tra (6)"
+        ],
+        "TOTAL BODY Coronal": [
+          "T1w Cor (1)",
+          "STIR Cor (1)",
+          "T1w Cor (2)",
+          "STIR Cor (2)",
+          "T1w Cor (3)",
+          "STIR Cor (3)",
+          "T1w Cor (4)",
+          "STIR Cor (4)",
+          "T1w Cor (5)",
+          "STIR Cor (5)",
+          "T1w Cor (6)",
+          "STIR Cor (6)"
+        ],
+        "TOTAL BODY DWIBS": [
+          "DWIBS Tra 1",
+          "DWIBS Tra 2",
+          "DWIBS Tra 3",
+          "DWIBS Tra 4",
+          "DWIBS Tra 5"
+        ],
+        "TOTAL mDIXON Quant": [
+          "mDIXON Quant BH 1",
+          "mDIXON Quant BH 2",
+          "mDIXON Quant BH 3",
+          "mDIXON Quant BH 4",
+          "mDIXON Quant BH 5",
+          "mDIXON Quant BH 6",
+          "mDIXON Quant BH 7"
+        ],
+        "TOTAL BODY Axial 5 stacks": [
+          "T1w Tra",
+          "STIR Tra",
+          "STIR Cor",
+          "T2w Tra"
+        ],
+        "TOTAL BODY MIELOMA": [
+          "T1w TSE cervical",
+          "STIR TSE cervical",
+          "T1w TSE lumbar",
+          "STIR TSE lumbar",
+          "T1w DIXON Tra 1",
+          "T1w DIXON Tra 2",
+          "T1w DIXON Tra 3",
+          "T1w DIXON Tra 4",
+          "T1w DIXON Tra 5",
+          "T1w DIXON Tra 6",
+          "DWIBS Tra 1",
+          "DWIBS Tra 2"
+        ]
+      },
+      "MAMA": {
+        "MAMA DINAMICO": [
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "DWI Tra",
+          "THRIVE dinamico"
+        ],
+        "MAMA PROTESIS": [
+          "T2w TSE Tra",
+          "STIR Tra",
+          "Silicone suppresion Tra",
+          "Silicone only Tra"
+        ],
+        "MAMA ABREVIADO": [
+          "T2w TSE Tra",
+          "DWI Tra",
+          "THRIVE dinamico"
+        ],
+        "MAMA TIDE": [
+          "STIR Tra",
+          "T2w TSE Tra",
+          "THRIVE dinamico"
+        ]
+      },
+      "TORAX": {
+        "TIMO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SPIR Tra",
+          "DWIBS Tra"
+        ],
+        "ELASTOFIBROMA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T2w TSE Tra"
+        ]
+      },
+      "EESS": {
+        "MUÑECA TUMOR DERECHA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE SPIR Tra",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE SPIR Sag Gd",
+          "T1w TSE SPIR Cor Gd",
+          "T1w TSE DIXON Tra Gd"
+        ],
+        "HOMBRO ESTANDARD DERECHO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw SPAIR Cor",
+          "T1w TSE Sag",
+          "PDw SPAIR Sag"
+        ],
+        "HOMBRO ESTANDARD IZQUIERDO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw SPAIR Cor",
+          "T1w TSE Sag",
+          "PDw SPAIR Sag"
+        ],
+        "HOMBRO ARTRO": [
+          "FFE Tra",
+          "T1w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "PDw TSE SPAIR Sag",
+          "PDw TSE SPAIR Cor",
+          "3D WATSf",
+          "3D FFE bone"
+        ],
+        "HOMBRO TUMOR": [
+          "T1w TSE Sag",
+          "STIR TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Sag Gd",
+          "DIXON HR Gd"
+        ],
+        "HOMBRO CAPSULITIS": [
+          "T2w TSE SPAIR Cor",
+          "T1w TSE Sag",
+          "DWI",
+          "DIXON HR",
+          "4D Trak",
+          "2D BOLUSTRAK",
+          "4D Trak",
+          "DIXON HR Tra Gd",
+          "T1w TSE Sag Gd"
+        ],
+        "HUESOS LARGOS - TUMOR": [
+          "STIR Sag",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE Cor Gd",
+          "DIXON HR Tra Gd"
+        ],
+        "CODO ESTANDARD": [
+          "PDw TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "T2w FFE Cor",
+          "PDw TSE SPAIR Cor",
+          "PDw TSE SPAIR Sag"
+        ],
+        "CODO TUMOR": [
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T1w TSE SPIR Tra Gd",
+          "T1w TSE SPIR Cor Gd",
+          "T1w DIXON TSE Tra"
+        ],
+        "MUÑECA ESTANDARD DERECHA": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "3D FFE",
+          "T2w TSE SPAIR Tra",
+          "T2w FFE Tra",
+          "T1w TSE Sag",
+          "3D FFE Bone"
+        ],
+        "MUÑECA ESTANDARD IZQUIERDA": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "3D FFE",
+          "T2w TSE SPAIR Tra",
+          "T2w FFE Tra",
+          "T1w TSE Sag",
+          "3D FFE Bone"
+        ],
+        "MUÑECA TUMOR IZQUIERDA": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE SPIR Tra",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE SPIR Sag Gd",
+          "T1w TSE SPIR Cor Gd",
+          "T1w TSE DIXON Tra Gd"
+        ],
+        "MANO ESTANDARD DERECHA": [
+          "T1w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Sag",
+          "T2w FFE Tra"
+        ],
+        "MANO ESTANDARD IZQUIERDA": [
+          "T1w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Sag",
+          "T2w FFE Tra"
+        ],
+        "DEDOS": [
+          "PDw TSE SPAIR Tra",
+          "T2w FFE Tra",
+          "T1w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "T1w TSE Tra",
+          "T2w TSE SPAIR Cor",
+          "TSE Tra Gd",
+          "TSE Cor Gd",
+          "SPIR Gd"
+        ],
+        "PLEXO CERVICAL MUSCULO": [
+          "T1w TSE Cor",
+          "3D STIR",
+          "3D NerveVIEW",
+          "DWIBS Tra",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T2w TSE Sag"
+        ]
+      },
+      "EEI": {
+        "DLAB 3D": [
+          "3D TRANCE SPIR",
+          "3D FFE Bone",
+          "3D NerveVIEW",
+          "3D PDw HR",
+          "3D T2w SPAIR"
+        ],
+        "SACROILIACAS ESTANDARD": [
+          "T1w TSE Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "T2w SPAIR Tra",
+          "DWIBS Tra",
+          "3D FFE bone"
+        ],
+        "CADERA ESTANDARD": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T2w TSE SPAIR Tra",
+          "PDW TSE Sag"
+        ],
+        "CADERA UNILATERAL": [
+          "T2w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "PDw TSE Cor",
+          "T2w TSE SPAIR Tra",
+          "3d FFE WATS",
+          "PDw TSE SPAIR Cor",
+          "PDw TSE Sag"
+        ],
+        "CADERA ARTRO": [
+          "T1w TSE Cor",
+          "T1w FFE Cor",
+          "T1w TSE SPIR Cor",
+          "T1w TSE Tra",
+          "T1w FFE Tra",
+          "T1w TSE SPIR Tra",
+          "3D WATSf"
+        ],
+        "CADERA - OMAR XD": [
+          "PDw TSE SEMAC Cor",
+          "STIR SEMAC Cor",
+          "T2w TSE SEMAC Cor",
+          "T2w TSE SEMAC Tra",
+          "STIR MARS Tra",
+          "PDw TSE SEMAC Sag"
+        ],
+        "MUSLO TUMOR": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE DIXON Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "T1w TSE DIXON Tra Gd",
+          "T1w TSE DIXON Cor Gd",
+          "Perfusion T1",
+          "DIXON HR Gd"
+        ],
+        "RODILLA ESTANDARD DERECHA": [
+          "PDw Sag",
+          "PDW SPIR Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "3D WATSf"
+        ],
+        "RODILLA ESTANDARD IZQUIERDA": [
+          "PDw Sag",
+          "PDW SPIR Sag",
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "3D WATSf"
+        ],
+        "RODILLA TUMOR": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI TSE",
+          "T2w TSE Tra",
+          "T1w TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra"
+        ],
+        "PIERNA TUMOR": [
+          "T1w TSE",
+          "STIR TSE",
+          "T1w TSE DIXON Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "T1w TSE DIXON Tra",
+          "T1w TSE DIXON Cor"
+        ],
+        "RODILLA - OMAR XD": [
+          "T1w TSE SEMAC Sag",
+          "STIR SEMAC Sag",
+          "T2w TSE SEMAC Tra",
+          "T1w TSE SEMAC Tra",
+          "T1w TSE SEMAC Sag Gd",
+          "T1w TSE SEMAC Tra Gd"
+        ],
+        "TOBILLO ESTANDARD": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T1w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor"
+        ],
+        "TOBILLO CONTRASTE": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "T1w TSE Sag Gd",
+          "T1w TSE Tra Gd",
+          "T1w TSE SPIR Tra Gd"
+        ],
+        "PIE ESTANDARD": [
+          "T1w TSE Sag",
+          "PDw TSE SPAIR Sag",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "PDw TSE Tra"
+        ],
+        "PIE CONTRASTE": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w TSE Cor",
+          "T1w TSE Cor",
+          "T1w TSE SPIR Cor",
+          "DWI TSE",
+          "T1w TSE Sag",
+          "T1w TSE Cor",
+          "T1w TSE SPIR Cor"
+        ],
+        "ANTEPIE - MORTON": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "PDw TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "T2w TSE Tra"
+        ],
+        "MALFORMACION ARTERIOVENOSA PIERNA": [
+          "STIR TSE Cor",
+          "T1w DIXON HR Cor",
+          "T1w TSE DIXON Tra",
+          "T2w TSE Tra",
+          "T1w TSE Cor",
+          "4D Trak",
+          "T1w DIXON HR Cor Gd",
+          "T1w TSE DIXON Tra Gd",
+          "T1w TSE Cor Gd"
+        ]
+      },
+      "ABDOMEN": {
+        "COLANGIO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "MRCP radial",
+          "DWI",
+          "3D MRCP",
+          "3D GRASE",
+          "3D GRASE",
+          "T2w HR Tra",
+          "T2w SPAIR Cor",
+          "T2w TSE Tra"
+        ],
+        "COLANGIO + HIGADO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "MRCP radial",
+          "3D GRASE",
+          "3D GRASE",
+          "DWI",
+          "T2w SPIR HR Tra",
+          "Dinamico 3D DIXON"
+        ],
+        "HIGADO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "DIXON Quant",
+          "DWI",
+          "T2w SPIR HR Tra",
+          "Dinamico 3D DIXON",
+          "3D Vane"
+        ],
+        "ENTERO RM + CINES PREBUSCAPINA": [
+          "BTFE prebuscapina Cor 1",
+          "BTFE prebuscapina Cor 2",
+          "BTFE prebuscapina Cor 3",
+          "BTFE prebuscapina Cor 4",
+          "T2w TSE poner buscapina",
+          "BTFE Tra",
+          "BTFE Cor",
+          "T2w SPAIR Cor",
+          "T2w TSE Cor",
+          "DIXON Cor",
+          "SS CINE Cor",
+          "DWI"
+        ],
+        "SUPRARENALES": [
+          "T2w TSE Cor",
+          "FFE dual Cor",
+          "FFE OP-IP Tra",
+          "T2w TSE Tra",
+          "DWI",
+          "DIXON Tra"
+        ],
+        "ABDOMEN PEDIATRIA": [
+          "T2w TSE Sag",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "T1w TFE IP Tra",
+          "T1w TFE OP Tra"
+        ],
+        "PRIMOVIST": [
+          "FFE OP-IP Tra",
+          "3D Dinamico DIXON",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "MRCP radial",
+          "3D GRASE",
+          "3D GRASE",
+          "FFE OP-IP Tra (20 min)",
+          "3D Dinamico DIXON (20 min)",
+          "FFE OP-IP Tra (30 min)",
+          "3D Dinamico DIXON (30 min)"
+        ],
+        "BIO89-100-131": [
+          "T2w TSE Tra",
+          "FFE Tra"
+        ],
+        "NICOFIB": [
+          "T2w TSE Tra",
+          "FFE OP-IP Tra",
+          "DIXON Quant Tra"
+        ],
+        "BIO89-100-132": [
+          "T2w TSE Tra",
+          "FFE Tra"
+        ]
+      },
+      "PEDIATRIA": {
+        "CRANEO PEDIATRICO STD": [
+          "T1w 3D IR TFE Tra",
+          "DWI",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "HEMOSIDERINA",
+          "T1w SE Tra",
+          "FLAIR Tra",
+          "FLAIR Long TR Tra",
+          "FLAIR SPIR Tra"
+        ],
+        "CRANEO ESTANDARD > 6 MESES": [
+          "T1w 3D IR TFE Tra",
+          "T2w TSE Tra",
+          "T2w DRIVE TSE Cor",
+          "T2w FLAIR Cor",
+          "DWI",
+          "HEMOSIDERINA",
+          "PDw TSE (epilepsia)",
+          "T2w FLAIR Tra"
+        ],
+        "CRANEO ESTANDARD < 6 MESES": [
+          "T1w 3D IR TFE Tra",
+          "T2w TSE Tra",
+          "T2w DRIVE TSE Cor",
+          "DWI",
+          "HEMOSIDERINA",
+          "PDw TSE Cor (epilepsia)",
+          "T2w TSE Sag"
+        ],
+        "ANGIO SENSE CONTRAST TOTAL BODY": [
+          "3D TOF 1",
+          "3D TOF 2",
+          "3D TOF 3",
+          "REACT 1",
+          "REACT 2",
+          "REACT 3"
+        ],
+        "ANGIO SENSE CONTRAST TORAX": [
+          "BTFE",
+          "3D TFE Tra (corazon)",
+          "3D TFE",
+          "3D TFE DIXON"
+        ]
+      },
+      "PELVIS": {
+        "RECTO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI"
+        ],
+        "CERVIX": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w SPIR",
+          "T1w TSE Tra",
+          "DWI",
+          "DIXON dinamico Sag",
+          "DIXON dinamico Tra"
+        ],
+        "MIOMA / MIOMA ATIPICO": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI",
+          "DIXON dinamico Sag",
+          "DIXON dinamico Tra"
+        ],
+        "NEO ENDOMETRIO": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor oblicuo",
+          "T2w TSE Tra oblicuo",
+          "T1w TSE Tra",
+          "T1w TSE SPIR",
+          "DWI",
+          "DIXON dinamico Sag",
+          "DIXON dinamico Tra oblicuo"
+        ],
+        "ENDOMETRIOSIS": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR"
+        ],
+        "PELVIS FEMENINA": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPIR",
+          "DWI",
+          "DIXON dinamico Tra"
+        ],
+        "PROSTATA": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "DWI",
+          "T1w TSE Tra",
+          "DIXON dinamico Tra",
+          "DWI"
+        ],
+        "FISTULA": [
+          "T2w TSE Sag",
+          "T2w SPAIR Sag",
+          "T2w TSE Cor",
+          "T2w Tra",
+          "T1w SPIR Tra",
+          "T1w SPIR Cor",
+          "T1w SPIR Tra Gd",
+          "T1w SPIR Cor Gd"
+        ],
+        "DEFECO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SS dinamico Sag (basal)",
+          "T2w SS dinamico Sag (kegel)",
+          "T2w SS dinamico Sag (valsalva)",
+          "T2w SS dinamico Sag (defeco)"
+        ],
+        "MALFORMACION UTERINA": [
+          "T2w TSE Cor",
+          "T2w TSE Sag",
+          "T2w TSE Tra",
+          "T2w TSE eje largo",
+          "T2w TSE eje corto",
+          "T1w TSE Tra",
+          "T1w SPIR"
+        ]
+      },
+      "SARCOMA": {
+        "DEDOS": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ],
+        "CODO - MANO - MUÑECA - PIE": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ],
+        "MUSLO UNILATERAL": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ],
+        "PELVIS INGUINAL - MUSLOS BILATERAL": [
+          "DWI",
+          "SWI",
+          "FFE DIXON dinamico",
+          "3D DIXON HR",
+          "T1w TSE DIXON Tra"
+        ]
+      }
+    },
+    "RM5": {
+      "CRANEO": {
+        "CRANEO RAPID": [
+          "FLAIR 3D SPIR",
+          "T1w 3D IR TFE",
+          "T2w TSE Tra",
+          "T2w FFE Tra",
+          "DWI SPIR"
+        ],
+        "PARES CRANEALES": [
+          "T2w 3D DRIVE",
+          "T1w 3D DIXON",
+          "T1w 3D DIXON Gd"
+        ],
+        "CRANEO + COLUMNA": [
+          "T1w 3D IR TFE",
+          "FLAIR 3D SPIR",
+          "T2w TSE Tra",
+          "DWI SPIR",
+          "SWI",
+          "T2w TSE DIXON cervical",
+          "T1w TSE Sag cervical",
+          "T2w TSE DIXON Sag dorsal",
+          "T1w TSE Sag dorsal",
+          "T2w TSE Tra columna"
+        ],
+        "CRANEO ESTANDAR": [
+          "T1w 3D IR TFE",
+          "T2w TSE Tra",
+          "DWI SPIR",
+          "SWI",
+          "FLAIR 3D SPIR",
+          "T1w 3D IR TFE Gd",
+          "T1w SE Gd"
+        ],
+        "CRANEO TUMOR DTI": [
+          "T1w 3D IR TFE",
+          "FLAIR 3D SPIR",
+          "T2w TSE Tra",
+          "DWI SPIR",
+          "SWI"
+        ],
+        "EA DESCARTAR ARIA": [
+          "FLAIR 3D SPIR",
+          "T2w FFE Tra",
+          "DWI SPIR",
+          "FLAIR 3D SPIR",
+          "T1w 3D IR TFE",
+          "SWI"
+        ],
+        "ICTUS": [
+          "DWI SPIR",
+          "FLAIR 3D SPIR",
+          "SWI",
+          "T2w TSE Tra",
+          "T1w SE Tra",
+          "3D TOF",
+          "MDME TSE"
+        ],
+        "TROMBOSIS VENOSA": [
+          "DWI SPIR",
+          "T2w TSE Tra",
+          "3D PCA SINUS",
+          "FLAIR 3D SPIR",
+          "SWI"
+        ],
+        "ORBITAS": [
+          "T2w DIXON Tra",
+          "T2w DIXON Cor",
+          "T1w 3D DIXON",
+          "T1w 3D DIXON Gd",
+          "DWI TSE"
+        ],
+        "HIPOFISIS": [
+          "FLAIR 3D SPIR",
+          "T1w SE Sag",
+          "T2w TSE Cor",
+          "T1w SE Cor",
+          "T2w TSE Sag",
+          "DWI TSE Cor",
+          "T1w TSE dinamico Cor",
+          "T1w SE Sag Gd",
+          "T1w SE Cor Gd"
+        ],
+        "EM": [
+          "DWI SPIR",
+          "SWI",
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T1w 3D IR TFE",
+          "T1w 3D IR TFE Gd"
+        ],
+        "CRANEO VASCULAR": [
+          "T1w 3D IR TFE",
+          "FLAIR 3D SPIR",
+          "T2w TSE Tra",
+          "DWI SPIR",
+          "SWI",
+          "3D PCA SINUS",
+          "3D TOF",
+          "3D BrainVIEW Black blood",
+          "4D TRANCE"
+        ],
+        "CUELLO STD": [
+          "T1w DIXON TSE Sag",
+          "T2w DIXON TSE Tra",
+          "T1w DIXON TSE Tra",
+          "DWIBS",
+          "T1w DIXON TSE Cor",
+          "T2w DIXON TSE Cor",
+          "3D DIXON MRA"
+        ],
+        "ATM": [
+          "T2w DIXON Cor",
+          "PDw TSE Sag (cerrada)",
+          "T2w Sag (cerrada)",
+          "PDw TSE Sag (abierta)",
+          "T2w Sag (cerrada)",
+          "MOVIE Sag"
+        ],
+        "CARA SENOS": [
+          "T1w DIXON TSE Sag",
+          "T2w DIXON TSE Tra",
+          "T1w DIXON TSE Tra",
+          "T2w DIXON TSE Cor",
+          "DWI",
+          "T1w 3D BrainVIEW",
+          "T2w 3D DIXON MRA",
+          "T2w 3D DIXON MRA Gd",
+          "T1w DIXON Sag Gd",
+          "T1w DIXON Cor Gd"
+        ],
+        "E.M": [
+          "DWI",
+          "VEN BOLD",
+          "T2w TSE Tra",
+          "FLAIR 3D SPIR",
+          "T1w 3D IR TFE",
+          "3D BrainVIEW DIR",
+          "T1w 3D Gd",
+          "T1w SE Gd"
+        ],
+        "CAIS": [
+          "DWI SPIR",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "FLAIR 3D SPIR",
+          "T2w 3D DRIVE",
+          "T1w 3D DIXON"
+        ],
+        "CAIS GADO": [
+          "DWI SPIR",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "FLAIR 3D SPIR",
+          "T2w 3D DRIVE",
+          "T1w 3D DIXON",
+          "T1w 3D DIXON Gd"
+        ],
+        "CAIS COLESTEATOMA": [
+          "DWI SPIR",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "FLAIR 3D SPIR",
+          "T2w 3D DRIVE",
+          "T1w 3D DIXON",
+          "DWI TSE coleatoatoma Cor"
+        ]
+      },
+      "COLUMNA": {
+        "COLUMNA 2 STACKS": [
+          "T2w TSE DIXON Sag cervical-dorsal",
+          "T1w TSE Sag cervical-dorsal",
+          "T2w TSE DIXON Sag dorsal-lumbar",
+          "T1w TSE Sag dorsal-lumbar",
+          "T2w TSE Tra columna",
+          "T1w TSE Tra columna"
+        ],
+        "SACROILIACAS": [
+          "STIR TSE Cor",
+          "T1w TSE Cor",
+          "T2w TSE DIXON Tra",
+          "T1w TSE Tra",
+          "DWI",
+          "3D FFE bone"
+        ],
+        "LUMBAR": [
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2t TSE Tra",
+          "T1w TSE Tra",
+          "T2w TSE Cor",
+          "T1w TSE DIXON Sag"
+        ],
+        "LUMBAR DIXON": [
+          "T2w TSE DIXON Sag",
+          "T1w TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Tra"
+        ],
+        "CERVICAL": [
+          "T2w TSE Sag",
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "T2w 3D TSE",
+          "T1w TSE Tra",
+          "T2w 3D FFE",
+          "T2w TSE Sag"
+        ]
+      },
+      "TOTAL BODY": {
+        "TOTAL BODY DWIBS": [
+          "DWIBS Tra 1",
+          "DWIBS Tra 2",
+          "DWIBS Tra 3",
+          "DWIBS Tra 4",
+          "DWIBS Tra 5",
+          "DWIBS Tra 6"
+        ],
+        "TOTAL BODY": [
+          "STIR Cor 1",
+          "STIR Cor 2",
+          "STIR Cor 3",
+          "STIR Cor 4",
+          "STIR Cor 5",
+          "T1w Tra 1"
+        ]
+      },
+      "ABDOMEN": {
+        "COLANGIO": [
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "Dual FFE Tra",
+          "MRCP radial"
+        ],
+        "SUPRARENALES": [
+          "T2w HR Cor",
+          "Dual FFE Cor",
+          "DWI",
+          "Dual FFE Tra"
+        ],
+        "CUANTIFICACION HIERRO QBODY": [
+          "DP/FFE/SEDIA/6C",
+          "T2/FFE/SEDIA/6C"
+        ],
+        "APENDICITIS EMBARAZADA": [
+          "T2w TSE Cor",
+          "T2w SPAIR Cor",
+          "T2w TSE Tra",
+          "DIXON fat sat Cor"
+        ]
+      },
+      "EESS": {
+        "PLEXO BRAQUIAL": [
+          "3D STIR",
+          "T1w TSE Sag",
+          "T1w TSE Tra",
+          "T2w TSE Tra",
+          "T1w DIXON TSE Cor",
+          "DWIBS",
+          "STIR TSE Cor"
+        ],
+        "HOMBRO DERECHO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw TSE SPIR Cor",
+          "PDw TSE SPIR Sag",
+          "T1w TSE Sag",
+          "3D FFE bone"
+        ],
+        "HOMBRO IZQUIERDO": [
+          "T2w FFE Tra",
+          "T2w TSE Cor",
+          "PDw TSE SPIR Cor",
+          "PDw TSE SPIR Sag",
+          "T1w TSE Sag",
+          "3D FFE bone"
+        ],
+        "MUÑECA FLEX": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Cor",
+          "T2w FFE Cor",
+          "T1w TSE Sag",
+          "T1w TSE Tra",
+          "T2w FFE Tra"
+        ],
+        "MUÑECA DP SUPRESION FREQ OFFSET 70": [
+          "T1w TSE Cor",
+          "PDw TSE SPAIR Sag",
+          "PDw TSE SPAIR Cor",
+          "SPIR DP Tra",
+          "PDw TSE DIXON Sag",
+          "PDw TSE DIXON Cor",
+          "PDw TSE DIXON Tra"
+        ],
+        "TUMOR EESS": [
+          "STIR Cor",
+          "T1w TSE Cor",
+          "T1w DIXON TSE Tra",
+          "T1w DIXON TSE Tra",
+          "T2w TSE Tra",
+          "T1w TSE Cor Gd",
+          "T1w DIXON TSE Tra Gd",
+          "T1w TSE Cor Gd"
+        ],
+        "TUMOR DEDOS": [
+          "T1w TSE Cor",
+          "T1w TSE Sag",
+          "T1w TSE Tra",
+          "STIR TSE Cor",
+          "T1w TSE SPIR Tra",
+          "STIR TSE Sag",
+          "T2w TSE Tra",
+          "T1w TSE Cor Gd"
+        ],
+        "TUMOR EESS FOV PEQUEÑO": [
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T2w TSE Tra",
+          "T1w TSE Sag"
+        ]
+      },
+      "EEII": {
+        "DLAB 3D": [
+          "3D FFE Bone",
+          "3D TRANCE STIR",
+          "T2w 3D SPAIR",
+          "PDw 3D",
+          "STIR 3D",
+          "3D DIXON",
+          "3D DIXON Tra"
+        ],
+        "RODILLA IZQUIERDA": [
+          "PDw TSE Sag",
+          "PDw TSE SPAIR Sag",
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "T2w TSE",
+          "PDw 3D SPAIR",
+          "3D FFE Bone",
+          "PDw TSE SPAIR Cor",
+          "DWIBS"
+        ],
+        "RODILLA DERECHA": [
+          "PDw TSE Sag",
+          "PDw TSE SPAIR Sag",
+          "T1w TSE Cor",
+          "STIR TSE Cor",
+          "PDw TSE SPAIR Tra",
+          "T2w TSE",
+          "PDw 3D SPAIR",
+          "3D FFE Bone",
+          "PDw TSE SPAIR Cor",
+          "DWIBS"
+        ],
+        "TUMOR EEII FOV GRAN": [
+          "STIR Cor",
+          "T1w TSE Cor",
+          "T1w DIXON TSE Cor",
+          "T1 DIXON TSE Tra",
+          "T2w TSE Tra",
+          "T1w DIXON Tra Gd",
+          "T1w DIXON Cor Gd",
+          "T1w DIXON TSE Cor",
+          "3D DIXON",
+          "3D DIXON Gd"
+        ],
+        "TUMOR EEII 1 STACK": [
+          "STIR Cor",
+          "T1w TSE Cor",
+          "T1w DIXON TSE Tra",
+          "T2w TSE Tra",
+          "T1w DIXON Tra Gd",
+          "T1w DIXON Cor Gd",
+          "T1w DIXON TSE Cor",
+          "3D DIXON",
+          "3D DIXON Gd",
+          "DWIBS"
+        ],
+        "PIE/TOBILLO XR": [
+          "T1w TSE Sag",
+          "STIR TSE Sag",
+          "PDw TSE SPAIR Cor",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "PDw TSE SPAIR Tra",
+          "DIWBS",
+          "3D FFE Bone tobillo"
+        ],
+        "CADERAS": [
+          "PDw TSE SPAIR Cor",
+          "T1w TSE Cor",
+          "T2w TSE Tra",
+          "T1w TSE Tra",
+          "T1w TSE SPAIR Tra",
+          "PDw TSE Sag"
+        ],
+        "CADERAS 3D": [
+          "3D FFE bone",
+          "T2w TSE SPAIR Tra",
+          "STIR Cor",
+          "PDw 3D SPAIR",
+          "T1w 3D"
+        ]
+      },
+      "PELVIS": {
+        "MIOMA/MIOMA ATIPICO": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Tra",
+          "T2w TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "DWI SPAIR Tra",
+          "3D DIXON dinamico",
+          "T1w TSE Tra Gd",
+          "3D DIXON Gd"
+        ],
+        "CERVIX": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor (oblicuo)",
+          "T2w TSE Tra (oblicuo)",
+          "T1w TSE Tra (pelvis)",
+          "T1w TSE SPIR Tra (pelvis)",
+          "DWI SPAIR Tra (oblicuo)",
+          "3D DIXON dinamico",
+          "3D DIXON dinamico",
+          "T1w TSE Tra SPIR Gd"
+        ],
+        "NEO ENDOMETRIO": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T2w TSE Cor (oblicuo)",
+          "T2w TSE Tra (oblicuo)",
+          "T1w TSE Tra (pelvis)",
+          "T1w TSE SPIR Tra (pelvis)",
+          "DWI SPAIR Tra (oblicuo)",
+          "3D DIXON dinamico",
+          "3D DIXON dinamico"
+        ],
+        "ENDOMETRIOSIS": [
+          "T2w TSE Sag",
+          "T2w 3D",
+          "T1w TSE Tra (pelvis)",
+          "T1w TSE SPIR Tra (pelvis)",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "DWI SPAIR Tra"
+        ],
+        "RECTO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T1w TSE Tra",
+          "T1w TSE SPIR Tra",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "DWI Tra",
+          "DWI SPAIR Sag"
+        ],
+        "FISTULA": [
+          "T2w TSE Sag",
+          "T1w TSE Cor",
+          "T2w TSE Cor",
+          "T2w TSE SPAIR Cor",
+          "T2w TSE Tra",
+          "T2w TSE SPAIR Tra",
+          "T1w TSE SPAIR Sag Gd",
+          "T1w TSE SPAIR Cor Gd",
+          "T1w TSE SPAIR Tra Gd",
+          "T2w TSE DIXON Cor"
+        ],
+        "DEFECO": [
+          "T2w TSE Sag",
+          "T2w TSE Cor",
+          "T2w TSE Tra",
+          "T2w SS Sag BASAL",
+          "T2w SS Sag KEGEL",
+          "T2w SS Sag VALSALVA",
+          "T2w SS Sag DEFECO"
+        ],
+        "BRAQUITERAPIA": [
+          "T2w TSE Sag",
+          "T2w TSE Tra",
+          "T2w TSE Cor"
+        ]
+      },
+      "MAMAS": {
+        "MAMA DINAMICO": [
+          "T2w Tra",
+          "T2w Cor",
+          "DWI SPAIR Tra",
+          "3D FFE dinamico",
+          "4D Breast",
+          "T2w 3D TSE Tra",
+          "T2w TSE Tra"
+        ],
+        "MAMA PROTESIS": [
+          "T2w TSE Tra",
+          "T2w SPIR silicona Tra",
+          "STIR Tra",
+          "STIR SPIR silicona Tra",
+          "T2w 3D TSE Tra",
+          "T2w TSE Tra",
+          "T2w TSE Cor"
+        ],
+        "MAMA TIDE": [
+          "STIR Tra",
+          "T2w TSE Tra",
+          "THRIVE dinamico Tra"
+        ]
+      }
+    }
+  },
+  "seq_to_protos": {
+    "T1w SE Gd": [
+      "CRANEO ESTANDAR",
+      "CRANEO ESTANDARD",
+      "E.M"
+    ],
+    "SWI": [
+      "CAR-T",
+      "CODO - MANO - MUÑECA - PIE",
+      "COVID",
+      "CRANEO + COLUMNA",
+      "CRANEO ESTANDAR",
+      "CRANEO ESTANDARD",
+      "CRANEO TUMOR DTI",
+      "CRANEO VASCULAR",
+      "CRANEO+MEDULAR",
+      "DEDOS",
+      "DISECCION CAROTIDA",
+      "EA DESCARTAR ARIA",
+      "EA descartar ARIA",
+      "EM",
+      "EPILEPSIA",
+      "ESCLEROSIS MULTIPLE",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "HIFU PRE/POST",
+      "ICTUS",
+      "MALFORMACION VASCULAR",
+      "MUSLO UNILATERAL",
+      "PARES CRANEALES - NEURALGIA",
+      "PARKINSON preECP",
+      "PELVIS INGUINAL - MUSLOS BILATERAL",
+      "TROMBOSIS VENOSA",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "T1w 3D TFE Gd": [
+      "CAR-T",
+      "CRANEO ESTANDARD",
+      "ESCLEROSIS MULTIPLE",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "T2w TSE Tra": [
+      "ABDOMEN PEDIATRIA",
+      "ANTEPIE - MORTON",
+      "APENDICITIS EMBARAZADA",
+      "ATM",
+      "BIO89-100-131",
+      "BIO89-100-132",
+      "BRAQUITERAPIA",
+      "CADERA ESTANDARD",
+      "CADERAS",
+      "CAI COLESTEATOMA",
+      "CAI ESTANDARD",
+      "CAI GADO",
+      "CAI IMPLANTE COCLEAR",
+      "CAIS",
+      "CAIS COLESTEATOMA",
+      "CAIS GADO",
+      "CAIs CONTRASTE",
+      "CAIs ESTANDARD",
+      "CAR-T",
+      "CARA / SENOS",
+      "CERVICAL MOTION FREE",
+      "CIBERDEM",
+      "CODO TUMOR",
+      "COLANGIO",
+      "COLANGIO + HIGADO",
+      "COLESTEATOMA",
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 2 STACKS DIXON",
+      "COLUMNA COMPLETA 3 STACKS",
+      "COLUMNA COMPLETA DIXON",
+      "COVID",
+      "CRANEO + COLUMNA",
+      "CRANEO ESTANDAR",
+      "CRANEO ESTANDARD",
+      "CRANEO ESTANDARD < 6 MESES",
+      "CRANEO ESTANDARD > 6 MESES",
+      "CRANEO PEDIATRICO STD",
+      "CRANEO RAPID",
+      "CRANEO TUMOR DTI",
+      "CRANEO VASCULAR",
+      "CRANEO+MEDULAR",
+      "DEFECO",
+      "DISECCION CAROTIDA",
+      "E.M",
+      "ELASTOFIBROMA",
+      "EM",
+      "ENDOMETRIOSIS",
+      "ENTERO RM + CINES PREBUSCAPINA",
+      "ESCLEROSIS MULTIPLE",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "ESTUDIO SUPRARRENAL",
+      "FISTULA",
+      "HIFU PRE/POST",
+      "HIGADO",
+      "HOMBRO TUMOR",
+      "HUESOS LARGOS - TUMOR",
+      "ICTUS",
+      "IMPLANTE COCLEAR",
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "MA",
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MALFORMACION UTERINA",
+      "MAMA ABREVIADO",
+      "MAMA DINAMICO",
+      "MAMA PROTESIS",
+      "MAMA TIDE",
+      "MANO ESTANDARD DERECHA",
+      "MANO ESTANDARD IZQUIERDA",
+      "MENIERE",
+      "MIOMA / MIOMA ATIPICO",
+      "MIOMA PREEMBOLIZACION",
+      "MIOMA/MIOMA ATIPICO",
+      "MUSLO TUMOR",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "NEURO: CAIS",
+      "NICOFIB",
+      "PARES CRANEALES - NEURALGIA",
+      "PARKINSON preECP",
+      "PELVIS FEMENINA",
+      "PIE TOBILLO GADO",
+      "PIE TOBILLO XR",
+      "PIE/TOBILLO XR",
+      "PIERNA TUMOR",
+      "PLEXO BRAQUIAL",
+      "PLEXO CERVICAL MUSCULO",
+      "PRIMOVIST",
+      "PROSTATA",
+      "QUANTIFICACIO GREIX - Bio89",
+      "RECTO",
+      "RODILLA GADO",
+      "RODILLA TUMOR",
+      "SACRO TUMOR",
+      "SACROILIACAS CONTRASTE",
+      "SUPRARENALES",
+      "TIMO",
+      "TOBILLO CONTRASTE",
+      "TOBILLO ESTANDARD",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO",
+      "TROMBOSIS VENOSA",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO",
+      "TUMOR DEDOS",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII 2020",
+      "TUMOR EEII FOV GRAN",
+      "TUMOR EESS",
+      "TUMOR EESS FOV PEQUEÑO"
+    ],
+    "FLAIR 3D SPIR": [
+      "CAI ESTANDARD",
+      "CAI GADO",
+      "CAI IMPLANTE COCLEAR",
+      "CAIS",
+      "CAIS COLESTEATOMA",
+      "CAIS GADO",
+      "CAIs CONTRASTE",
+      "CAIs ESTANDARD",
+      "CAR-T",
+      "COLESTEATOMA",
+      "COVID",
+      "CRANEO + COLUMNA",
+      "CRANEO ESTANDAR",
+      "CRANEO ESTANDARD",
+      "CRANEO ESTEROTAXIA",
+      "CRANEO RAPID",
+      "CRANEO TUMOR DTI",
+      "CRANEO VASCULAR",
+      "DISECCION CAROTIDA",
+      "E.M",
+      "EA DESCARTAR ARIA",
+      "EM",
+      "EPILEPSIA",
+      "ESCLEROSIS MULTIPLE",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "HIFU PRE/POST",
+      "HIPOFISIS",
+      "ICTUS",
+      "IMPLANTE COCLEAR",
+      "NEURO: CAIS",
+      "PARES CRANEALES - NEURALGIA",
+      "PARKINSON preECP",
+      "TROMBOSIS VENOSA",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "DWI": [
+      "CAI COLESTEATOMA",
+      "CAI ESTANDARD",
+      "CAI IMPLANTE COCLEAR",
+      "CAIs ESTANDARD",
+      "CAR-T",
+      "CARA / SENOS",
+      "CARA SENOS",
+      "CERVIX",
+      "CODO - MANO - MUÑECA - PIE",
+      "COLANGIO",
+      "COLANGIO + HIGADO",
+      "COVID",
+      "CRANEO ESTANDARD",
+      "CRANEO ESTANDARD < 6 MESES",
+      "CRANEO ESTANDARD > 6 MESES",
+      "CRANEO PEDIATRICO STD",
+      "CRANEO TUMOR DTI",
+      "CRANEO+MEDULAR",
+      "CUELLO STD",
+      "DEDOS",
+      "DISECCION CAROTIDA",
+      "Depre",
+      "E.M",
+      "EA descartar ARIA",
+      "EM",
+      "ENDOMETRIOSIS",
+      "ENTERO RM + CINES PREBUSCAPINA",
+      "EPILEPSIA",
+      "ESCLEROSIS MULTIPLE",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "ESTUDIO SUPRARRENAL",
+      "FETAL CRANI",
+      "FETAL UTERO MADRE",
+      "HIFU PRE/POST",
+      "HIGADO",
+      "HOMBRO CAPSULITIS",
+      "ICTUS",
+      "IMPLANTE COCLEAR",
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "LUMBAR+SACRO",
+      "MAMA DINAMICO",
+      "MIOMA / MIOMA ATIPICO",
+      "MUSLO TUMOR",
+      "MUSLO UNILATERAL",
+      "NEO ENDOMETRIO",
+      "PARES CRANEALES - NEURALGIA",
+      "PARKINSON preECP",
+      "PAROTIDA",
+      "PELVIS FEMENINA",
+      "PELVIS INGUINAL - MUSLOS BILATERAL",
+      "PIERNA TUMOR",
+      "PROSTATA",
+      "RECTO",
+      "SACRO TUMOR",
+      "SACROILIACAS",
+      "SUPRARENALES",
+      "TIMO",
+      "TROMBOSIS VENOSA",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "T1w 3D IR TFE": [
+      "CRANEO + COLUMNA",
+      "CRANEO ESTANDAR",
+      "CRANEO ESTANDARD",
+      "CRANEO RAPID",
+      "CRANEO TUMOR DTI",
+      "CRANEO VASCULAR",
+      "CRANEO+MEDULAR",
+      "E.M",
+      "EA DESCARTAR ARIA",
+      "EM"
+    ],
+    "T1w 3D TFE": [
+      "CAR-T",
+      "CERVICAL",
+      "CERVICAL DIXON",
+      "CERVICAL LIGAMENTOS",
+      "COVID",
+      "CRANEO ESTANDARD",
+      "CRANEO ESTEROTAXIA",
+      "DBS",
+      "DISECCION CAROTIDA",
+      "EA descartar ARIA",
+      "EPILEPSIA",
+      "ESCLEROSIS MULTIPLE",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "PARES CRANEALES - NEURALGIA",
+      "TROMBOSIS VENOSA",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "T1w SE Tra": [
+      "CARA / SENOS",
+      "CRANEO PEDIATRICO STD",
+      "FOSA POSTERIOR",
+      "ICTUS"
+    ],
+    "DWI SPIR": [
+      "CAI GADO",
+      "CAIS",
+      "CAIS COLESTEATOMA",
+      "CAIS GADO",
+      "CRANEO + COLUMNA",
+      "CRANEO ESTANDAR",
+      "CRANEO RAPID",
+      "CRANEO TUMOR DTI",
+      "CRANEO VASCULAR",
+      "EA DESCARTAR ARIA",
+      "EM",
+      "ICTUS",
+      "TROMBOSIS VENOSA"
+    ],
+    "3D TOF": [
+      "CERVICAL LIGAMENTOS",
+      "CRANEO VASCULAR",
+      "ICTUS",
+      "MALFORMACION VASCULAR",
+      "PARES CRANEALES - NEURALGIA"
+    ],
+    "MDME TSE": [
+      "ICTUS"
+    ],
+    "T1w 3D DIXON": [
+      "CAI ESTANDARD",
+      "CAI GADO",
+      "CAIS",
+      "CAIS COLESTEATOMA",
+      "CAIS GADO",
+      "ORBITAS",
+      "PARES CRANEALES"
+    ],
+    "BFFE Tra": [
+      "CAI GADO",
+      "CERVICAL MOTION FREE",
+      "PARES CRANEALES"
+    ],
+    "T1w 3D DIXON Gd": [
+      "CAI GADO",
+      "CAIS GADO",
+      "ORBITAS",
+      "PARES CRANEALES",
+      "PARES CRANEALES - NEURALGIA"
+    ],
+    "T2w 3D DRIVE": [
+      "CAI COLESTEATOMA",
+      "CAI ESTANDARD",
+      "CAIS",
+      "CAIS COLESTEATOMA",
+      "CAIS GADO",
+      "IMPLANTE COCLEAR",
+      "PARES CRANEALES",
+      "PARES CRANEALES - NEURALGIA"
+    ],
+    "T1w 3D Gd": [
+      "E.M",
+      "EM",
+      "PARES CRANEALES"
+    ],
+    "3D T1w DIXON Gd": [
+      "CUELLO",
+      "CUELLO 2025",
+      "ORBITAS",
+      "PAROTIDA"
+    ],
+    "DWI TSE Cor": [
+      "HIPOFISIS",
+      "ORBITAS"
+    ],
+    "DWI TSE": [
+      "HIPOFISIS",
+      "MEDULA+NERVIO",
+      "ORBITAS",
+      "PIE CONTRASTE",
+      "RODILLA TUMOR"
+    ],
+    "3D T1w DIXON": [
+      "ORBITAS"
+    ],
+    "DWI TSE Tra": [
+      "ORBITAS"
+    ],
+    "T2w DIXON Tra": [
+      "ORBITAS"
+    ],
+    "T2w DIXON Cor": [
+      "ATM",
+      "ATM ANTENA DE CRANEO",
+      "ORBITAS"
+    ],
+    "T1w TSE dinamico Cor": [
+      "HIPOFISIS"
+    ],
+    "T1w TSE dinamico": [
+      "HIPOFISIS"
+    ],
+    "T1w SE Cor Gd": [
+      "HIPOFISIS"
+    ],
+    "T1w TSE Cor Gd": [
+      "HIPOFISIS",
+      "HUESOS LARGOS - TUMOR",
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MANO/CARPO GADO",
+      "RODILLA GADO",
+      "SACROILIACAS CONTRASTE",
+      "TUMOR DEDOS",
+      "TUMOR EEII 2020",
+      "TUMOR EESS"
+    ],
+    "T1w SE Sag Gd": [
+      "HIPOFISIS"
+    ],
+    "T1w SE Cor": [
+      "HIPOFISIS",
+      "TROMBOSIS VENOSA"
+    ],
+    "T1w SE Sag": [
+      "HIPOFISIS"
+    ],
+    "T1w TSE Cor": [
+      "CADERA ARTRO",
+      "CADERA ESTANDARD",
+      "CADERAS",
+      "CERVICAL LIGAMENTOS",
+      "CERVICAL MOTION FREE",
+      "CODO",
+      "CODO ESTANDARD",
+      "CODO TUMOR",
+      "DEDOS",
+      "EEII MARS",
+      "ELASTOFIBROMA",
+      "FISTULA",
+      "HIPOFISIS",
+      "HUESOS LARGOS - TUMOR",
+      "MA",
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MANO ESTANDARD DERECHA",
+      "MANO ESTANDARD IZQUIERDA",
+      "MANO/CARPO GADO",
+      "MUSLO TUMOR",
+      "MUÑECA DP SUPRESION FREQ OFFSET 70",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA",
+      "MUÑECA FLEX",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "PIE CONTRASTE",
+      "PIE ESTANDARD",
+      "PIE TOBILLO XR",
+      "PIE/TOBILLO XR",
+      "PLEXO BRAQUIAL",
+      "PLEXO CERVICAL MUSCULO",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA ESTANDARD DERECHA",
+      "RODILLA ESTANDARD IZQUIERDA",
+      "RODILLA GADO",
+      "RODILLA IZQUIERDA",
+      "RODILLA TUMOR",
+      "SACRO TUMOR",
+      "SACROILIACA",
+      "SACROILIACAS",
+      "SACROILIACAS CONTRASTE",
+      "SACROILIACAS ESTANDARD",
+      "TOBILLO CONTRASTE",
+      "TOBILLO ESTANDARD",
+      "TUMOR DEDOS",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII 2020",
+      "TUMOR EEII FOV GRAN",
+      "TUMOR EESS",
+      "TUMOR EESS FOV PEQUEÑO"
+    ],
+    "T2w TSE Sag": [
+      "ABDOMEN PEDIATRIA",
+      "ATM",
+      "BRAQUITERAPIA",
+      "CERVICAL",
+      "CERVICAL MOTION FREE",
+      "CERVIX",
+      "CRANEO ESTANDARD < 6 MESES",
+      "DEFECO",
+      "DORSAL",
+      "ENDOMETRIOSIS",
+      "FISTULA",
+      "HIPOFISIS",
+      "LUMBAR",
+      "MALFORMACION UTERINA",
+      "MIOMA / MIOMA ATIPICO",
+      "MIOMA/MIOMA ATIPICO",
+      "NEO ENDOMETRIO",
+      "PELVIS FEMENINA",
+      "PLEXO CERVICAL MUSCULO",
+      "PROSTATA",
+      "RECTO",
+      "SACROILIACAS CONTRASTE",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "T1w TSE Sag Gd": [
+      "HIPOFISIS",
+      "HOMBRO CAPSULITIS",
+      "PIE TOBILLO GADO",
+      "TOBILLO CONTRASTE"
+    ],
+    "T2w TSE Cor": [
+      "ABDOMEN PEDIATRIA",
+      "APENDICITIS EMBARAZADA",
+      "ATM",
+      "BRAQUITERAPIA",
+      "CADERA UNILATERAL",
+      "CAI COLESTEATOMA",
+      "CAI ESTANDARD",
+      "CAI GADO",
+      "CAIS",
+      "CAIS COLESTEATOMA",
+      "CAIS GADO",
+      "CERVICAL",
+      "CERVICAL DIXON",
+      "CERVICAL LIGAMENTOS",
+      "CERVICAL MOTION FREE",
+      "CIBERDEM",
+      "COLANGIO",
+      "COLANGIO + HIGADO",
+      "CRANEO PEDIATRICO STD",
+      "DEFECO",
+      "DORSAL DIXON",
+      "ENDOMETRIOSIS",
+      "ENTERO RM + CINES PREBUSCAPINA",
+      "EPILEPSIA",
+      "ESTUDIO SUPRARRENAL",
+      "FISTULA",
+      "HIGADO",
+      "HIPOFISIS",
+      "HOMBRO",
+      "HOMBRO DERECHO",
+      "HOMBRO ESTANDARD DERECHO",
+      "HOMBRO ESTANDARD IZQUIERDO",
+      "HOMBRO IZQUIERDO",
+      "IMPLANTE COCLEAR",
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "MALFORMACION UTERINA",
+      "MAMA DINAMICO",
+      "MAMA PROTESIS",
+      "MIOMA / MIOMA ATIPICO",
+      "MIOMA/MIOMA ATIPICO",
+      "PELVIS FEMENINA",
+      "PIE CONTRASTE",
+      "PIE ESTANDARD",
+      "PRIMOVIST",
+      "PROSTATA",
+      "RECTO",
+      "SUPRARENALES",
+      "TIMO",
+      "TROMBOSIS VENOSA"
+    ],
+    "T1w TSE Sag": [
+      "ANTEPIE - MORTON",
+      "CERVICAL",
+      "CERVICAL DIXON",
+      "CERVICAL MOTION FREE",
+      "DORSAL",
+      "DORSAL DIXON",
+      "FOSA POSTERIOR",
+      "HIPOFISIS",
+      "HOMBRO",
+      "HOMBRO CAPSULITIS",
+      "HOMBRO DERECHO",
+      "HOMBRO ESTANDARD DERECHO",
+      "HOMBRO ESTANDARD IZQUIERDO",
+      "HOMBRO IZQUIERDO",
+      "HOMBRO TUMOR",
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "LUMBAR+SACRO",
+      "MA",
+      "MANO ESTANDARD DERECHA",
+      "MANO ESTANDARD IZQUIERDA",
+      "MANO/CARPO GADO",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA",
+      "MUÑECA FLEX",
+      "PIE CONTRASTE",
+      "PIE ESTANDARD",
+      "PIE TOBILLO GADO",
+      "PIE TOBILLO XR",
+      "PIE/TOBILLO XR",
+      "PLEXO BRAQUIAL",
+      "SACROILIACAS",
+      "SACROILIACAS ESTANDARD",
+      "TOBILLO CONTRASTE",
+      "TOBILLO ESTANDARD",
+      "TUMOR DEDOS",
+      "TUMOR EESS FOV PEQUEÑO"
+    ],
+    "T2w IR": [
+      "EPILEPSIA"
+    ],
+    "T1w IR Cor": [
+      "EPILEPSIA"
+    ],
+    "T2w TSE DRIVE": [
+      "EPILEPSIA",
+      "TROMBOSIS VENOSA"
+    ],
+    "T2w 3D TFE": [
+      "EPILEPSIA"
+    ],
+    "BBFE Tra": [
+      "CAI ESTANDARD"
+    ],
+    "3D T1w DIXON Tra": [
+      "CAI COLESTEATOMA",
+      "IMPLANTE COCLEAR"
+    ],
+    "DWI Cor": [
+      "CAI COLESTEATOMA"
+    ],
+    "3D BrainVIEW FLAIR": [
+      "CAI COLESTEATOMA",
+      "TROMBOSIS VENOSA"
+    ],
+    "T1w DIXON TSE Tra": [
+      "CARA SENOS",
+      "CODO TUMOR",
+      "CUELLO STD",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII 2020",
+      "TUMOR EESS"
+    ],
+    "T1w DIXON Cor Gd": [
+      "CARA SENOS",
+      "CUELLO STD",
+      "PAROTIDA",
+      "PLEXO",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII FOV GRAN"
+    ],
+    "T2w DIXON TSE Cor": [
+      "CARA SENOS",
+      "CUELLO STD",
+      "PAROTIDA"
+    ],
+    "T1w DIXON TSE Cor": [
+      "CARA SENOS",
+      "CUELLO STD",
+      "MEDULA+NERVIO",
+      "PLEXO",
+      "PLEXO BRAQUIAL",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII FOV GRAN"
+    ],
+    "T1w DIXON Sag Gd": [
+      "CARA SENOS",
+      "CUELLO STD"
+    ],
+    "T1w 3D BrainVIEW": [
+      "CARA SENOS"
+    ],
+    "T2w 3D DIXON MRA": [
+      "CARA SENOS"
+    ],
+    "3D DIXON MRA": [
+      "CARA SENOS",
+      "CUELLO STD"
+    ],
+    "T2w DIXON TSE Tra": [
+      "CARA SENOS",
+      "CUELLO STD",
+      "PAROTIDA"
+    ],
+    "T2w 3D DIXON MRA Gd": [
+      "CARA SENOS"
+    ],
+    "T1w DIXON TSE Sag": [
+      "CARA SENOS",
+      "CUELLO STD"
+    ],
+    "DTI": [
+      "CAR-T",
+      "COVID",
+      "CRANEO ESTEROTAXIA",
+      "CRANEO TUMOR DTI",
+      "DBS",
+      "DBS Depre Post",
+      "DBS Depre Pre",
+      "Depre",
+      "HIFU PRE/POST",
+      "PARKINSON preECP",
+      "TUMOR - DIAGNOSTICO"
+    ],
+    "Neuronavegador": [
+      "CRANEO TUMOR DTI",
+      "DBS",
+      "HIFU PRE/POST",
+      "PARKINSON preECP",
+      "TUMOR - DIAGNOSTICO"
+    ],
+    "T1w Tra Gd": [
+      "CRANEO TUMOR DTI"
+    ],
+    "Neuronavegador Gd": [
+      "CRANEO TUMOR DTI"
+    ],
+    "FE EPI": [
+      "CRANEO TUMOR DTI",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "3D PCA SINUS": [
+      "CRANEO VASCULAR",
+      "MALFORMACION VASCULAR",
+      "TROMBOSIS VENOSA"
+    ],
+    "SS Cor": [
+      "FETAL COS",
+      "FETAL CRANI"
+    ],
+    "BTFE Sag": [
+      "FETAL COS",
+      "FETAL CRANI"
+    ],
+    "SS Sag": [
+      "FETAL COS",
+      "FETAL CRANI"
+    ],
+    "SS MRCP": [
+      "FETAL CRANI"
+    ],
+    "SS Tra": [
+      "FETAL COS",
+      "FETAL CRANI"
+    ],
+    "BTFE Tra": [
+      "ENTERO RM + CINES PREBUSCAPINA",
+      "FETAL COS",
+      "FETAL CRANI"
+    ],
+    "BTFE Cor utero": [
+      "FETAL UTERO MADRE"
+    ],
+    "T1w BH": [
+      "FETAL UTERO MADRE"
+    ],
+    "SV PRESS 31 (espectro single voxel)": [
+      "FETAL UTERO MADRE"
+    ],
+    "BTFE Sag utero": [
+      "FETAL UTERO MADRE"
+    ],
+    "T2w SS TSE body": [
+      "FETAL UTERO MADRE"
+    ],
+    "BTFE FIESTA": [
+      "FETAL UTERO MADRE"
+    ],
+    "T2w SS TSE neuro": [
+      "FETAL UTERO MADRE"
+    ],
+    "BTFE Tra utero": [
+      "FETAL UTERO MADRE"
+    ],
+    "T1w 3D IR TFE Gd": [
+      "CRANEO ESTANDAR",
+      "EM"
+    ],
+    "3D FLAIR": [
+      "CRANEO+MEDULAR",
+      "DBS",
+      "EM"
+    ],
+    "T1w PRESTO": [
+      "DBS"
+    ],
+    "FFE Sag": [
+      "ATM",
+      "CODO"
+    ],
+    "PDw TSE Sag (abierta)": [
+      "ATM"
+    ],
+    "T1w FFE Sag": [
+      "ATM"
+    ],
+    "MOVIE Sag": [
+      "ATM"
+    ],
+    "T2w TSE Sag (abierta)": [
+      "ATM"
+    ],
+    "MOVIE Tra": [
+      "ATM"
+    ],
+    "PDw TSE Sag (cerrada)": [
+      "ATM"
+    ],
+    "T2w TSE Sag (cerrada)": [
+      "ATM"
+    ],
+    "T2w TSE DIXON Cor": [
+      "ATM",
+      "CARA / SENOS",
+      "FISTULA"
+    ],
+    "T2w Sag (cerrada)": [
+      "ATM"
+    ],
+    "FFE Tra Sag": [
+      "ATM"
+    ],
+    "T2w GRASE Tra": [
+      "PAROTIDA"
+    ],
+    "T1w mDIXON TSE Cor": [
+      "PAROTIDA"
+    ],
+    "T2w SS": [
+      "PAROTIDA"
+    ],
+    "T1w DIXON Tra Gd": [
+      "PAROTIDA",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII FOV GRAN"
+    ],
+    "T1w HR mDIXON TSE RL Cor": [
+      "CUELLO",
+      "CUELLO 2025",
+      "PAROTIDA"
+    ],
+    "T1w mDIXON Sag Gd": [
+      "PAROTIDA"
+    ],
+    "THRIVE dinamico Tra": [
+      "MAMA TIDE",
+      "MIOMA / MIOMA ATIPICO",
+      "PAROTIDA"
+    ],
+    "T2w mDIXON TSE Cor": [
+      "PAROTIDA"
+    ],
+    "THIRVE dinamico Tra": [
+      "PAROTIDA"
+    ],
+    "3D T1w mDIXON": [
+      "PAROTIDA"
+    ],
+    "THRIVE Dinamico": [
+      "CUELLO",
+      "CUELLO 2025",
+      "PAROTIDA"
+    ],
+    "THRIVE Tra": [
+      "MIOMA PREEMBOLIZACION",
+      "PAROTIDA"
+    ],
+    "DWI STIR Tra": [
+      "CUELLO",
+      "CUELLO 2025",
+      "PAROTIDA",
+      "RODILLA TUMOR"
+    ],
+    "DWI STIR": [
+      "PAROTIDA"
+    ],
+    "T2w HR mDIXON TSE RL Tra": [
+      "CUELLO 2025",
+      "PAROTIDA"
+    ],
+    "T2w mDIXON TSE Tra": [
+      "PAROTIDA"
+    ],
+    "T1w DXON TSE Tra": [
+      "PAROTIDA"
+    ],
+    "T2w HR mDIXON TSE RL Cor": [
+      "CUELLO",
+      "CUELLO 2025",
+      "PAROTIDA"
+    ],
+    "T1w mDIXON TSE Tra": [
+      "PAROTIDA"
+    ],
+    "DWIBS": [
+      "CUELLO STD",
+      "PLEXO",
+      "PLEXO BRAQUIAL",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII 2020"
+    ],
+    "MOVIE 3 dinamicos": [
+      "ATM ANTENA DE CRANEO"
+    ],
+    "T2w TSE 2 Cor": [
+      "ATM ANTENA DE CRANEO"
+    ],
+    "STIR TSE lumbar": [
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 3 STACKS",
+      "CRANEO+MEDULAR",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO",
+      "TOTAL BODY MIELOMA"
+    ],
+    "T1w TSE Tra": [
+      "ARTRO ESPATLLA",
+      "CADERA ARTRO",
+      "CADERA ESTANDARD",
+      "CADERAS",
+      "CERVICAL",
+      "CERVIX",
+      "CODO TUMOR",
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 2 STACKS DIXON",
+      "COLUMNA COMPLETA 3 STACKS",
+      "COLUMNA COMPLETA DIXON",
+      "CRANEO+MEDULAR",
+      "DEDOS",
+      "ELASTOFIBROMA",
+      "ENDOMETRIOSIS",
+      "ESTRECHO TORACICO",
+      "FISTULA",
+      "HOMBRO ARTRO",
+      "HOMBRO TUMOR",
+      "HUESOS LARGOS - TUMOR",
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "MALFORMACION UTERINA",
+      "MIOMA / MIOMA ATIPICO",
+      "MIOMA/MIOMA ATIPICO",
+      "MUÑECA FLEX",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "NEO ENDOMETRIO",
+      "PELVIS FEMENINA",
+      "PIE TOBILLO GADO",
+      "PLEXO BRAQUIAL",
+      "PLEXO CERVICAL MUSCULO",
+      "PROSTATA",
+      "RECTO",
+      "RODILLA GADO",
+      "RODILLA TUMOR",
+      "SACRO TUMOR",
+      "SACROILIACAS",
+      "SACROILIACAS CONTRASTE",
+      "TOBILLO ESTANDARD",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO",
+      "TUMOR DEDOS",
+      "TUMOR EESS",
+      "TUMOR EESS FOV PEQUEÑO"
+    ],
+    "T1w TSE lumbar": [
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 2 STACKS DIXON",
+      "COLUMNA COMPLETA 3 STACKS",
+      "CRANEO+MEDULAR",
+      "MEDULA+NERVIO",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO",
+      "TOTAL BODY MIELOMA"
+    ],
+    "T2w TSE dorsal": [
+      "COLUMNA COMPLETA 3 STACKS",
+      "COLUMNA COMPLETA DIXON",
+      "CRANEO+MEDULAR",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "MEDULA+NERVIO",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO"
+    ],
+    "T1w TSE cervical": [
+      "CERVICAL LIGAMENTOS",
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 2 STACKS DIXON",
+      "COLUMNA COMPLETA 3 STACKS",
+      "COLUMNA COMPLETA DIXON",
+      "CRANEO+MEDULAR",
+      "MEDULA+NERVIO",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO",
+      "TOTAL BODY MIELOMA"
+    ],
+    "STIR TSE dorsal": [
+      "COLUMNA COMPLETA 3 STACKS",
+      "CRANEO+MEDULAR",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO"
+    ],
+    "T2w TSE lumbar": [
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 3 STACKS",
+      "CRANEO+MEDULAR",
+      "MEDULA+NERVIO",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO"
+    ],
+    "T2w TSE cervical": [
+      "CERVICAL LIGAMENTOS",
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 3 STACKS",
+      "COLUMNA COMPLETA DIXON",
+      "CRANEO+MEDULAR",
+      "MEDULA+NERVIO",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO"
+    ],
+    "T1w TSE dorsal": [
+      "COLUMNA COMPLETA 3 STACKS",
+      "COLUMNA COMPLETA DIXON",
+      "CRANEO+MEDULAR",
+      "ESCLEROSIS MULTIPLE DEBUT",
+      "MEDULA+NERVIO",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO"
+    ],
+    "STIR TSE cervical": [
+      "CERVICAL LIGAMENTOS",
+      "COLUMNA COMPLETA 2 STACKS",
+      "COLUMNA COMPLETA 3 STACKS",
+      "CRANEO+MEDULAR",
+      "TODA COLUMNA",
+      "TODA COLUMNA SAR BAJO",
+      "TOTAL BODY MIELOMA"
+    ],
+    "T2w DIXON TSE dorsal": [
+      "COLUMNA COMPLETA DIXON"
+    ],
+    "T2w DIXON TSE cervical": [
+      "COLUMNA COMPLETA DIXON"
+    ],
+    "T2w 3D TSE": [
+      "CERVICAL"
+    ],
+    "T2w DRIVE 3D": [
+      "CERVICAL",
+      "CERVICAL DIXON",
+      "CERVICAL LIGAMENTOS"
+    ],
+    "Tw2 DRIVE 3D": [
+      "CERVICAL",
+      "DORSAL",
+      "DORSAL DIXON"
+    ],
+    "T2w 3D FFE": [
+      "CERVICAL"
+    ],
+    "STIR TSE Sag": [
+      "ANTEPIE - MORTON",
+      "CERVICAL",
+      "DORSAL",
+      "HOMBRO TUMOR",
+      "LUMBAR",
+      "LUMBAR+SACRO",
+      "PIE CONTRASTE",
+      "PIE TOBILLO GADO",
+      "PIE TOBILLO XR",
+      "PIE/TOBILLO XR",
+      "TOBILLO CONTRASTE",
+      "TOBILLO ESTANDARD",
+      "TUMOR DEDOS"
+    ],
+    "MYELO radial": [
+      "CERVICAL",
+      "CERVICAL DIXON",
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "PLEXO CERVICAL"
+    ],
+    "T1w TFE 3D": [
+      "CERVICAL",
+      "CERVICAL DIXON",
+      "DORSAL",
+      "DORSAL DIXON"
+    ],
+    "T2w TSE DIXON Sag": [
+      "CARA / SENOS",
+      "CERVICAL DIXON",
+      "CERVICAL MOTION FREE",
+      "DORSAL DIXON",
+      "LUMBAR DIXON"
+    ],
+    "Tw2 TSE Cor": [
+      "CERVICAL DIXON"
+    ],
+    "T2w FFE cervical": [
+      "CERVICAL LIGAMENTOS"
+    ],
+    "T2t TSE Tra": [
+      "LUMBAR"
+    ],
+    "MYELO 3D": [
+      "LUMBAR",
+      "LUMBAR DIXON",
+      "PLEXO LUMBAR"
+    ],
+    "T1w TSE DIXON Sag": [
+      "LUMBAR"
+    ],
+    "T2w_TSE Cor": [
+      "LUMBAR",
+      "LUMBAR DIXON"
+    ],
+    "T2w TSE MARS": [
+      "LUMBAR MARS"
+    ],
+    "STIR TSE MARS Sag": [
+      "LUMBAR MARS"
+    ],
+    "T2w TSE MARS Tra": [
+      "LUMBAR MARS"
+    ],
+    "T1w TSE MARS Tra": [
+      "LUMBAR MARS"
+    ],
+    "T1w TSE MARS": [
+      "LUMBAR MARS"
+    ],
+    "STIR TSE Cor sacro": [
+      "LUMBAR+SACRO"
+    ],
+    "T1w TSE Cor sacro": [
+      "LUMBAR+SACRO"
+    ],
+    "STIR Cor sacro": [
+      "LUMBAR+SACRO"
+    ],
+    "STIR Cor": [
+      "3D LAB",
+      "CADERAS 3D",
+      "PLEXO BRAQUIAL",
+      "SACRO TUMOR",
+      "SACROILIACA",
+      "TOTAL BODY Axial 5 stacks",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII 2020",
+      "TUMOR EEII FOV GRAN",
+      "TUMOR EESS"
+    ],
+    "3D STIR Cor": [
+      "PLEXO"
+    ],
+    "T1w DIXON Cor Gd lumbar": [
+      "MEDULA+NERVIO"
+    ],
+    "T1w DIXON Cor Gd cervical": [
+      "MEDULA+NERVIO"
+    ],
+    "T1w DIXON Sag Gd lumbar": [
+      "MEDULA+NERVIO"
+    ],
+    "T2w TSE Cor dorsal": [
+      "MEDULA+NERVIO"
+    ],
+    "T1w DIXON Cor Gd dorsal": [
+      "MEDULA+NERVIO"
+    ],
+    "T2w TSE Cor cervical": [
+      "MEDULA+NERVIO"
+    ],
+    "T2w TSE Cor lumbar": [
+      "MEDULA+NERVIO"
+    ],
+    "STIR TSE Cor": [
+      "CODO TUMOR",
+      "ELASTOFIBROMA",
+      "HOMBRO TUMOR",
+      "MA",
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MUSLO TUMOR",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "PLEXO BRAQUIAL",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA ESTANDARD DERECHA",
+      "RODILLA ESTANDARD IZQUIERDA",
+      "RODILLA GADO",
+      "RODILLA IZQUIERDA",
+      "RODILLA TUMOR",
+      "SACROILIACAS",
+      "SACROILIACAS CONTRASTE",
+      "SACROILIACAS ESTANDARD",
+      "TUMOR DEDOS",
+      "TUMOR EESS",
+      "TUMOR EESS FOV PEQUEÑO"
+    ],
+    "T1w TSE ADD Sag": [
+      "ESTRECHO TORACICO"
+    ],
+    "3D ANGIO ABD": [
+      "ESTRECHO TORACICO"
+    ],
+    "2D BOLUSTRAK": [
+      "DISECCION CAROTIDA",
+      "ESTRECHO TORACICO",
+      "HOMBRO CAPSULITIS",
+      "MIOMA PREEMBOLIZACION"
+    ],
+    "T1w TSE ABD Sag": [
+      "ESTRECHO TORACICO"
+    ],
+    "dual FFE Tra": [
+      "TIMO"
+    ],
+    "T2w SPIR Tra": [
+      "TIMO",
+      "TIMOMA"
+    ],
+    "T2w SPAIR Tra": [
+      "FISTULA",
+      "HIGADO",
+      "SACROILIACAS ESTANDARD",
+      "TIMO"
+    ],
+    "THRIVE dinamico": [
+      "HIGADO",
+      "MAMA ABREVIADO",
+      "MAMA DINAMICO",
+      "MAMA TIDE",
+      "PROSTATA",
+      "TIMO",
+      "TIMOMA",
+      "TUMOR EEII 2020"
+    ],
+    "3D DIXON dinamico": [
+      "CERVIX",
+      "MIOMA/MIOMA ATIPICO",
+      "NEO ENDOMETRIO",
+      "TIMO"
+    ],
+    "FFE IP-OP Tra": [
+      "TIMO"
+    ],
+    "DWIBS Tra": [
+      "PLEXO CERVICAL",
+      "PLEXO CERVICAL MUSCULO",
+      "PLEXO LUMBAR",
+      "SACROILIACAS CONTRASTE",
+      "SACROILIACAS ESTANDARD",
+      "TIMO",
+      "TIMOMA"
+    ],
+    "T2w 3D TSE Tra": [
+      "MAMA DINAMICO",
+      "MAMA PROTESIS"
+    ],
+    "T2w Tra": [
+      "FISTULA",
+      "MAMA DINAMICO",
+      "PROSTATA",
+      "TIMOMA",
+      "TOTAL BODY Axial 5 stacks"
+    ],
+    "T2w Cor": [
+      "MAMA DINAMICO",
+      "PROSTATA",
+      "RECTO"
+    ],
+    "DWI SPAIR Tra": [
+      "ENDOMETRIOSIS",
+      "MAMA DINAMICO",
+      "MIOMA/MIOMA ATIPICO"
+    ],
+    "3D FFE dinamico": [
+      "MAMA DINAMICO"
+    ],
+    "DWI Tra": [
+      "MAMA ABREVIADO",
+      "MAMA DINAMICO",
+      "RECTO"
+    ],
+    "4D Breast": [
+      "MAMA DINAMICO"
+    ],
+    "THRIVE dinamico DIXON": [
+      "MAMA DINAMICO"
+    ],
+    "Silicone suppresion Tra": [
+      "MAMA PROTESIS"
+    ],
+    "STIR Tra": [
+      "MAMA PROTESIS",
+      "MAMA TIDE",
+      "TOTAL BODY Axial 5 stacks"
+    ],
+    "T2w SPIR silicona Tra": [
+      "MAMA PROTESIS"
+    ],
+    "Silicone supresion Tra": [
+      "MAMA PROTESIS"
+    ],
+    "STIR SPIR silicona Tra": [
+      "MAMA PROTESIS"
+    ],
+    "Silicone only Tra": [
+      "MAMA PROTESIS"
+    ],
+    "MRCP radial": [
+      "COLANGIO",
+      "COLANGIO + HIGADO",
+      "PRIMOVIST"
+    ],
+    "T2w TSE SPAIR HR Cor": [
+      "COLANGIO"
+    ],
+    "T2w SPAIR Cor": [
+      "APENDICITIS EMBARAZADA",
+      "COLANGIO",
+      "ENTERO RM + CINES PREBUSCAPINA",
+      "FISTULA"
+    ],
+    "3D MRCP": [
+      "COLANGIO"
+    ],
+    "T2w HR Tra": [
+      "COLANGIO"
+    ],
+    "3D GRASE": [
+      "COLANGIO",
+      "COLANGIO + HIGADO",
+      "PRIMOVIST"
+    ],
+    "FFE OP-IP Tra": [
+      "CIBERDEM",
+      "COLANGIO",
+      "COLANGIO + HIGADO",
+      "HIGADO",
+      "NICOFIB",
+      "PRIMOVIST",
+      "SUPRARENALES"
+    ],
+    "Dual FFE Tra": [
+      "COLANGIO",
+      "ESTUDIO SUPRARRENAL",
+      "HIGADO",
+      "SUPRARENALES"
+    ],
+    "T2w TSE SPAIR Tra": [
+      "ANTEPIE - MORTON",
+      "CADERA ESTANDARD",
+      "CADERA UNILATERAL",
+      "CADERAS",
+      "CADERAS 3D",
+      "FISTULA",
+      "HIGADO",
+      "MANO/CARPO GADO",
+      "MIOMA / MIOMA ATIPICO",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA"
+    ],
+    "T2w SPIR HR Tra": [
+      "COLANGIO + HIGADO",
+      "HIGADO"
+    ],
+    "Dinamico 3D DIXON": [
+      "COLANGIO + HIGADO",
+      "HIGADO"
+    ],
+    "DIXON Quant": [
+      "HIGADO"
+    ],
+    "DIXON quant": [
+      "CIBERDEM",
+      "HIGADO"
+    ],
+    "3D Vane": [
+      "HIGADO"
+    ],
+    "T1w THRIVE": [
+      "ESTUDIO SUPRARRENAL"
+    ],
+    "Dual FFE Cor": [
+      "ESTUDIO SUPRARRENAL",
+      "SUPRARENALES"
+    ],
+    "THRIVE supresion": [
+      "ESTUDIO SUPRARRENAL"
+    ],
+    "T2/FFE/SEDIA/6C": [
+      "CUANTIFICACION HIERRO QBODY"
+    ],
+    "DP/FFE/SEDIA/6C": [
+      "CUANTIFICACION HIERRO QBODY"
+    ],
+    "DIXON fat sat Cor": [
+      "APENDICITIS EMBARAZADA",
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "BTFE prebuscapina Cor 3": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "SS CINE Cor": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "T2w TSE poner buscapina": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "BTFE prebuscapina Cor 1": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "BTFE Cor": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "BTFE prebuscapina Cor 4": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "DIXON Cor": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "BTFE prebuscapina Cor 2": [
+      "ENTERO RM + CINES PREBUSCAPINA"
+    ],
+    "PDw TSE SPAIR Sag": [
+      "CODO",
+      "CODO ESTANDARD",
+      "CODO TUMOR",
+      "HOMBRO",
+      "HOMBRO ARTRO",
+      "MUÑECA DP SUPRESION FREQ OFFSET 70",
+      "PIE ESTANDARD",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA"
+    ],
+    "PDw TSE SPAIR Cor": [
+      "CADERA ESTANDARD",
+      "CADERA UNILATERAL",
+      "CADERAS",
+      "CODO",
+      "CODO ESTANDARD",
+      "HOMBRO",
+      "HOMBRO ARTRO",
+      "MA",
+      "MANO ESTANDARD DERECHA",
+      "MANO ESTANDARD IZQUIERDA",
+      "MANO/CARPO GADO",
+      "MUÑECA DP SUPRESION FREQ OFFSET 70",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA",
+      "MUÑECA FLEX",
+      "PIE TOBILLO XR",
+      "PIE/TOBILLO XR",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA",
+      "TOBILLO CONTRASTE",
+      "TOBILLO ESTANDARD"
+    ],
+    "T2w FFE Tra": [
+      "CRANEO RAPID",
+      "DEDOS",
+      "EA DESCARTAR ARIA",
+      "EA descartar ARIA",
+      "HOMBRO",
+      "HOMBRO DERECHO",
+      "HOMBRO ESTANDARD DERECHO",
+      "HOMBRO ESTANDARD IZQUIERDO",
+      "HOMBRO IZQUIERDO",
+      "MANO ESTANDARD DERECHA",
+      "MANO ESTANDARD IZQUIERDA",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA",
+      "MUÑECA FLEX"
+    ],
+    "DWI SPIR Tra": [
+      "HOMBRO"
+    ],
+    "PDw TSE SPAIR Tra": [
+      "ARTRO ESPATLLA",
+      "CODO",
+      "CODO ESTANDARD",
+      "DEDOS",
+      "HOMBRO ARTRO",
+      "PIE TOBILLO XR",
+      "PIE/TOBILLO XR",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA ESTANDARD DERECHA",
+      "RODILLA ESTANDARD IZQUIERDA",
+      "RODILLA IZQUIERDA",
+      "TOBILLO CONTRASTE",
+      "TOBILLO ESTANDARD"
+    ],
+    "PDw TSE Tra": [
+      "ARTRO CADERA",
+      "CODO",
+      "CODO ESTANDARD",
+      "PIE ESTANDARD"
+    ],
+    "3D FFE": [
+      "MANO/CARPO GADO",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA"
+    ],
+    "T2w FFE": [
+      "MANO/CARPO GADO"
+    ],
+    "FFE Tra": [
+      "ARTRO ESPATLLA",
+      "BIO89-100-131",
+      "BIO89-100-132",
+      "CERVICAL MOTION FREE",
+      "HOMBRO ARTRO",
+      "MA"
+    ],
+    "PDw TSE Sag": [
+      "ARTRO ESPATLLA",
+      "CADERA UNILATERAL",
+      "CADERAS",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA"
+    ],
+    "PDw SPIR Cor": [
+      "ARTRO ESPATLLA",
+      "HOMBRO ESTANDARD DERECHO",
+      "HOMBRO ESTANDARD IZQUIERDO"
+    ],
+    "T1w TSE SPIR Tra": [
+      "CADERA ARTRO",
+      "CODO TUMOR",
+      "FISTULA",
+      "HOMBRO TUMOR",
+      "HUESOS LARGOS - TUMOR",
+      "MIOMA / MIOMA ATIPICO",
+      "MIOMA/MIOMA ATIPICO",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "PIE TOBILLO GADO",
+      "RECTO",
+      "RODILLA GADO",
+      "RODILLA TUMOR",
+      "SACROILIACAS CONTRASTE",
+      "TUMOR DEDOS",
+      "TUMOR EESS",
+      "TUMOR EESS FOV PEQUEÑO"
+    ],
+    "T1w DIXON TSE Tra Gd": [
+      "TUMOR EESS"
+    ],
+    "3D STIR": [
+      "PLEXO BRAQUIAL",
+      "PLEXO CERVICAL",
+      "PLEXO CERVICAL MUSCULO"
+    ],
+    "T1w TSE SPAIR Tra": [
+      "CADERAS"
+    ],
+    "PDw SPAIR radial": [
+      "ARTRO CADERA"
+    ],
+    "T1w FFE Cor": [
+      "ARTRO CADERA",
+      "CADERA ARTRO"
+    ],
+    "T1w SPIR Cor": [
+      "ARTRO CADERA",
+      "FISTULA"
+    ],
+    "T1w SPIR Tra": [
+      "ARTRO CADERA",
+      "FISTULA",
+      "RECTO"
+    ],
+    "T1w FFE Tra": [
+      "ARTRO CADERA",
+      "CADERA ARTRO"
+    ],
+    "T1w Tra": [
+      "ARTRO CADERA",
+      "EEII COMPLETAS",
+      "PROSTATA",
+      "RECTO",
+      "TOTAL BODY Axial 5 stacks"
+    ],
+    "T1w Cor": [
+      "ARTRO CADERA"
+    ],
+    "DIXON Tra Gd": [
+      "SACRO TUMOR"
+    ],
+    "Cor Gd": [
+      "SACRO TUMOR"
+    ],
+    "3D FFE bone": [
+      "CADERAS 3D",
+      "HOMBRO ARTRO",
+      "HOMBRO DERECHO",
+      "HOMBRO IZQUIERDO",
+      "SACROILIACAS",
+      "SACROILIACAS ESTANDARD"
+    ],
+    "T1w Cor oblicuo": [
+      "SACROILIACAS"
+    ],
+    "STIR Cor oblicuo": [
+      "SACROILIACAS"
+    ],
+    "T2w TSE DIXON Tra": [
+      "SACROILIACAS"
+    ],
+    "T2w SPAIR Tra oblicuo": [
+      "SACROILIACAS"
+    ],
+    "PDw 3D SPAIR": [
+      "3D LAB",
+      "CADERAS 3D",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA"
+    ],
+    "T2w TSE": [
+      "ENDOMETRIOSIS",
+      "RODILLA",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA"
+    ],
+    "T1w TSE SPIR Tra Gd": [
+      "CODO TUMOR",
+      "FISTULA",
+      "HOMBRO TUMOR",
+      "HUESOS LARGOS - TUMOR",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "RODILLA GADO",
+      "SACROILIACAS CONTRASTE",
+      "TOBILLO CONTRASTE"
+    ],
+    "T1w TSE Tra Gd": [
+      "MIOMA/MIOMA ATIPICO",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "PIE TOBILLO GADO",
+      "RODILLA GADO",
+      "TOBILLO CONTRASTE"
+    ],
+    "STIR SEMAC Sag": [
+      "RODILLA - OMAR XD",
+      "RODILLA DERECHA MARS"
+    ],
+    "T1w TSE SEMAC Sag": [
+      "RODILLA - OMAR XD",
+      "RODILLA DERECHA MARS"
+    ],
+    "T1w TSE SEMAC Tra Gd": [
+      "RODILLA - OMAR XD",
+      "RODILLA DERECHA MARS"
+    ],
+    "T2w TSE SEMAC Tra": [
+      "CADERA - OMAR XD",
+      "EEII MARS",
+      "RODILLA - OMAR XD",
+      "RODILLA DERECHA MARS"
+    ],
+    "T1w TSE SEMAC Sag Gd": [
+      "RODILLA - OMAR XD",
+      "RODILLA DERECHA MARS"
+    ],
+    "T1w SPIR Tra Gd": [
+      "FISTULA",
+      "PIE TOBILLO GADO"
+    ],
+    "T1w TSE DIXON Tra Gd": [
+      "CARA / SENOS",
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MUSLO TUMOR",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA",
+      "TUMOR EEII 2020"
+    ],
+    "STIR SEMAC Cor": [
+      "CADERA - OMAR XD",
+      "EEII MARS"
+    ],
+    "T1w TSE SEMAC Tra": [
+      "EEII MARS",
+      "RODILLA - OMAR XD"
+    ],
+    "DWIBS Tra 2": [
+      "EEII DWIBS",
+      "TOTAL BODY DWIBS",
+      "TOTAL BODY MIELOMA"
+    ],
+    "DWIBS Tra 3": [
+      "EEII DWIBS",
+      "TOTAL BODY DWIBS"
+    ],
+    "DWIBS Tra 1": [
+      "EEII DWIBS",
+      "TOTAL BODY DWIBS",
+      "TOTAL BODY MIELOMA"
+    ],
+    "DWIBS Tra 4": [
+      "EEII DWIBS",
+      "TOTAL BODY DWIBS"
+    ],
+    "STIR Cor 3": [
+      "EEII COMPLETAS",
+      "TOTAL BODY",
+      "TOTAL EEII"
+    ],
+    "STIR Cor 4": [
+      "EEII COMPLETAS",
+      "TOTAL BODY",
+      "TOTAL EEII"
+    ],
+    "STIR Cor 1": [
+      "EEII COMPLETAS",
+      "TOTAL BODY",
+      "TOTAL EEII"
+    ],
+    "STIR Cor 2": [
+      "EEII COMPLETAS",
+      "TOTAL BODY",
+      "TOTAL EEII"
+    ],
+    "T1w Tra 4": [
+      "TOTAL EEII"
+    ],
+    "T1w Tra 1": [
+      "TOTAL BODY",
+      "TOTAL EEII"
+    ],
+    "T1w Tra 3": [
+      "TOTAL EEII"
+    ],
+    "T1w Tra 2": [
+      "TOTAL EEII"
+    ],
+    "T1w 3D": [
+      "3D LAB",
+      "CADERAS 3D",
+      "DBS Depre Post",
+      "DBS Depre Pre",
+      "Depre"
+    ],
+    "T2w 3D": [
+      "3D LAB",
+      "CERVIX",
+      "ENDOMETRIOSIS",
+      "MIOMA / MIOMA ATIPICO",
+      "MIOMA/MIOMA ATIPICO",
+      "NEO ENDOMETRIO",
+      "PELVIS FEMENINA",
+      "RECTO"
+    ],
+    "T1w TSE DIXON Cor": [
+      "3D LAB",
+      "CARA / SENOS",
+      "PIERNA TUMOR"
+    ],
+    "T2w 3D HR": [
+      "CERVIX",
+      "MIOMA / MIOMA ATIPICO",
+      "NEO ENDOMETRIO",
+      "RECTO"
+    ],
+    "THRIVE dinamico Sag": [
+      "MIOMA / MIOMA ATIPICO"
+    ],
+    "DIXON dinamico Tra": [
+      "CERVIX",
+      "CUELLO 2025",
+      "MIOMA / MIOMA ATIPICO",
+      "PELVIS FEMENINA",
+      "PROSTATA"
+    ],
+    "T2w TSE Cor oblicuo": [
+      "CERVIX",
+      "ENDOMETRIOSIS",
+      "MIOMA / MIOMA ATIPICO",
+      "NEO ENDOMETRIO",
+      "RECTO"
+    ],
+    "DIXON dinamico Sag": [
+      "CERVIX",
+      "MIOMA / MIOMA ATIPICO",
+      "NEO ENDOMETRIO"
+    ],
+    "3D dinamico (venas)": [
+      "MIOMA PREEMBOLIZACION"
+    ],
+    "THRIVE Sag": [
+      "MIOMA PREEMBOLIZACION"
+    ],
+    "T2w Sag": [
+      "MIOMA PREEMBOLIZACION",
+      "PROSTATA",
+      "RECTO"
+    ],
+    "THRIVE Sag Gd": [
+      "CERVIX",
+      "MIOMA PREEMBOLIZACION",
+      "NEO ENDOMETRIO"
+    ],
+    "3D dinamico": [
+      "MIOMA PREEMBOLIZACION"
+    ],
+    "THRIVE Tra Gd": [
+      "CERVIX",
+      "MIOMA PREEMBOLIZACION",
+      "NEO ENDOMETRIO"
+    ],
+    "T1w TSE SPAIR": [
+      "CERVIX",
+      "ENDOMETRIOSIS",
+      "NEO ENDOMETRIO"
+    ],
+    "T1w SPIR": [
+      "CERVIX",
+      "MALFORMACION UTERINA"
+    ],
+    "T2w TSE Tra oblicuo": [
+      "CERVIX",
+      "NEO ENDOMETRIO",
+      "RECTO"
+    ],
+    "T1w TSE SPIR Tra (pelvis)": [
+      "CERVIX",
+      "ENDOMETRIOSIS",
+      "NEO ENDOMETRIO"
+    ],
+    "T1w TSE Tra SPIR Gd": [
+      "CERVIX"
+    ],
+    "T2w TSE Tra (oblicuo)": [
+      "CERVIX",
+      "NEO ENDOMETRIO"
+    ],
+    "T1w TSE Tra (pelvis)": [
+      "CERVIX",
+      "ENDOMETRIOSIS",
+      "NEO ENDOMETRIO"
+    ],
+    "T2w TSE Cor (oblicuo)": [
+      "CERVIX",
+      "NEO ENDOMETRIO"
+    ],
+    "DWI SPAIR Tra (oblicuo)": [
+      "CERVIX",
+      "NEO ENDOMETRIO"
+    ],
+    "T1w TSE SPIR": [
+      "ENDOMETRIOSIS",
+      "NEO ENDOMETRIO",
+      "PELVIS FEMENINA"
+    ],
+    "DIXON dinamico Tra oblicuo": [
+      "NEO ENDOMETRIO"
+    ],
+    "T1w SPIR Cor Gd": [
+      "FISTULA"
+    ],
+    "T2w SPAIR Sag": [
+      "FISTULA"
+    ],
+    "T1w TSE SPAIR Tra Gd": [
+      "FISTULA"
+    ],
+    "T1w TSE SPAIR Sag Gd": [
+      "FISTULA"
+    ],
+    "T2w TSE SPAIR Cor": [
+      "ANTEPIE - MORTON",
+      "CADERA UNILATERAL",
+      "DEDOS",
+      "FISTULA",
+      "HOMBRO CAPSULITIS",
+      "MANO ESTANDARD DERECHA",
+      "MANO ESTANDARD IZQUIERDA"
+    ],
+    "T1w TSE SPIR Cor Gd": [
+      "CODO TUMOR",
+      "FISTULA",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA"
+    ],
+    "T1w TSE SPAIR Cor Gd": [
+      "FISTULA"
+    ],
+    "DWI SPAIR Sag": [
+      "RECTO"
+    ],
+    "T2w Cor oblicuo": [
+      "RECTO"
+    ],
+    "T2w Tra oblicuo": [
+      "RECTO"
+    ],
+    "T2w SS dinamico Sag (defeco)": [
+      "DEFECO"
+    ],
+    "T2w SS dinamico Sag (kegel)": [
+      "DEFECO"
+    ],
+    "T2w SS Sag VALSALVA": [
+      "DEFECO"
+    ],
+    "T2w SS Sag BASAL": [
+      "DEFECO"
+    ],
+    "T2w SS dinamico Sag (basal)": [
+      "DEFECO"
+    ],
+    "T2w SS Sag KEGEL": [
+      "DEFECO"
+    ],
+    "T2w SS Sag DEFECO": [
+      "DEFECO"
+    ],
+    "T2w SS dinamico Sag (valsalva)": [
+      "DEFECO"
+    ],
+    "T1w HR DIXON TSE Tra": [
+      "FOSA POSTERIOR"
+    ],
+    "T2w HR DIXON TSE Tra": [
+      "FOSA POSTERIOR"
+    ],
+    "3D BrainView FLAIR Sag": [
+      "EA descartar ARIA"
+    ],
+    "FLAIR SPIR Tra": [
+      "CRANEO PEDIATRICO STD",
+      "EA descartar ARIA"
+    ],
+    "3D T1 DIXON Gd": [
+      "CARA / SENOS"
+    ],
+    "T2w HR DIXON TSE RL Cor": [
+      "CARA / SENOS"
+    ],
+    "FLAIR Tra": [
+      "CARA / SENOS",
+      "CRANEO PEDIATRICO STD"
+    ],
+    "T1w TSE DIXON Tra": [
+      "CARA / SENOS",
+      "CODO - MANO - MUÑECA - PIE",
+      "DEDOS",
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MUSLO TUMOR",
+      "MUSLO UNILATERAL",
+      "PELVIS INGUINAL - MUSLOS BILATERAL",
+      "PIERNA TUMOR"
+    ],
+    "T1w HR DIXON TSE RL Cor": [
+      "CARA / SENOS"
+    ],
+    "T1w TSE DIXON Cor Gd": [
+      "CARA / SENOS",
+      "MUSLO TUMOR"
+    ],
+    "T2w DIXON TSE RL Tra (cuello)": [
+      "DISECCION CAROTIDA"
+    ],
+    "T1w DIXON TSE RL Tra (cuello)": [
+      "DISECCION CAROTIDA"
+    ],
+    "3D CAROTIDS": [
+      "DISECCION CAROTIDA"
+    ],
+    "T1w TSE SPIR Tra (cuello)": [
+      "DISECCION CAROTIDA"
+    ],
+    "T1w 3D TSE SPIR Tra (cuello)": [
+      "DISECCION CAROTIDA"
+    ],
+    "SV_35 (single voxel)": [
+      "COVID"
+    ],
+    "Permeabilidad": [
+      "CAR-T",
+      "COVID"
+    ],
+    "Flip 15": [
+      "COVID"
+    ],
+    "Flip 5": [
+      "COVID"
+    ],
+    "3D BrainVIEW Black Blood Gd": [
+      "CAR-T",
+      "COVID"
+    ],
+    "3D BrainVIEW Black Blood": [
+      "CAR-T",
+      "COVID"
+    ],
+    "SV_144 (single voxel)": [
+      "COVID"
+    ],
+    "3D DIR": [
+      "ESCLEROSIS MULTIPLE",
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "T1w SE Tra Gd": [
+      "ESCLEROSIS MULTIPLE"
+    ],
+    "3D T2 BrainVIEW": [
+      "PARES CRANEALES - NEURALGIA"
+    ],
+    "SV PRESS 35 (espectro single voxel)": [
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "SV PRESS 144 (espectro single voxel)": [
+      "TUMOR - DIAGNOSTICO"
+    ],
+    "2D PRESS 144 (espectro multi voxel)": [
+      "TUMOR - DIAGNOSTICO"
+    ],
+    "APT": [
+      "CAR-T",
+      "TUMOR - DIAGNOSTICO",
+      "TUMOR - SEGUIMIENTO"
+    ],
+    "Pre FA5": [
+      "CAR-T"
+    ],
+    "SV_144 (espectro single voxel)": [
+      "CAR-T"
+    ],
+    "Pre FA15": [
+      "CAR-T"
+    ],
+    "SV_35 (espectro single voxel)": [
+      "CAR-T"
+    ],
+    "4D TRANCE": [
+      "CRANEO VASCULAR",
+      "MALFORMACION VASCULAR"
+    ],
+    "Angio post Gd": [
+      "MALFORMACION VASCULAR"
+    ],
+    "fMRI": [
+      "CRANEO ESTEROTAXIA",
+      "Depre",
+      "PARKINSON preECP"
+    ],
+    "T2w TSE localizador CAI": [
+      "CAI IMPLANTE COCLEAR",
+      "CAIs CONTRASTE",
+      "CAIs ESTANDARD",
+      "COLESTEATOMA",
+      "MENIERE",
+      "NEURO: CAIS"
+    ],
+    "COLESTEATOMA": [
+      "NEURO: CAIS"
+    ],
+    "T2w 3D DRIVE CAI": [
+      "CAI IMPLANTE COCLEAR",
+      "CAIs CONTRASTE",
+      "CAIs ESTANDARD",
+      "COLESTEATOMA",
+      "MENIERE",
+      "NEURO: CAIS"
+    ],
+    "DWI TSE Cor CAI": [
+      "COLESTEATOMA",
+      "NEURO: CAIS"
+    ],
+    "T1w DIXON Sag": [
+      "CUELLO 2025"
+    ],
+    "T2w Hr mDIXON TSE RL Tra": [
+      "CUELLO",
+      "CUELLO 2025"
+    ],
+    "T1w HR mDIXON TSE RL Tra": [
+      "CUELLO",
+      "CUELLO 2025"
+    ],
+    "T2w DRIVE": [
+      "CERVICAL MOTION FREE"
+    ],
+    "FFE 3D VANE": [
+      "CERVICAL MOTION FREE"
+    ],
+    "T2w ZOOM Cor": [
+      "CERVICAL MOTION FREE"
+    ],
+    "3D Nerve VIEW": [
+      "PLEXO CERVICAL",
+      "PLEXO LUMBAR"
+    ],
+    "T1w DIXON TSE FH Cor": [
+      "PLEXO CERVICAL"
+    ],
+    "T1w DIXON TSE FH Cor Gd": [
+      "PLEXO CERVICAL"
+    ],
+    "PROSET": [
+      "PLEXO LUMBAR"
+    ],
+    "3D VANE": [
+      "TIMOMA"
+    ],
+    "mDIXON Quant BH 4": [
+      "TOTAL mDIXON Quant"
+    ],
+    "mDIXON Quant BH 6": [
+      "TOTAL mDIXON Quant"
+    ],
+    "mDIXON Quant BH 5": [
+      "TOTAL mDIXON Quant"
+    ],
+    "mDIXON Quant BH 1": [
+      "TOTAL mDIXON Quant"
+    ],
+    "mDIXON Quant BH 3": [
+      "TOTAL mDIXON Quant"
+    ],
+    "mDIXON Quant BH 7": [
+      "TOTAL mDIXON Quant"
+    ],
+    "mDIXON Quant BH 2": [
+      "TOTAL mDIXON Quant"
+    ],
+    "T1w Tra (6)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Tra (2)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "T1w Tra (5)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "T1w Tra (4)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Tra (6)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Tra (4)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Tra (3)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "T1w Tra (1)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Tra (1)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "T1w Tra (3)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "T1w Tra (2)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Tra (5)": [
+      "TOTAL BODY Axial",
+      "TOTAL BODY Axial 2024"
+    ],
+    "STIR Cor (4)": [
+      "TOTAL BODY Coronal"
+    ],
+    "T1w Cor (5)": [
+      "TOTAL BODY Coronal"
+    ],
+    "STIR Cor (1)": [
+      "TOTAL BODY Coronal"
+    ],
+    "STIR Cor (3)": [
+      "TOTAL BODY Coronal"
+    ],
+    "T1w Cor (3)": [
+      "TOTAL BODY Coronal"
+    ],
+    "T1w Cor (4)": [
+      "TOTAL BODY Coronal"
+    ],
+    "T1w Cor (2)": [
+      "TOTAL BODY Coronal"
+    ],
+    "T1w Cor (6)": [
+      "TOTAL BODY Coronal"
+    ],
+    "T1w Cor (1)": [
+      "TOTAL BODY Coronal"
+    ],
+    "STIR Cor (2)": [
+      "TOTAL BODY Coronal"
+    ],
+    "STIR Cor (5)": [
+      "TOTAL BODY Coronal"
+    ],
+    "STIR Cor (6)": [
+      "TOTAL BODY Coronal"
+    ],
+    "DWIBS Tra 6": [
+      "TOTAL BODY DWIBS"
+    ],
+    "DWIBS Tra 5": [
+      "TOTAL BODY DWIBS"
+    ],
+    "FFE MEDSPACE": [
+      "CIBERDEM",
+      "QUANTIFICACIO GREIX - Bio89"
+    ],
+    "FFE dual Cor": [
+      "SUPRARENALES"
+    ],
+    "DIXON Tra": [
+      "SUPRARENALES"
+    ],
+    "T2w HR Cor": [
+      "SUPRARENALES"
+    ],
+    "T1w TFE IP Tra": [
+      "ABDOMEN PEDIATRIA"
+    ],
+    "T1w TFE OP Tra": [
+      "ABDOMEN PEDIATRIA"
+    ],
+    "DIXON Quant Tra": [
+      "NICOFIB"
+    ],
+    "3D NerveVIEW": [
+      "DLAB 3D",
+      "PLEXO CERVICAL MUSCULO"
+    ],
+    "3D WATSf": [
+      "CADERA ARTRO",
+      "HOMBRO ARTRO",
+      "RODILLA ESTANDARD DERECHA",
+      "RODILLA ESTANDARD IZQUIERDA"
+    ],
+    "DIXON HR Tra Gd": [
+      "HOMBRO CAPSULITIS",
+      "HUESOS LARGOS - TUMOR"
+    ],
+    "DIXON HR": [
+      "HOMBRO CAPSULITIS"
+    ],
+    "4D Trak": [
+      "HOMBRO CAPSULITIS",
+      "MALFORMACION ARTERIOVENOSA PIERNA"
+    ],
+    "PDw SPAIR Cor": [
+      "HOMBRO ESTANDARD DERECHO",
+      "HOMBRO ESTANDARD IZQUIERDO"
+    ],
+    "PDw SPAIR Sag": [
+      "HOMBRO ESTANDARD DERECHO",
+      "HOMBRO ESTANDARD IZQUIERDO"
+    ],
+    "T1w TSE SPIR Sag Gd": [
+      "HOMBRO TUMOR",
+      "MUÑECA TUMOR DERECHA",
+      "MUÑECA TUMOR IZQUIERDA"
+    ],
+    "DIXON HR Cor Gd": [
+      "HOMBRO TUMOR"
+    ],
+    "DIXON HR Gd": [
+      "HOMBRO TUMOR",
+      "MUSLO TUMOR"
+    ],
+    "STIR Sag": [
+      "HUESOS LARGOS - TUMOR"
+    ],
+    "T2w FFE Cor": [
+      "CODO ESTANDARD",
+      "MUÑECA FLEX"
+    ],
+    "3D FFE Bone": [
+      "DLAB 3D",
+      "HIFU PRE/POST",
+      "MUÑECA ESTANDARD DERECHA",
+      "MUÑECA ESTANDARD IZQUIERDA",
+      "RODILLA DERECHA",
+      "RODILLA IZQUIERDA"
+    ],
+    "T2w FFE Sag": [
+      "DEDOS"
+    ],
+    "3D DIXON HR": [
+      "CODO - MANO - MUÑECA - PIE",
+      "DEDOS",
+      "MUSLO UNILATERAL",
+      "PELVIS INGUINAL - MUSLOS BILATERAL"
+    ],
+    "TSE Cor Gd": [
+      "DEDOS"
+    ],
+    "TSE Tra Gd": [
+      "DEDOS"
+    ],
+    "SPIR Gd": [
+      "DEDOS"
+    ],
+    "FFE DIXON dinamico": [
+      "CODO - MANO - MUÑECA - PIE",
+      "DEDOS",
+      "MUSLO UNILATERAL",
+      "PELVIS INGUINAL - MUSLOS BILATERAL"
+    ],
+    "T1w TSE SPIR Cor": [
+      "CADERA ARTRO",
+      "PIE CONTRASTE"
+    ],
+    "PDw TSE Cor": [
+      "ANTEPIE - MORTON",
+      "CADERA UNILATERAL"
+    ],
+    "3d FFE WATS": [
+      "CADERA UNILATERAL"
+    ],
+    "PDW TSE Sag": [
+      "CADERA ESTANDARD"
+    ],
+    "T2w TSE SEMAC Cor": [
+      "CADERA - OMAR XD"
+    ],
+    "PDw TSE SEMAC Cor": [
+      "CADERA - OMAR XD"
+    ],
+    "PDw TSE SEMAC Sag": [
+      "CADERA - OMAR XD"
+    ],
+    "STIR MARS Tra": [
+      "CADERA - OMAR XD"
+    ],
+    "Perfusion T1": [
+      "MUSLO TUMOR"
+    ],
+    "T1w DIXON HR Cor Gd": [
+      "MALFORMACION ARTERIOVENOSA PIERNA",
+      "MUSLO TUMOR"
+    ],
+    "PDw Sag": [
+      "RODILLA ESTANDARD DERECHA",
+      "RODILLA ESTANDARD IZQUIERDA"
+    ],
+    "PDW SPIR Sag": [
+      "RODILLA ESTANDARD DERECHA",
+      "RODILLA ESTANDARD IZQUIERDA"
+    ],
+    "STIR TSE": [
+      "PIERNA TUMOR"
+    ],
+    "T1w TSE": [
+      "PIERNA TUMOR"
+    ],
+    "T1w 3D IR TFE Tra": [
+      "CRANEO ESTANDARD < 6 MESES",
+      "CRANEO ESTANDARD > 6 MESES",
+      "CRANEO PEDIATRICO STD"
+    ],
+    "FLAIR Long TR Tra": [
+      "CRANEO PEDIATRICO STD"
+    ],
+    "HEMOSIDERINA": [
+      "CRANEO ESTANDARD < 6 MESES",
+      "CRANEO ESTANDARD > 6 MESES",
+      "CRANEO PEDIATRICO STD"
+    ],
+    "PDw TSE Cor (epilepsia)": [
+      "CRANEO ESTANDARD < 6 MESES"
+    ],
+    "T2w DRIVE TSE Cor": [
+      "CRANEO ESTANDARD < 6 MESES",
+      "CRANEO ESTANDARD > 6 MESES"
+    ],
+    "PDw TSE (epilepsia)": [
+      "CRANEO ESTANDARD < 6 MESES",
+      "CRANEO ESTANDARD > 6 MESES"
+    ],
+    "T2w FLAIR Tra": [
+      "CRANEO ESTANDARD > 6 MESES"
+    ],
+    "T2w FLAIR Cor": [
+      "CRANEO ESTANDARD > 6 MESES"
+    ],
+    "REACT 2": [
+      "ANGIO SENSE CONTRAST TOTAL BODY"
+    ],
+    "REACT 1": [
+      "ANGIO SENSE CONTRAST TOTAL BODY"
+    ],
+    "3D TOF 2": [
+      "ANGIO SENSE CONTRAST TOTAL BODY"
+    ],
+    "REACT 3": [
+      "ANGIO SENSE CONTRAST TOTAL BODY"
+    ],
+    "3D TOF 3": [
+      "ANGIO SENSE CONTRAST TOTAL BODY"
+    ],
+    "3D TOF 1": [
+      "ANGIO SENSE CONTRAST TOTAL BODY"
+    ],
+    "3D TFE DIXON": [
+      "ANGIO SENSE CONTRAST TORAX"
+    ],
+    "BTFE": [
+      "ANGIO SENSE CONTRAST TORAX"
+    ],
+    "3D TFE": [
+      "ANGIO SENSE CONTRAST TORAX"
+    ],
+    "3D TFE Tra (corazon)": [
+      "ANGIO SENSE CONTRAST TORAX"
+    ],
+    "STIR SAG": [
+      "CUELLO"
+    ],
+    "T2w TSE DIXON cervical": [
+      "COLUMNA COMPLETA 2 STACKS DIXON",
+      "CRANEO + COLUMNA"
+    ],
+    "T2w TSE DIXON lumbar": [
+      "COLUMNA COMPLETA 2 STACKS DIXON"
+    ],
+    "T2w TSE T_col": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "T1w TSE Cervical": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "T1w TSE dorsal Gd": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "T1w TSE T_col": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "STIR TSE Cervical": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "T2w TSE Cervical": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "T1w TSE cervical Gd": [
+      "ESCLEROSIS MULTIPLE DEBUT"
+    ],
+    "B0 map": [
+      "CRANEO ESTEROTAXIA"
+    ],
+    "T2w 3D BrainVIEW": [
+      "CRANEO ESTEROTAXIA",
+      "DBS Depre Pre",
+      "Depre"
+    ],
+    "3D SWI": [
+      "CRANEO ESTEROTAXIA"
+    ],
+    "CSF PCA Sag": [
+      "QUANTIFICACIO LCR"
+    ],
+    "CSF DRIVE Sag": [
+      "QUANTIFICACIO LCR"
+    ],
+    "CSF Qflow": [
+      "QUANTIFICACIO LCR"
+    ],
+    "pCASL": [
+      "HIFU PRE/POST"
+    ],
+    "Wmnull": [
+      "HIFU PRE/POST"
+    ],
+    "T1w 3D DIXON CAI": [
+      "CAIs CONTRASTE",
+      "CAIs ESTANDARD",
+      "COLESTEATOMA"
+    ],
+    "T1w 3D DIXON Gd CAI": [
+      "CAIs CONTRASTE"
+    ],
+    "3D IR Meniere": [
+      "MENIERE"
+    ],
+    "3D FLAIR Meniere": [
+      "MENIERE"
+    ],
+    "fMRI ojos cerrados": [
+      "DBS Depre Post",
+      "DBS Depre Pre",
+      "Depre"
+    ],
+    "Sbref": [
+      "Depre"
+    ],
+    "T1w DIXON Tra 6": [
+      "TOTAL BODY MIELOMA"
+    ],
+    "T1w DIXON Tra 5": [
+      "TOTAL BODY MIELOMA"
+    ],
+    "T1w DIXON Tra 1": [
+      "TOTAL BODY MIELOMA"
+    ],
+    "T1w DIXON Tra 4": [
+      "TOTAL BODY MIELOMA"
+    ],
+    "T1w DIXON Tra 2": [
+      "TOTAL BODY MIELOMA"
+    ],
+    "T1w DIXON Tra 3": [
+      "TOTAL BODY MIELOMA"
+    ],
+    "3D TRANCE SPIR": [
+      "DLAB 3D"
+    ],
+    "3D DIXON": [
+      "DLAB 3D",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII FOV GRAN"
+    ],
+    "3D PDw HR": [
+      "DLAB 3D"
+    ],
+    "PDw 3D": [
+      "DLAB 3D"
+    ],
+    "T2w 3D SPAIR": [
+      "DLAB 3D"
+    ],
+    "3D T2w SPAIR": [
+      "DLAB 3D"
+    ],
+    "STIR 3D": [
+      "DLAB 3D"
+    ],
+    "3D DIXON Tra": [
+      "DLAB 3D"
+    ],
+    "3D TRANCE STIR": [
+      "DLAB 3D"
+    ],
+    "T1w DIXON HR Cor": [
+      "MALFORMACION ARTERIOVENOSA PIERNA"
+    ],
+    "3D Dinamico DIXON (20 min)": [
+      "PRIMOVIST"
+    ],
+    "FFE OP-IP Tra (20 min)": [
+      "PRIMOVIST"
+    ],
+    "3D Dinamico DIXON (30 min)": [
+      "PRIMOVIST"
+    ],
+    "FFE OP-IP Tra (30 min)": [
+      "PRIMOVIST"
+    ],
+    "3D Dinamico DIXON": [
+      "PRIMOVIST"
+    ],
+    "T2w TSE eje largo": [
+      "MALFORMACION UTERINA"
+    ],
+    "T2w TSE eje corto": [
+      "MALFORMACION UTERINA"
+    ],
+    "T2w TSE Tra columna": [
+      "COLUMNA 2 STACKS",
+      "CRANEO + COLUMNA"
+    ],
+    "T2w TSE DIXON Sag dorsal": [
+      "CRANEO + COLUMNA"
+    ],
+    "T1w TSE Sag dorsal": [
+      "CRANEO + COLUMNA"
+    ],
+    "T1w TSE Sag cervical": [
+      "CRANEO + COLUMNA"
+    ],
+    "3D BrainVIEW Black blood": [
+      "CRANEO VASCULAR"
+    ],
+    "3D BrainVIEW DIR": [
+      "E.M"
+    ],
+    "VEN BOLD": [
+      "E.M"
+    ],
+    "DWI TSE coleatoatoma Cor": [
+      "CAIS COLESTEATOMA"
+    ],
+    "T1w TSE Sag dorsal-lumbar": [
+      "COLUMNA 2 STACKS"
+    ],
+    "T1w TSE Tra columna": [
+      "COLUMNA 2 STACKS"
+    ],
+    "T2w TSE DIXON Sag cervical-dorsal": [
+      "COLUMNA 2 STACKS"
+    ],
+    "T2w TSE DIXON Sag dorsal-lumbar": [
+      "COLUMNA 2 STACKS"
+    ],
+    "T1w TSE Sag cervical-dorsal": [
+      "COLUMNA 2 STACKS"
+    ],
+    "STIR Cor 5": [
+      "TOTAL BODY"
+    ],
+    "PDw TSE SPIR Cor": [
+      "HOMBRO DERECHO",
+      "HOMBRO IZQUIERDO"
+    ],
+    "PDw TSE SPIR Sag": [
+      "HOMBRO DERECHO",
+      "HOMBRO IZQUIERDO"
+    ],
+    "PDw TSE DIXON Sag": [
+      "MUÑECA DP SUPRESION FREQ OFFSET 70"
+    ],
+    "SPIR DP Tra": [
+      "MUÑECA DP SUPRESION FREQ OFFSET 70"
+    ],
+    "PDw TSE DIXON Cor": [
+      "MUÑECA DP SUPRESION FREQ OFFSET 70"
+    ],
+    "PDw TSE DIXON Tra": [
+      "MUÑECA DP SUPRESION FREQ OFFSET 70"
+    ],
+    "T1 DIXON TSE Tra": [
+      "TUMOR EEII FOV GRAN"
+    ],
+    "3D DIXON Gd": [
+      "MIOMA/MIOMA ATIPICO",
+      "TUMOR EEII 1 STACK",
+      "TUMOR EEII FOV GRAN"
+    ],
+    "3D FFE Bone tobillo": [
+      "PIE/TOBILLO XR"
+    ],
+    "DIWBS": [
+      "PIE/TOBILLO XR"
+    ]
+  }
+}

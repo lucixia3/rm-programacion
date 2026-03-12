@@ -10,6 +10,7 @@ import { validateBody } from "@/lib/validate";
 import { checkRateLimit, getIdentifier } from "@/lib/rate-limit";
 import { getServerEnv } from "@/lib/env";
 import { EXCEL, buildPromptTable } from "@/data/excel";
+import { detectSequenceHints } from "@/data/sequences";
 
 const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 
@@ -166,7 +167,8 @@ Retorna ÚNICAMENT aquest JSON, sense cap altre text ni markdown:
 }
 
 function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean | null, isCRI: boolean): string {
-  let msg = `Nota clínica: "${normalizeInput(text)}"`;
+  const normalized = normalizeInput(text);
+  let msg = `Nota clínica: "${normalized}"`;
   if (anestesia) {
     if (anestMajor === false) msg += "\n[ANESTESIA PEDIÀTRICA: menor de 3 anys → RM1, DIVENDRES MATÍ]";
     else if (anestMajor === true) msg += "\n[ANESTESIA PEDIÀTRICA: 3 anys o més → RM1, DIMARTS TARDA]";
@@ -175,6 +177,9 @@ function buildUserMessage(text: string, anestesia: boolean, anestMajor: boolean 
   if (isCRI) {
     msg += "\n[CRI — CIRCUITO RÁPIDO DE ICTUS: protocol 15, EXCLUSIU RM3 (prioritari) o RM5. MAI RM1, RM2 ni RM4. Màxim 3 dies des de la sol·licitud.]";
   }
+  // Detectar noms de protocol i seqüències MRI a la nota
+  const seqHints = detectSequenceHints(text);
+  if (seqHints) msg += seqHints;
   return msg;
 }
 
